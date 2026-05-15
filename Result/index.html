@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сандлеры из Литина - семейный архив</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  :root {
+    --bg:        #f4ede0;
+    --bg-soft:   #ece1cc;
+    --paper:     #fcf6ea;
+    --paper-2:   #f9f1de;
+    --ink:       #221c14;
+    --ink-soft:  #5a4a39;
+    --ink-mute:  #8a7960;
+    --accent:    #7a2c43;
+    --accent-2:  #7a3b1f;
+    --rule:      #c9b893;
+    --gold:      #b78d4a;
+    --shadow:    0 18px 40px -22px rgba(60,40,15,.45),
+                 0 4px 12px -6px rgba(60,40,15,.25);
+    --gen-2: #7a2c43;
+    --gen-3: #1f5d8c;
+    --gen-4: #2c8a82;
+    --gen-5: #cc7a2c;
+    --gen-6: #c94545;
+    --gen-7: #7a4abc;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background:
+      radial-gradient(1200px 600px at 12% -8%,  #efe2c4 0%, transparent 60%),
+      radial-gradient(900px 500px  at 100% 0%,  #e9dcc0 0%, transparent 55%),
+      radial-gradient(700px 400px  at 0% 100%,  #f0e3c6 0%, transparent 60%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+    color: var(--ink);
+    font-family: "PT Serif", "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image:
+      radial-gradient(rgba(120,80,30,.07) 1px, transparent 1px),
+      radial-gradient(rgba(120,80,30,.05) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 1px;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: multiply;
+    opacity: .55;
+  }
+
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(8px);
+    background: rgba(244,237,224,.82);
+    border-bottom: 1px solid var(--rule);
+    font-family: "PT Sans", system-ui, sans-serif;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  nav.top .nav-inner {
+    max-width: 1180px; margin: 0 auto;
+    padding: 12px 24px;
+    display: flex; gap: 4px 22px; flex-wrap: wrap;
+    align-items: center;
+  }
+  nav.top .brand {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: 18px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--accent);
+    margin-right: auto;
+  }
+  nav.top a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+  }
+  nav.top a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 24px 96px;
+  }
+
+  h1, h2, h3 { margin-top: 0; }
+
+  section.major {
+    margin-top: 96px;
+    scroll-margin-top: 72px;
+  }
+  section.major:first-of-type { margin-top: 24px; }
+
+  .section-kicker {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .26em;
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.05;
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+  .section-lede {
+    font-family: "PT Serif", serif;
+    font-size: clamp(17px, 1.8vw, 19px);
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 740px;
+    margin-bottom: 36px;
+  }
+  .section-rule {
+    height: 1px; background: var(--rule);
+    margin: 0 0 36px;
+    position: relative;
+  }
+  .section-rule::after {
+    content: "\2726";
+    position: absolute; left: 0; top: -10px;
+    background: var(--bg); padding: 0 12px 0 0;
+    color: var(--gold); font-size: 18px;
+  }
+
+  header.hero {
+    text-align: center;
+    padding: 56px 12px 36px;
+    position: relative;
+  }
+  header.hero .kicker {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  header.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500; font-style: italic;
+    font-size: clamp(44px, 8vw, 92px);
+    line-height: 1.0;
+    margin: 0 0 12px;
+  }
+  header.hero .subtitle {
+    font-family: "PT Serif", serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.3vw, 22px);
+    color: var(--ink-soft);
+    max-width: 760px; margin: 12px auto 0;
+  }
+  header.hero .meta-line {
+    margin-top: 22px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px; color: var(--ink-soft);
+    letter-spacing: .12em; text-transform: uppercase;
+  }
+  header.hero::after {
+    content: "\2726";
+    display: block;
+    text-align: center;
+    color: var(--gold);
+    font-size: 20px;
+    margin-top: 36px;
+  }
+
+  .patriarchs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    margin-bottom: 48px;
+  }
+  .patriarch-card { text-align: center; }
+  .patriarch-photo {
+    background: #fff;
+    padding: 16px 16px 8px;
+    border: 1px solid rgba(180,140,80,.4);
+    box-shadow: var(--shadow);
+    display: inline-block;
+    max-width: 100%;
+  }
+  .patriarch-photo img {
+    display: block;
+    max-width: 100%;
+    max-height: 440px;
+    width: auto; margin: 0 auto;
+    filter: contrast(1.02) saturate(.92);
+  }
+  .patriarch-name {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 18px 0 4px;
+    color: var(--accent);
+  }
+  .patriarch-meta {
+    font-family: "PT Sans", sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: .04em;
+  }
+  .patriarch-meta div { margin: 2px 0; }
+  .patriarchs-intro {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 26px 34px;
+    margin-bottom: 64px;
+    position: relative;
+    font-size: 18px;
+  }
+  .patriarchs-intro::before {
+    content: "";
+    position: absolute; inset: 6px;
+    border: 1px solid rgba(183,141,74,.32);
+    pointer-events: none;
+  }
+  .patriarchs-intro p { margin: 0 0 10px; }
+  .patriarchs-intro p:last-child { margin-bottom: 0; }
+
+  /* visual tree */
+  .tree-legend {
+    display: flex; flex-wrap: wrap; gap: 8px 24px;
+    margin: 0 0 32px;
+    padding: 14px 22px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    align-items: center;
+  }
+  .tree-legend .lbl { letter-spacing: .12em; text-transform: uppercase; }
+  .tree-legend .dot {
+    display: inline-block; width: 10px; height: 10px;
+    border-radius: 50%; margin-right: 6px;
+    vertical-align: middle;
+  }
+  .tree-legend .item { display: flex; align-items: center; }
+
+  .ctree, .ctree ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    position: relative;
+  }
+  .ctree {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 16px 0 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ctree ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 28px;
+    position: relative;
+  }
+  .ctree ul::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 50%;
+    width: 1px; height: 28px;
+    background: var(--rule);
+  }
+  /* outermost ul of a per-branch tree has no parent .tnode above it -
+     suppress the dangling line. The overview tree is wrapped in
+     .root-wrap so its ul is not a direct child of .ctree. */
+  .ctree > ul::before { display: none; }
+  .ctree li {
+    flex: 0 0 auto;
+    padding: 28px 10px 0;
+    position: relative;
+    text-align: center;
+  }
+  .ctree li::before,
+  .ctree li::after {
+    content: "";
+    position: absolute;
+    top: 0; height: 1px;
+    background: var(--rule);
+  }
+  .ctree li::before {
+    right: 50%;
+    width: 50%;
+  }
+  .ctree li::after {
+    left: 50%;
+    width: 50%;
+  }
+  .ctree li:only-child::before,
+  .ctree li:only-child::after { display: none; }
+  .ctree li:first-child::before { background: transparent; }
+  .ctree li:last-child::after  { background: transparent; }
+  .ctree li > .tnode::before {
+    content: "";
+    position: absolute;
+    top: -28px; left: 50%;
+    width: 1px; height: 28px;
+    background: var(--rule);
+  }
+  .ctree li:only-child > .tnode::before { display: block; }
+  .ctree > ul > li > .tnode::before { display: none; }
+  .ctree .root-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ctree .root-wrap > .tnode { margin: 0 auto; }
+
+  .tnode {
+    display: inline-block;
+    position: relative;
+    min-width: 140px;
+    max-width: 220px;
+    padding: 10px 14px;
+    border: 1.5px solid var(--gen-2);
+    border-radius: 6px;
+    background: var(--paper);
+    font-family: "PT Sans", sans-serif;
+    text-align: center;
+    box-shadow: 0 2px 6px -3px rgba(60,40,15,.3);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .tnode:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px -4px rgba(60,40,15,.4);
+  }
+  .tnode .nm {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gen-2);
+    line-height: 1.2;
+  }
+  .tnode .alt {
+    display: block;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--ink-mute);
+    margin-top: 2px;
+  }
+  .tnode .sp {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+  .tnode .pl {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 1px 7px;
+    background: rgba(180,140,80,.18);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--ink-soft);
+    border-radius: 2px;
+  }
+  .tnode.g2 { border-color: var(--gen-2); }
+  .tnode.g2 .nm { color: var(--gen-2); }
+  .tnode.g3 { border-color: var(--gen-3); }
+  .tnode.g3 .nm { color: var(--gen-3); }
+  .tnode.g4 { border-color: var(--gen-4); }
+  .tnode.g4 .nm { color: var(--gen-4); }
+  .tnode.g5 { border-color: var(--gen-5); }
+  .tnode.g5 .nm { color: var(--gen-5); }
+  .tnode.g6 { border-color: var(--gen-6); }
+  .tnode.g6 .nm { color: var(--gen-6); }
+  .tnode.g7 { border-color: var(--gen-7); }
+  .tnode.g7 .nm { color: var(--gen-7); }
+  .tnode.root {
+    border-color: var(--ink);
+    background: var(--paper-2);
+  }
+  .tnode.root .nm { color: var(--ink); font-size: 16px; }
+
+  a.tnode-link {
+    text-decoration: none;
+    display: inline-block;
+  }
+  a.tnode-link .tnode { cursor: pointer; }
+  .tnode .ph-marker {
+    position: absolute;
+    top: -8px; right: -8px;
+    min-width: 22px; height: 22px;
+    padding: 0 6px;
+    background: var(--accent);
+    color: var(--paper);
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: "PT Sans", sans-serif;
+    line-height: 22px;
+    text-align: center;
+    box-shadow: 0 2px 4px -1px rgba(60,40,15,.4);
+  }
+  .tnode .ph-marker.mem { background: var(--gen-5); }
+  .tnode .ph-marker.bio { background: var(--gen-3); }
+
+  .branch-title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 64px 0 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .branch-title .num {
+    font-style: normal;
+    color: var(--gold);
+    margin-right: 6px;
+  }
+  .branch-sub {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  /* list tree */
+  .ltree-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 36px 30px 36px 24px;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  .ltree-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .ltree .root-couple {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 0 18px;
+    border-bottom: 1px dashed var(--rule);
+    margin-bottom: 20px;
+  }
+  .ltree .root-couple .m { font-weight: 400; color: var(--accent); padding: 0 4px; }
+  .ltree .root-couple .meta {
+    display: block;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+  .ltree ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 22px;
+    position: relative;
+  }
+  .ltree > ul { padding-left: 4px; }
+  .ltree ul ul {
+    margin-top: 4px;
+    padding-left: 22px;
+    border-left: 1px solid rgba(180,140,80,.30);
+    margin-left: 6px;
+  }
+  .ltree li {
+    padding: 6px 0 6px 12px;
+    position: relative;
+    font-family: "PT Serif", serif;
+  }
+  .ltree ul ul li::before {
+    content: "";
+    position: absolute;
+    left: -1px; top: 16px;
+    width: 12px; height: 1px;
+    background: rgba(180,140,80,.45);
+  }
+  .ltree .branch-head {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: clamp(20px, 2.4vw, 25px);
+    font-weight: 600;
+    padding: 18px 0 8px;
+    border-top: 1px solid var(--rule);
+    margin-top: 14px;
+  }
+  .ltree > ul > li:first-child .branch-head {
+    border-top: none; margin-top: 0; padding-top: 4px;
+  }
+  .ltree > ul > li:first-child .branch-head::before { display: none; }
+  .ltree .branch-head .num {
+    display: inline-block;
+    width: 1.6em;
+    color: var(--accent);
+    font-style: normal;
+  }
+  .ltree .m { color: var(--accent); font-style: italic; margin: 0 4px; }
+  .ltree .dates {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin: 0 6px;
+    letter-spacing: .02em;
+    font-style: normal;
+  }
+  .ltree .place {
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    margin-left: 6px;
+    background: rgba(183,141,74,.12);
+    padding: 1px 6px;
+    border-radius: 2px;
+  }
+  .ltree .meta-inline {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-left: 4px;
+    font-style: italic;
+  }
+
+  a.linked-name {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 1px;
+    font-weight: 700;
+  }
+  a.linked-name:hover {
+    color: var(--accent);
+    background: rgba(122,44,67,.08);
+  }
+  sup.ref-cluster {
+    display: inline-flex;
+    gap: 3px;
+    margin-left: 4px;
+    line-height: 1;
+    vertical-align: super;
+    font-size: 75%;
+  }
+  a.ph-ref {
+    font-family: "PT Sans", sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    background: var(--accent);
+    color: var(--paper);
+    padding: 1.5px 5px;
+    border-radius: 2px;
+    text-decoration: none;
+    letter-spacing: .04em;
+  }
+  a.ph-ref:hover { background: var(--ink); }
+  a.ph-ref.bio { background: var(--gen-3); }
+  a.ph-ref.mem { background: var(--gen-5); }
+
+  /* album */
+  .album-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 28px 30px 30px;
+    margin-bottom: 52px;
+    position: relative;
+    scroll-margin-top: 72px;
+  }
+  .album-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .album-card-num {
+    position: absolute;
+    top: -14px; left: 26px;
+    background: var(--accent);
+    color: var(--paper);
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: .18em;
+    padding: 6px 12px;
+    text-transform: uppercase;
+  }
+  .album-card-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(26px, 3.2vw, 34px);
+    line-height: 1.15;
+    margin: 6px 0 4px;
+  }
+  .album-card-date {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .album-card-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 32px;
+  }
+  .album-card-body.tall .photo-frame img { max-height: 720px; }
+  .photo-frame {
+    background: #fff;
+    padding: 14px;
+    border: 1px solid rgba(180,140,80,.35);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.04);
+    text-align: center;
+  }
+  .photo-frame img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: contrast(1.02) saturate(.92);
+  }
+  .photo-frame.tree img { filter: none; max-height: none; }
+  .album-card-fields .field { margin: 0 0 18px; }
+  .album-card-fields .field-label {
+    font-family: "PT Sans", sans-serif;
+    font-size: 10.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .album-card-fields .field-body { font-size: 17px; line-height: 1.55; }
+  .album-card-source {
+    margin-top: 18px; padding-top: 14px;
+    border-top: 1px dashed var(--rule);
+    font-size: 16px; color: var(--ink-soft);
+    font-style: italic;
+  }
+  .album-card-source strong { font-style: normal; color: var(--ink); }
+  .album-card-note {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(183,141,74,.10);
+    border-left: 3px solid var(--accent);
+    font-size: 16px;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+  .album-card-note strong { font-style: normal; color: var(--ink); }
+
+  /* memorial */
+  .memorial {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 48px 44px;
+    position: relative;
+    text-align: center;
+  }
+  .memorial::before {
+    content: "";
+    position: absolute; inset: 8px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .memorial .kicker {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .32em;
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .memorial h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: clamp(34px, 4.5vw, 48px);
+    margin: 4px 0 6px;
+  }
+  .memorial .lifespan {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    color: var(--ink-soft);
+    letter-spacing: .05em;
+    margin-bottom: 36px;
+  }
+  .memorial-body {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: 40px;
+    text-align: left;
+    align-items: start;
+  }
+  .memorial-photo {
+    background: #fff;
+    padding: 14px 14px 8px;
+    border: 1px solid rgba(180,140,80,.35);
+  }
+  .memorial-photo img {
+    max-width: 100%; height: auto; display: block;
+    filter: contrast(1.02) saturate(.92);
+  }
+  .memorial-text p { margin: 0 0 12px; }
+  .memorial-text h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 22px;
+    margin: 18px 0 4px;
+    color: var(--accent);
+  }
+  .memorial-closing {
+    margin-top: 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+
+  /* bio */
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .bio-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 28px 30px;
+    position: relative;
+    scroll-margin-top: 72px;
+  }
+  .bio-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .bio-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: 28px;
+    margin: 4px 0 4px;
+    color: var(--accent);
+  }
+  .bio-card .bio-sub {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: .08em;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .bio-card h4 {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .22em;
+    color: var(--accent);
+    margin: 14px 0 4px;
+  }
+  .bio-card p { margin: 0 0 10px; font-size: 16px; line-height: 1.55; }
+
+  /* updates */
+  .info-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 28px 32px;
+    position: relative;
+  }
+  .info-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .info-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: 24px;
+    margin: 18px 0 6px;
+    color: var(--accent);
+  }
+  .info-card h3:first-of-type { margin-top: 0; }
+  .info-card ul {
+    list-style: none;
+    padding: 0; margin: 0 0 10px;
+  }
+  .info-card li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    font-size: 16px;
+  }
+  .info-card li::before {
+    content: "\2726";
+    position: absolute; left: 4px; top: 6px;
+    color: var(--gold);
+    font-size: 11px;
+  }
+
+  /* contact */
+  .contact-block {
+    text-align: center;
+    padding: 40px 24px;
+  }
+  .contact-block h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 28px;
+    margin: 0 0 14px;
+    color: var(--accent);
+  }
+  .contact-block .who {
+    font-family: "PT Serif", serif;
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+  .contact-block .lines {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+  .contact-block .lines a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+  .contact-block .footer-meta {
+    margin-top: 36px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+  }
+
+  @media (max-width: 820px) {
+    .patriarchs { grid-template-columns: 1fr; }
+    .album-card-body { grid-template-columns: 1fr; }
+    .memorial-body { grid-template-columns: 1fr; }
+    .bio-grid { grid-template-columns: 1fr; }
+    nav.top .nav-inner { padding: 10px 14px; gap: 4px 14px; }
+    nav.top .brand { width: 100%; margin-bottom: 4px; }
+    .wrap { padding: 16px 16px 60px; }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="nav-inner">
+    <span class="brand">Сандлеры из Литина</span>
+    <a href="#root-couple">Предки</a>
+    <a href="#visual-tree">Дерево</a>
+    <a href="#list-tree">Список</a>
+    <a href="#album">Фотоархив</a>
+    <a href="#memorial-naum">Памяти Наума</a>
+    <a href="#living">Современники</a>
+    <a href="#updates">Уточнения</a>
+    <a href="#contact">Контакт</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">Семейный архив &middot; мышпуха &middot; май 2026</div>
+  <h1>Сандлеры из Литина</h1>
+  <div class="subtitle">Семейное древо, фотоархив и биографические страницы семи ветвей от Мотла Сандлера и Хаи Райхер</div>
+  <div class="meta-line">Литин &middot; Москва &middot; Денвер &middot; Нью-Йорк &middot; Израиль &middot; Германия &middot; Франция</div>
+</header>
+
+<section class="major" id="root-couple">
+  <div class="section-kicker">Семейный архив &middot; корни</div>
+  <h2 class="section-title">Мотл Сандлер &middot; Хая Райхер</h2>
+  <div class="section-rule"></div>
+
+  <div class="patriarchs">
+    <a href="#motl-1940" style="text-decoration:none; color:inherit;">
+    <div class="patriarch-card">
+      <div class="patriarch-photo"><img src="photos/motl-1940.jpg" alt="Мотл Сандлер, 1940"></div>
+      <div class="patriarch-name">Мотл Сандлер</div>
+      <div class="patriarch-meta">
+        <div>мельник в Литине &middot; фото 1940</div>
+        <div>убит в Холокосте, осень 1941</div>
+      </div>
+    </div>
+    </a>
+    <a href="#khaya-1930s" style="text-decoration:none; color:inherit;">
+    <div class="patriarch-card">
+      <div class="patriarch-photo"><img src="photos/khaya-1930s.jpg" alt="Хая Райхер"></div>
+      <div class="patriarch-name">Хая Райхер</div>
+      <div class="patriarch-meta">
+        <div>жена Мотла &middot; фото ~1930-е</div>
+        <div>убита в Холокосте, 1941</div>
+      </div>
+    </div>
+    </a>
+  </div>
+
+  <div class="patriarchs-intro">
+    <p>Мотл и Хая жили в Литине Винницкой области (Украина). Мотл был мельником. У них родилось <strong>семеро детей</strong> в порядке старшинства: Яков (Янкель), Роза, Мехл (Михаил), Сруль (Исраиль), Фаня (Фрима), Бетя (Бейла, 1914-1979) и Идл.</p>
+    <p>Обвенчались <em>21 июля 1898 года</em>. <strong>Оба убиты в Холокосте в 1941 году:</strong> Хая - почти сразу после прихода оккупантов, Мотл - осенью, когда пытался уйти из Литина в зону румынской оккупации. Похоронен в братской могиле литинских евреев. До 1970-х Бетя с сёстрами приезжали в Литин поминать родителей.</p>
+    <p>Дальше - каждая из семи ветвей, фотоархив на 23 снимка, страница памяти Наума Михайловича Сандлера и краткие справки о двух ныне живущих родственниках, посвятивших себя восстановлению истории семьи.</p>
+  </div>
+</section>
+
+<section class="major" id="visual-tree">
+  <div class="section-kicker">Дерево № 1 &mdash; в коробочном стиле PDF</div>
+  <h2 class="section-title">Древо рода &mdash; обзор</h2>
+  <div class="section-lede">Семь детей Мотла и Хаи и их потомки. Цвет рамки указывает поколение; красный кружок с номером &mdash; это номер фотографии в архиве, на которой человек запечатлён. Кликните по коробке, чтобы перейти к снимку.</div>
+  <div class="section-rule"></div>
+
+  <div class="tree-legend">
+    <span class="lbl">Цвет = поколение:</span>
+    <span class="item"><span class="dot" style="background:var(--gen-2)"></span>дети Мотла</span>
+    <span class="item"><span class="dot" style="background:var(--gen-3)"></span>внуки</span>
+    <span class="item"><span class="dot" style="background:var(--gen-4)"></span>правнуки</span>
+    <span class="item"><span class="dot" style="background:var(--gen-5)"></span>праправнуки</span>
+    <span class="item"><span class="dot" style="background:var(--gen-6)"></span>поколение 6</span>
+    <span class="item"><span class="dot" style="background:var(--gen-7)"></span>поколение 7</span>
+  </div>
+
+  
+<div class="ctree">
+  <div class="root-wrap">
+    <div class="tnode root"><span class="nm">Мотл Сандлер + Хая Райхер</span><span class="alt">Литин &middot; ум. в Холокосте 1941</span></div>
+    <ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g2"><span class="ph-marker">14</span><span class="nm">Яков (Янкель)</span></div></a></li><li><div class="tnode g2"><span class="nm">Роза</span></div></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Мехл</span><span class="alt">1907/14 - 1942/43</span></div></a></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Сруль</span><span class="alt">погиб на войне</span></div></a></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Фаня</span></div></a></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Бетя</span><span class="alt">1914-1979</span></div></a></li><li><div class="tnode g2"><span class="nm">Идл</span><span class="alt">без потомков</span></div></li></ul>
+  </div>
+</div>
+
+
+  
+<div class="branch-title"><span class="num">1.</span>Яков (Янкель) Сандлер</div>
+<div class="branch-sub">Яков (Янкель) Сандлер &mdash; ветка</div>
+<div class="ctree">
+  <ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g2"><span class="ph-marker">14</span><span class="nm">Яков Сандлер</span><span class="alt">Янкель</span><span class="sp">+ Нохума Зельцер</span></div></a><ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">14</span><span class="nm">Фаня</span><span class="sp">+ Михаил Местецкий</span></div></a><ul><li><div class="tnode g4"><span class="nm">Марк</span><span class="sp">+ Валерия Алыгина</span></div><ul><li><div class="tnode g5"><span class="nm">Дмитрий</span></div></li><li><div class="tnode g5"><span class="nm">Наталья</span></div></li></ul></li><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g4"><span class="ph-marker">14</span><span class="nm">Лариса</span><span class="alt">старшая</span><span class="sp">+ Леонид Визельман</span></div></a><ul><li><div class="tnode g5"><span class="nm">Александр</span></div></li><li><div class="tnode g5"><span class="nm">Лев</span></div></li></ul></li></ul></li><li><a href="#mozya-officer" class="tnode-link"><div class="tnode g3"><span class="ph-marker">07</span><span class="nm">Мозя</span><span class="alt">Моисей, в Денвере</span><span class="sp">+ Софа Керцбург</span></div></a><ul><li><a href="#yakov-with-rita" class="tnode-link"><div class="tnode g4"><span class="ph-marker">20</span><span class="nm">Рита</span><span class="sp">+ Григорий Райтер</span></div></a><ul><li><div class="tnode g5"><span class="nm">Борис</span><span class="pl">США</span></div></li></ul></li><li><a href="#mozya-sofa-grave" class="tnode-link"><div class="tnode g4"><span class="ph-marker">22</span><span class="nm">Александр</span><span class="sp">+ Елена Полякова</span><span class="pl">окр. NY</span></div></a><ul><li><a href="#shifra-with-kids" class="tnode-link"><div class="tnode g5"><span class="ph-marker">23</span><span class="nm">Светлана Балансио</span><span class="alt">Shifra, урожд. Сандлер</span><span class="sp">+ Джеффри Балансио</span></div></a><ul><li><a href="#shifra-with-kids" class="tnode-link"><div class="tnode g6"><span class="ph-marker">23</span><span class="nm">Simone Lily Balancio</span><span class="alt">Сима</span></div></a></li><li><a href="#shifra-with-kids" class="tnode-link"><div class="tnode g6"><span class="ph-marker">23</span><span class="nm">Louis Balancio III</span><span class="alt">Луис</span></div></a></li></ul></li></ul></li></ul></li><li><a href="#sofa-redhead-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">11</span><span class="nm">Софа</span><span class="alt">рыжая</span><span class="sp">+ Исаак Савранский</span><span class="pl">Израиль</span></div></a><ul><li><a href="#old-family-clean" class="tnode-link"><div class="tnode g4"><span class="ph-marker">05</span><span class="nm">Ирина</span><span class="alt">Ира Савранская</span><span class="sp">+ Лёня Левин</span></div></a><ul><li><div class="tnode g5"><span class="nm">Яков</span></div></li><li><div class="tnode g5"><span class="nm">Яэль</span></div></li></ul></li></ul></li><li><div class="tnode g3"><span class="nm">Михаил</span><span class="sp">+ Раиса Гендлина</span></div><ul><li><div class="tnode g4"><span class="nm">Геннадий</span><span class="sp">+ Светлана</span></div><ul><li><div class="tnode g5"><span class="nm">Лиза</span></div></li><li><div class="tnode g5"><span class="nm">Леонид</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">2.</span>Роза</div>
+<div class="branch-sub">Роза &mdash; ветка</div>
+<div class="ctree">
+  <ul><li><div class="tnode g2"><span class="nm">Роза</span><span class="sp">+ Зейдл Бангик / Давид Баранович</span></div><ul><li><div class="tnode g3"><span class="nm">Арон Бангик</span><span class="alt">без потомков</span></div></li><li><div class="tnode g3"><span class="nm">Маня</span><span class="sp">+ Григорий Бронфмахер</span></div><ul><li><div class="tnode g4"><span class="nm">Анна</span><span class="sp">+ Яков Ховер</span></div><ul><li><div class="tnode g5"><span class="nm">Александр</span><span class="pl">Израиль</span></div></li><li><div class="tnode g5"><span class="nm">Майя</span><span class="sp">+ Цвика Шимон</span><span class="pl">Израиль</span></div><ul><li><div class="tnode g6"><span class="nm">Идо</span></div></li><li><div class="tnode g6"><span class="nm">Анит</span></div></li></ul></li></ul></li><li><div class="tnode g4"><span class="nm">Инна</span><span class="sp">+ Дмитрий Кранцберг</span></div><ul><li><div class="tnode g5"><span class="nm">Роман</span><span class="sp">+ Ольга</span><span class="pl">Израиль</span></div><ul><li><div class="tnode g6"><span class="nm">Шай</span></div></li><li><div class="tnode g6"><span class="nm">Ротем</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">Яков</span><span class="pl">Израиль</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">3.</span>Мехл (Михаил Матвеевич) Сандлер</div>
+<div class="branch-sub">Мехл (Михаил Матвеевич) Сандлер &mdash; ветка</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Мехл Сандлер</span><span class="alt">Михаил Матвеевич, 1907/14 - 1942/43</span><span class="sp">+ Хума (Нина) Трефняк</span></div></a><ul><li><a href="#naum-galina-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">13</span><span class="nm">Наум</span><span class="alt">1941-2026, Москва</span><span class="sp">+ Галина Филюшина</span></div></a><ul><li><a href="#naum-mikhail-ny" class="tnode-link"><div class="tnode g4"><span class="ph-marker">21</span><span class="nm">Михаил Наумович</span><span class="alt">Канада 1991, США 2013</span><span class="sp">+ Елена Волынская / Татьяна Третьякова</span></div></a><ul><li><div class="tnode g5"><span class="nm">Денис</span><span class="alt">от Елены</span><span class="sp">+ Нора Тураева</span></div><ul><li><div class="tnode g6"><span class="nm">Камила</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">Филипп</span><span class="alt">от Татьяны</span></div></li><li><div class="tnode g5"><span class="nm">Иван</span><span class="alt">от Татьяны</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">4.</span>Сруль (Исраиль) Сандлер</div>
+<div class="branch-sub">Сруль (Исраиль) Сандлер &mdash; ветка</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Сруль Сандлер</span><span class="alt">погиб на войне 1943</span><span class="sp">+ Геня Гамер</span></div></a><ul><li><a href="#manya-garik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">12</span><span class="nm">Маня</span><span class="sp">+ Гарик (Григорий) Козлин</span></div></a><ul><li><div class="tnode g4"><span class="nm">Евгения (Женя)</span><span class="sp">+ Лев Шербелис</span><span class="pl">Израиль</span></div><ul><li><div class="tnode g5"><span class="nm">Асаф Сандлер</span><span class="sp">+ Дорит</span><span class="pl">Израиль</span></div><ul><li><div class="tnode g6"><span class="nm">Саар</span></div></li></ul></li></ul></li></ul></li><li><div class="tnode g3"><span class="nm">Рита</span><span class="sp">+ Элик Райхер</span></div><ul><li><div class="tnode g4"><span class="nm">Белла</span><span class="sp">+ Стив Коэн</span><span class="pl">США</span></div><ul><li><div class="tnode g5"><span class="nm">Лэни</span></div></li><li><div class="tnode g5"><span class="nm">Джейсон</span></div></li></ul></li><li><div class="tnode g4"><span class="nm">Светлана</span><span class="pl">США</span></div></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">5.</span>Фаня</div>
+<div class="branch-sub">Фаня &mdash; ветка</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Фаня</span><span class="sp">+ Ицик (Исаак) Шомштейн</span></div></a><ul><li><div class="tnode g3"><span class="nm">Миля Шомштейн</span><span class="sp">+ Людмила Сидлер</span></div><ul><li><div class="tnode g4"><span class="nm">Марина</span><span class="sp">+ Анатолий Ильчук</span><span class="pl">Германия</span></div><ul><li><div class="tnode g5"><span class="nm">Елена</span><span class="sp">+ Кристиан</span><span class="pl">Германия</span></div><ul><li><div class="tnode g6"><span class="nm">Артур</span></div></li><li><div class="tnode g6"><span class="nm">Ноа</span></div></li></ul></li></ul></li></ul></li><li><div class="tnode g3"><span class="nm">Анчель (Алик)</span><span class="sp">+ Ирина Фридман</span></div><ul><li><div class="tnode g4"><span class="nm">Алла</span><span class="sp">+ Женя Меирсон</span><span class="pl">Израиль</span></div><ul><li><div class="tnode g5"><span class="nm">Ноа</span></div></li><li><div class="tnode g5"><span class="nm">Дана</span></div></li></ul></li><li><div class="tnode g4"><span class="nm">Игорь Шомштейн</span><span class="sp">+ Инна</span><span class="pl">США</span></div><ul><li><div class="tnode g5"><span class="nm">Итан</span></div></li><li><div class="tnode g5"><span class="nm">Арон</span></div></li><li><div class="tnode g5"><span class="nm">Джол</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">6.</span>Бетя</div>
+<div class="branch-sub">Бетя &mdash; ветка</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Бетя</span><span class="alt">1914-1979</span><span class="sp">+ Шико Липовецкий / Моисей Шестак</span></div></a><ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">14</span><span class="nm">Миля Липовецкий</span><span class="alt">от Шико</span><span class="sp">+ Рита (Галина) Гуральник</span></div></a><ul><li><div class="tnode g4"><span class="nm">Марина</span><span class="sp">+ Александр Друян</span></div><ul><li><div class="tnode g5"><span class="nm">Батхен</span><span class="sp">+ Раз Фельдман</span><span class="pl">Израиль</span></div><ul><li><div class="tnode g6"><span class="nm">ребёнок</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">Ронен</span><span class="pl">Израиль</span></div></li><li><div class="tnode g5"><span class="nm">Итай</span><span class="pl">Израиль</span></div></li></ul></li><li><div class="tnode g4"><span class="nm">Ирина</span><span class="sp">+ Леонид Горбаковский</span><span class="pl">Израиль</span></div></li></ul></li><li><a href="#manya-garik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">12</span><span class="nm">Геня Бейдер</span><span class="alt">мать Александра</span><span class="sp">+ Борис Бейдер</span><span class="pl">Германия</span></div></a><ul><li><a href="#bio-aleksandr-beider" class="tnode-link"><div class="tnode g4"><span class="ph-marker bio">био</span><span class="nm">Александр Бейдер</span><span class="alt">лингвист, источник фото</span><span class="pl">Франция</span></div></a><ul><li><div class="tnode g5"><span class="nm">Соня</span><span class="sp">+ Этьен Эрнинг</span></div><ul><li><div class="tnode g6"><span class="nm">Артур</span></div></li><li><div class="tnode g6"><span class="nm">Эли</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">Катя</span><span class="sp">+ Антуан Шлафмыц</span></div><ul><li><div class="tnode g6"><span class="nm">Елена</span></div></li></ul></li></ul></li><li><div class="tnode g4"><span class="nm">Маша (Мария)</span><span class="sp">+ Саша Михалев</span><span class="pl">Германия</span></div><ul><li><div class="tnode g5"><span class="nm">Макс Бейдер</span></div></li><li><div class="tnode g5"><span class="nm">Элиза Бейдер</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">7.</span>Идл Сандлер</div>
+<div class="branch-sub">Идл Сандлер &mdash; ветка</div>
+<div class="ctree">
+  <ul><li><div class="tnode g2"><span class="nm">Идл Сандлер</span><span class="alt">без потомков</span></div></li></ul>
+</div>
+
+
+</section>
+
+<section class="major" id="list-tree">
+  <div class="section-kicker">Дерево № 2 &mdash; в виде списка</div>
+  <h2 class="section-title">Древо списком</h2>
+  <div class="section-lede">Та же родословная в виде иерархического списка. Имена с <em>подчёркиванием</em> кликабельны; красные значки рядом &mdash; номера фотографий, синие &laquo;био&raquo; &mdash; биографические карточки, оранжевые &#10026; &mdash; страница памяти.</div>
+  <div class="section-rule"></div>
+
+<div class="ltree-card">
+<div class="ltree">
+
+  <div class="root-couple">
+    <a href="#motl-1940" class="linked-name">Мотл (Мордко) Сандлер</a><sup class="ref-cluster"><a href="#motl-1940" class="ph-ref" title="фото 1">01</a><a href="#old-family-damaged" class="ph-ref" title="фото 3">03</a><a href="#old-family-clean" class="ph-ref" title="фото 5">05</a></sup> <span class="m">+ <a href="#khaya-1930s" class="linked-name">Хая (Шейна Хая) Райхер</a><sup class="ref-cluster"><a href="#khaya-1930s" class="ph-ref" title="фото 2">02</a></sup></span>
+    <span class="meta">Литин (Винницкая обл.), мельник &middot; обвенчались 21 июля 1898 &middot; оба убиты в Холокосте, 1941</span>
+  </div>
+
+  <ul>
+    <li>
+      <div class="branch-head">
+        <span class="num">1.</span> <a href="#tamara-edik-wedding" class="linked-name">Яков (Янкель) Сандлер</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="фото 14">14</a><a href="#yakov-nokhuma-portrait" class="ph-ref" title="фото 17">17</a><a href="#fifty-year-anniversary" class="ph-ref" title="фото 18">18</a><a href="#yakov-with-rita" class="ph-ref" title="фото 20">20</a></sup> <span class="m">+ <a href="#sofa-redhead-wedding" class="linked-name">Нохума (Наташа) Зельцер</a><sup class="ref-cluster"><a href="#sofa-redhead-wedding" class="ph-ref" title="фото 11">11</a><a href="#tamara-edik-wedding" class="ph-ref" title="фото 14">14</a><a href="#yakov-nokhuma-portrait" class="ph-ref" title="фото 17">17</a><a href="#fifty-year-anniversary" class="ph-ref" title="фото 18">18</a></sup></span>
+      </div>
+      <ul>
+        <li><a href="#tamara-edik-wedding" class="linked-name">Фаня Местецкая</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="фото 14">14</a><a href="#fanya-mestetskaya-husband" class="ph-ref" title="фото 19">19</a></sup> <span class="m">+ <a href="#tamara-edik-wedding" class="linked-name">Михаил Местецкий</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="фото 14">14</a><a href="#fanya-mestetskaya-husband" class="ph-ref" title="фото 19">19</a></sup></span>
+          <ul>
+            <li>Марк Местецкий <span class="m">+ Валерия Алыгина</span>
+              <ul><li>Дмитрий</li><li>Наталья</li></ul>
+            </li>
+            <li><a href="#tamara-edik-wedding" class="linked-name">Лариса</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="фото 14">14</a></sup> <span class="m">+ Леонид Визельман</span>
+              <ul><li>Александр</li><li>Лев</li></ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#mozya-officer" class="linked-name">Мозя (Моисей) Сандлер</a><sup class="ref-cluster"><a href="#mozya-officer" class="ph-ref" title="фото 7">07</a><a href="#mozya-wedding" class="ph-ref" title="фото 8">08</a><a href="#mozya-wedding-duplicate" class="ph-ref" title="фото 9">09</a><a href="#mozya-sofa-grave" class="ph-ref" title="фото 22">22</a></sup> <span class="dates">01.01.1930 - 07.12.2017, Денвер</span> <span class="m">+ <a href="#mozya-wedding" class="linked-name">Софа Керцбург</a><sup class="ref-cluster"><a href="#mozya-wedding" class="ph-ref" title="фото 8">08</a><a href="#mozya-wedding-duplicate" class="ph-ref" title="фото 9">09</a><a href="#tamara-edik-wedding" class="ph-ref" title="фото 14">14</a><a href="#mozya-sofa-grave" class="ph-ref" title="фото 22">22</a></sup></span> <span class="dates">19.09.1932 - 27.11.2019</span>
+          <ul>
+            <li><a href="#yakov-with-rita" class="linked-name">Рита Райтер</a><sup class="ref-cluster"><a href="#yakov-with-rita" class="ph-ref" title="фото 20">20</a></sup> <span class="m">+ Григорий Райтер</span>
+              <ul><li>Борис <span class="place">США</span></li></ul>
+            </li>
+            <li><a href="#mozya-sofa-grave" class="linked-name">Александр Сандлер</a><sup class="ref-cluster"><a href="#mozya-sofa-grave" class="ph-ref" title="фото 22">22</a></sup> <span class="m">+ Елена Полякова</span> <span class="place">окрестности Нью-Йорка</span>
+              <ul>
+                <li><a href="#shifra-with-kids" class="linked-name">Шифра (Светлана) Балансио</a><sup class="ref-cluster"><a href="#shifra-with-kids" class="ph-ref" title="фото 23">23</a><a href="#bio-shifra" class="ph-ref bio" title="биография">био</a></sup> <span class="m">+ Джеффри Балансио</span>
+                  <ul>
+                    <li><a href="#shifra-with-kids" class="linked-name">Simone Lily Balancio</a><sup class="ref-cluster"><a href="#shifra-with-kids" class="ph-ref" title="фото 23">23</a></sup></li>
+                    <li><a href="#shifra-with-kids" class="linked-name">Louis Balancio III</a><sup class="ref-cluster"><a href="#shifra-with-kids" class="ph-ref" title="фото 23">23</a></sup></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#sofa-redhead-wedding" class="linked-name">Софа Сандлер &amp;laquo;рыжая&amp;raquo;</a><sup class="ref-cluster"><a href="#sofa-redhead-wedding" class="ph-ref" title="фото 11">11</a><a href="#manya-garik-wedding" class="ph-ref" title="фото 12">12</a><a href="#tamara-edik-wedding" class="ph-ref" title="фото 14">14</a></sup> <span class="m">+ <a href="#sofa-redhead-wedding" class="linked-name">Исаак Савранский</a><sup class="ref-cluster"><a href="#sofa-redhead-wedding" class="ph-ref" title="фото 11">11</a></sup></span> <span class="place">Израиль</span>
+          <ul>
+            <li><a href="#old-family-clean" class="linked-name">Ирина (Ира) Савранская</a><sup class="ref-cluster"><a href="#old-family-clean" class="ph-ref" title="фото 5">05</a></sup> <span class="m">+ Лёня Левин</span>
+              <ul><li>Яков</li><li>Яэль</li></ul>
+            </li>
+          </ul>
+        </li>
+        <li>Михаил Сандлер <span class="m">+ Раиса Гендлина</span>
+          <ul>
+            <li>Геннадий <span class="m">+ Светлана</span>
+              <ul><li>Лиза</li><li>Леонид</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">2.</span> Роза <span class="m">+ Зейдл Бангик / Давид Баранович</span>
+      </div>
+      <ul>
+        <li>Арон Бангик <span class="meta-inline">(без потомков)</span></li>
+        <li>Маня <span class="m">+ Григорий Бронфмахер</span>
+          <ul>
+            <li>Анна <span class="m">+ Яков Ховер</span>
+              <ul>
+                <li>Александр <span class="place">Израиль</span></li>
+                <li>Майя <span class="m">+ Цвика Шимон</span> <span class="place">Израиль</span>
+                  <ul><li>Идо</li><li>Анит</li></ul>
+                </li>
+              </ul>
+            </li>
+            <li>Инна <span class="m">+ Дмитрий Кранцберг</span>
+              <ul>
+                <li>Роман <span class="m">+ Ольга</span> <span class="place">Израиль</span>
+                  <ul><li>Шай</li><li>Ротем</li></ul>
+                </li>
+                <li>Яков <span class="place">Израиль</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">3.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">Мехл (Михаил Матвеевич) Сандлер</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="фото 6">06</a></sup> <span class="dates">1907/14 - 1942/43, погиб на войне</span> <span class="m">+ <a href="#naum-galina-wedding" class="linked-name">Хума (Нина) Трефняк</a><sup class="ref-cluster"><a href="#naum-galina-wedding" class="ph-ref" title="фото 13">13</a></sup></span>
+        <span class="meta-inline">Хума ум. в Москве 1977/78</span>
+      </div>
+      <ul>
+        <li><a href="#naum-galina-wedding" class="linked-name">Наум Михайлович</a><sup class="ref-cluster"><a href="#naum-galina-wedding" class="ph-ref" title="фото 13">13</a><a href="#naum-mikhail-ny" class="ph-ref" title="фото 21">21</a><a href="#memorial-naum" class="ph-ref mem" title="памяти">&#10026;</a></sup> <span class="dates">09.01.1941 - 27.01.2026, Москва</span> <span class="m">+ <a href="#naum-galina-wedding" class="linked-name">Галина Фёдоровна Филюшина</a><sup class="ref-cluster"><a href="#naum-galina-wedding" class="ph-ref" title="фото 13">13</a></sup></span>
+          <ul>
+            <li><a href="#naum-mikhail-ny" class="linked-name">Михаил Наумович Сандлер</a><sup class="ref-cluster"><a href="#naum-mikhail-ny" class="ph-ref" title="фото 21">21</a></sup> <span class="place">Канада 1991 → США 2013</span>
+              <ul>
+                <li><em>от Елены Волынской:</em> Денис <span class="m">+ Нора (Гульнора) Тураева</span>
+                  <ul><li>Камила</li></ul>
+                </li>
+                <li><em>от Татьяны Третьяковой:</em> Филипп, Иван</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">4.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">Сруль (Исраиль) Сандлер</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="фото 6">06</a></sup> <span class="dates">1904 - погиб под Запорожьем 1943</span> <span class="m">+ Геня Гамер</span>
+      </div>
+      <ul>
+        <li><a href="#manya-garik-wedding" class="linked-name">Маня Сандлер</a><sup class="ref-cluster"><a href="#manya-garik-wedding" class="ph-ref" title="фото 12">12</a></sup> <span class="m">+ <a href="#manya-garik-wedding" class="linked-name">Гарик (Григорий) Козлин</a><sup class="ref-cluster"><a href="#manya-garik-wedding" class="ph-ref" title="фото 12">12</a></sup></span>
+          <ul>
+            <li>Евгения (Женя) <span class="m">+ Лев Шербелис</span> <span class="place">Израиль</span>
+              <ul>
+                <li>Асаф Сандлер <span class="m">+ Дорит Сандлер</span> <span class="place">Израиль</span>
+                  <ul><li>Саар Сандлер</li></ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Рита <span class="m">+ Элик Райхер</span>
+          <ul>
+            <li>Белла <span class="m">+ Стив Коэн</span> <span class="place">США</span>
+              <ul><li>Лэни</li><li>Джейсон</li></ul>
+            </li>
+            <li>Светлана <span class="place">США</span></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">5.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">Фаня (Фрима)</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="фото 6">06</a></sup> <span class="m">+ <a href="#betya-mehl-fanya-prewar" class="linked-name">Ицик (Исаак) Шомштейн</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="фото 6">06</a></sup></span>
+      </div>
+      <ul>
+        <li>Миля Шомштейн <span class="m">+ Людмила Сидлер</span>
+          <ul>
+            <li>Марина <span class="m">+ Анатолий Ильчук</span> <span class="place">Германия</span>
+              <ul>
+                <li>Елена <span class="m">+ Кристиан</span> <span class="place">Германия</span>
+                  <ul><li>Артур</li><li>Ноа</li></ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Анчель (Алик) <span class="m">+ Ирина Фридман</span>
+          <ul>
+            <li>Алла <span class="m">+ Женя Меирсон</span> <span class="place">Израиль</span>
+              <ul><li>Ноа</li><li>Дана</li></ul>
+            </li>
+            <li>Игорь Шомштейн <span class="m">+ Инна</span> <span class="place">США</span>
+              <ul><li>Итан</li><li>Арон</li><li>Джол</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">6.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">Бетя (Бейла)</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="фото 6">06</a></sup> <span class="dates">1914 - 1979</span> <span class="m">+ Шико Липовецкий / Моисей Шестак</span>
+      </div>
+      <ul>
+        <li><a href="#tamara-edik-wedding" class="linked-name">Миля Липовецкий</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="фото 14">14</a><a href="#fifty-year-anniversary" class="ph-ref" title="фото 18">18</a></sup> <span class="m">+ Рита (Галина) Гуральник</span>
+          <ul>
+            <li>Марина <span class="m">+ Александр Друян</span>
+              <ul>
+                <li>Батхен <span class="m">+ Раз Фельдман</span> <span class="place">Израиль</span>
+                  <ul><li>ребёнок</li></ul>
+                </li>
+                <li>Ронен <span class="place">Израиль</span></li>
+                <li>Итай <span class="place">Израиль</span></li>
+              </ul>
+            </li>
+            <li>Ирина <span class="m">+ Леонид Горбаковский</span> <span class="place">Израиль</span></li>
+          </ul>
+        </li>
+        <li><a href="#manya-garik-wedding" class="linked-name">Геня Бейдер</a><sup class="ref-cluster"><a href="#manya-garik-wedding" class="ph-ref" title="фото 12">12</a></sup> <span class="m">+ Борис Бейдер</span> <span class="place">Германия</span>
+          <ul>
+            <li><a href="#bio-aleksandr-beider" class="linked-name">Александр Бейдер</a><sup class="ref-cluster"><a href="#bio-aleksandr-beider" class="ph-ref bio" title="биография">био</a></sup> <span class="place">Франция, лингвист-ономаст</span>
+              <ul>
+                <li>Соня <span class="m">+ Этьен Эрнинг</span> <ul><li>Артур</li><li>Эли</li></ul></li>
+                <li>Катя <span class="m">+ Антуан Шлафмыц</span> <ul><li>Елена</li></ul></li>
+              </ul>
+            </li>
+            <li>Маша (Мария) <span class="m">+ Саша Михалев</span> <span class="place">Германия</span>
+              <ul><li>Макс Бейдер</li><li>Элиза Бейдер</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">7.</span> Идл Сандлер <span class="meta-inline">(без потомков)</span>
+      </div>
+    </li>
+
+  </ul>
+
+</div>
+</div>
+</section>
+
+<section class="major" id="album">
+  <div class="section-kicker">Фотоархив &middot; 23 снимка + рукописное древо</div>
+  <h2 class="section-title">Фотоархив</h2>
+  <div class="section-lede">Все фотографии в порядке от старейших к более поздним. Каждая карточка имеет свой якорь &mdash; на эти якоря ссылаются имена в двух деревьях выше.</div>
+  <div class="section-rule"></div>
+  
+<article class="album-card" id="motl-1940">
+  <span class="album-card-num">Фото 01</span>
+  <h3 class="album-card-title">Мотл Сандлер - 1940</h3>
+  <div class="album-card-date">1940 год</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/motl-1940.jpg" alt="Мотл Сандлер - 1940" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>Мотл (Матвей) Сандлер</strong> - прадед Михаила Наумовича Сандлера и общий предок всех потомков рода. Мельник в Литине (Винницкая обл., Украина).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">1940 год - за год до начала войны и его гибели.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Страница из альбома Кати Бейдер. Через <strong>Геню Бейдер</strong> (мать Александра Бейдера) - от старших родственников.</div>
+      <div class="album-card-note">Гибель в Холокосте, осень 1941. Мотл пытался уйти из оккупированного Литина в зону румынской оккупации (там евреев не убивали) - не дошёл. Похоронен в братской могиле литинских евреев. До 1970-х Бетя с сёстрами приезжали туда поминать родителей.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="khaya-1930s">
+  <span class="album-card-num">Фото 02</span>
+  <h3 class="album-card-title">Хая Райхер</h3>
+  <div class="album-card-date">вероятно 1930-е</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/khaya-1930s.jpg" alt="Хая Райхер" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>Хая Райхер</strong>, жена Мотла Сандлера. Мать всех семерых детей: Якова, Идл, Бети, Фани, Сруля, Мехла, Розы. Прабабка Михаила Наумовича Сандлера.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Точная дата неизвестна. Вероятно, 1930-е годы.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Единственный известный портрет. Найден <strong>Александром Бейдером</strong> в семейных бумагах.</div>
+      <div class="album-card-note">Гибель в Холокосте, лето-осень 1941. По рассказам Бети: Хая вышла из дома, и кто-то - то ли немец, то ли местный полицай - её застрелил. Почти сразу после прихода оккупантов.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="old-family-damaged">
+  <span class="album-card-num">Фото 03</span>
+  <h3 class="album-card-title">Старая семейная фотография (потёртая копия)</h3>
+  <div class="album-card-date">1920-е - 1930-е</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/old-family-damaged.jpg" alt="Старая семейная фотография (потёртая копия)" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">По центру - пожилой мужчина с усами, бородой и в кепке. <strong>По одежде, кепке и характерному галстуку - это, скорее всего, Мотл Сандлер собственной персоной</strong> (сравните с фото №1 «Мотл, 1940» в более позднем возрасте). Слева - молодой мужчина в галстуке, сзади-слева - девочка-подросток с каре, справа - мальчик и молодая женщина. Если центральный - действительно Мотл, то вокруг него четверо из его семи детей.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">1920-е - 1930-е гг.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото прислал <strong>Александр Сандлер</strong> (13 мая 18:25) без подписи - в продолжение разговора о фото 50-летия Янкеля и Нохумы.</div>
+      <div class="album-card-note">Это та же фотография, что и Фото №5 ниже - там у Ирины Левин из Израиля сохранилась куда более чистая копия, на которой видны лица.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="old-family-children">
+  <span class="album-card-num">Фото 04</span>
+  <h3 class="album-card-title">Девочка, женщина и ребёнок</h3>
+  <div class="album-card-date">1920-е - 1930-е</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/old-family-children.jpg" alt="Девочка, женщина и ребёнок" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Слева - девочка-подросток с большим бантом, в центре - женщина средних лет с длинной бусиной/цепью, справа - маленький ребёнок в шапочке. Возможно, Хая Райхер с детьми или одна из её сестёр - требует уточнения.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Сильно повреждённый отпечаток того же периода и, скорее всего, из того же альбома. Стилистика портретного ателье начала XX века.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото прислал <strong>Александр Сандлер</strong> (13 мая 18:25) вместе с предыдущим снимком.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="old-family-clean">
+  <span class="album-card-num">Фото 05</span>
+  <h3 class="album-card-title">Семейный портрет (чистая копия из Израиля)</h3>
+  <div class="album-card-date">1920-е - 1930-е</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/old-family-clean.jpg" alt="Семейный портрет (чистая копия из Израиля)" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Слева - молодой мужчина в костюме с галстуком; сзади-слева - девочка-подросток с тёмным каре; в центре - пожилой мужчина с усами, бородой и в кепке (<strong>предположительно Мотл Сандлер</strong>); справа - мальчик и молодая женщина. Старшее поколение Сандлеров/Райхеров; конкретные имена остальных пока ждут подтверждения.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Та же сцена, что и фото №3 выше, но копия Ирины Левин из Израиля сохранилась гораздо лучше: без разрывов и трещин, лица читаются. (Снимок повёрнут на 90° по часовой - оригинал был отсканирован боком.)</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото прислала <strong>Ирина (Ирена) Левин</strong> (14 мая 13:10) - внучка Якова Сандлера через дочь Софу (рыжую), живёт в Израиле, замужем за Лёней Левиным.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="betya-mehl-fanya-prewar">
+  <span class="album-card-num">Фото 06</span>
+  <h3 class="album-card-title">Бетя, Мехл и Фаня. До войны</h3>
+  <div class="album-card-date">1920-е - начало 1930-х</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/betya-mehl-fanya-prewar.jpg" alt="Бетя, Мехл и Фаня. До войны" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Сидят слева направо: <strong>Бетя Сандлер</strong> (1914-1979) - <strong>Мехл (Михаил Матвеевич) Сандлер</strong> - <strong>Фаня Сандлер</strong> (в замужестве Шомштейн). Стоит сзади: молодой мужчина - личность под вопросом. Скорее всего, либо <strong>Сруль Сандлер</strong> (брат, погиб на войне), либо <strong>Исаак Шомштейн</strong> (муж Фани).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Ориентировочно 1920-е - начало 1930-х гг.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span><strong>Александр Бейдер</strong>, февраль 2026.</div>
+      <div class="album-card-note"><strong>Главное на этом снимке:</strong> впервые в архиве - лицо Михаила Матвеевича Сандлера, отца Наума Михайловича. До 2026 года в семье Наума не было ни одной фотографии его отца.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-officer">
+  <span class="album-card-num">Фото 07</span>
+  <h3 class="album-card-title">Мозя Сандлер - офицер Советской армии</h3>
+  <div class="album-card-date">конец 1940-х - 1950-е</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-officer.jpg" alt="Мозя Сандлер - офицер Советской армии" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>Мозя (Моисей Яковлевич) Сандлер</strong> - сын Якова (Янкеля), брат Фани, Софы и Михаила. Дядя Михаила Наумовича по линии Якова. В форме офицера Советской армии.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Ориентировочно конец 1940-х - 1950-е гг.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Семейный архив, май 2026.</div>
+      <div class="album-card-note">Жил и был похоронен в Денвере. Через его потомков род Сандлеров продолжается в США: сын Алекс Сандлер с женой Леной Поляковой - под Нью-Йорком, их дочь Шифра Балансио и внуки Simone Lily и Louis III.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-wedding">
+  <span class="album-card-num">Фото 08</span>
+  <h3 class="album-card-title">Свадебный портрет Мози и Софы</h3>
+  <div class="album-card-date">1 сентября 1955</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-wedding.jpg" alt="Свадебный портрет Мози и Софы" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>Мозя (Моисей) Сандлер</strong> (01.01.1930 - 07.12.2017) - сын Якова и Нохумы, и его жена <strong>Софа Керцбург</strong> (19.09.1932 - 27.11.2019). Впоследствии переехали в Денвер. Их сын - Александр Сандлер, дочь - Рита.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">День регистрации брака. Жених - в форме офицера Советской Армии.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото прислала <strong>Шифра (Светлана) Балансио</strong>, внучка Мози и Софы (13 мая 17:21): «Married September 1 1955».</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-wedding-duplicate">
+  <span class="album-card-num">Фото 09</span>
+  <h3 class="album-card-title">Свадебный портрет Мози и Софы (другая копия)</h3>
+  <div class="album-card-date">1 сентября 1955</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-wedding-duplicate.jpg" alt="Свадебный портрет Мози и Софы (другая копия)" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>Мозя (Моисей) Сандлер</strong> в офицерской форме и <strong>Софа Керцбург</strong>.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">То же свадебное фото, что и фото №8, - отсканирована вторая копия.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Архив <strong>Александра Сандлера</strong> (14 мая 14:00).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="beach-sochi-1960">
+  <span class="album-card-num">Фото 10</span>
+  <h3 class="album-card-title">На море - Сочи, 26 июля 1960</h3>
+  <div class="album-card-date">26 июля 1960</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/beach-sochi-1960.jpg" alt="На море - Сочи, 26 июля 1960" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Молодая пара из рода Сандлеров; точная идентификация в чате не закреплена. По возрасту и стилю - поколение детей Якова и Нохумы.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Курортная съёмка на каменистом валуне в воде. На отпечатке справа внизу - рукописная надпись «Сочи 26.VII.60».</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото из архива <strong>Александра Сандлера</strong> (14 мая 13:58), переснято с альбомного листа.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="sofa-redhead-wedding">
+  <span class="album-card-num">Фото 11</span>
+  <h3 class="album-card-title">Свадьба Софы (рыжей) и Исаака Савранского</h3>
+  <div class="album-card-date">середина 1960-х</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/sofa-redhead-wedding.jpg" alt="Свадьба Софы (рыжей) и Исаака Савранского" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Невеста - <strong>Софа Сандлер «рыжая»</strong>, дочь Якова и Нохумы, жених - <strong>Исаак Савранский</strong>. После свадьбы Софа и Исаак уехали в Израиль; их дочь - Ирина Савранская (Левин). На заднем плане за Софой - её мать, <strong>Нохума (Натаsha)</strong>.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Регистрация брака во Дворце бракосочетаний (видны колонны и интерьер советского ЗАГСа). Невеста - с букетом и фатой, в белом костюме, причёска «бабетта».</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Атрибуция: <strong>Александр Сандлер</strong> (13 мая 18:29) - «Софа рыжая». Натаsha сзади опознали Наталья, Лариса и Марк Местецкие.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="manya-garik-wedding">
+  <span class="album-card-num">Фото 12</span>
+  <h3 class="album-card-title">Свадьба Мани и Гарика Козлиных</h3>
+  <div class="album-card-date">конец 1960-х</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/manya-garik-wedding.jpg" alt="Свадьба Мани и Гарика Козлиных" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Невеста - <strong>Маня Сандлер</strong> (дочь Сруля, погибшего на фронте в 1943), жених - <strong>Гарик (Григорий) Козлин</strong>. Их дочь - Женя Сандлер (Шербелис), сейчас в Израиле. Рядом, по подсказке Жени: «справа от мамы стоит <strong>Геня Бейдер</strong> (мать Александра Бейдера), а слева от папы - <strong>Софа</strong> (рыжая)».</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Свадебная съёмка в зале ЗАГСа с люстрой и узорчатым ковром.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Прислала и атрибутировала <strong>Женя Сандлер</strong> (14 мая 13:02-13:04): «Это на свадьбе моих родителей». Александр Бейдер подтвердил.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="naum-galina-wedding">
+  <span class="album-card-num">Фото 13</span>
+  <h3 class="album-card-title">Свадьба Наума и Галины - 22 августа 1964, Москва</h3>
+  <div class="album-card-date">22 августа 1964</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/naum-galina-wedding.jpg" alt="Свадьба Наума и Галины - 22 августа 1964, Москва" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Слева направо: 1) <strong>Наум Михайлович Сандлер</strong> - жених; 2) <strong>Хума «Нина» Трефняк-Сандлер</strong> - мать жениха, бабушка Михаила по отцу; 3) <strong>Галина Фёдоровна Филюшина</strong> - невеста; 4) <strong>Анастасия Николаевна Филюшина</strong> (в дев. Елисеева) - мать невесты; 5) <strong>Фёдор Егорович Филюшин</strong> - отец невесты.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">22 августа 1964 года, Москва.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Домашний архив <strong>Михаила Наумовича Сандлера</strong>.</div>
+      <div class="album-card-note"><strong>Главное:</strong> единственное известное фото Хумы (Нины) Трефняк, матери Наума. На одном снимке - обе семьи: Сандлеры (через Хуму) и Филюшины-Елисеевы. Хума скончалась в Москве в 1977 или 1978 году.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="tamara-edik-wedding">
+  <span class="album-card-num">Фото 14</span>
+  <h3 class="album-card-title">Свадьба Тамары Липовецкой и Эдика Табакина - ~1964, Москва</h3>
+  <div class="album-card-date">~1964, Москва</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/tamara-edik-wedding.jpg" alt="Свадьба Тамары Липовецкой и Эдика Табакина - ~1964, Москва" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Невеста - <strong>Тамара Липовецкая</strong> (дочь Хаима / Ефима Липовецкого). Жених - <strong>Эдик Табакин</strong>.<br><br><strong>«Клан Сандлеров» на снимке:</strong> <strong>Миля Липовецкий</strong> (дядя Александра Бейдера), <strong>Лариса</strong> (старшая дочь Фани), <strong>Софа Керцбург</strong> (жена Мози), <strong>Софа Сандлер</strong> («Софа рыжая», сестра Мози), <strong>Фаня Сандлер</strong>, <strong>Миша Местецкий</strong> (муж Фани), <strong>Нохума Зельцер</strong>, <strong>Яков (Яша) Сандлер</strong>, <strong>Эмма Липовецкая</strong> (сестра невесты), <strong>Марик Индурский</strong> (друг семьи).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">~1964 г., Москва.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Идентификация: <strong>Лариса + Александр Бейдер</strong>.</div>
+      <div class="album-card-note">Редкий групповой снимок, на котором сразу несколько ветвей рода в одном кадре.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mother-dacha">
+  <span class="album-card-num">Фото 15</span>
+  <h3 class="album-card-title">На прогулке в лесу</h3>
+  <div class="album-card-date">конец 1950-х - начало 1960-х</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mother-dacha.jpg" alt="На прогулке в лесу" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Молодая женщина с улыбкой держит на руках маленького мальчика в кепке; рядом - девочка постарше в светлой кофточке с воротничком. Точные имена пока не закреплены.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Снимок на лесной дорожке (вероятно, дача под Москвой). Тёплое, бытовое, не парадное фото.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото из архива <strong>Александра Сандлера</strong> (14 мая 13:58).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="two-men-tree">
+  <span class="album-card-num">Фото 16</span>
+  <h3 class="album-card-title">Двое молодых под цветущим деревом</h3>
+  <div class="album-card-date">1960-е - 1970-е</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/two-men-tree.jpg" alt="Двое молодых под цветущим деревом" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Двое молодых мужчин из родни - вероятно, родственники или друзья. Точные имена не закреплены в чате.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Летний снимок на природе: цветущий шиповник или яблоня позади, двое мужчин сидят в траве в белых рубашках.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото из архива <strong>Александра Сандлера</strong> (14 мая 13:58).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="yakov-nokhuma-portrait">
+  <span class="album-card-num">Фото 17</span>
+  <h3 class="album-card-title">Янкель и Нохума - парадный портрет</h3>
+  <div class="album-card-date">1970-е</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/yakov-nokhuma-portrait.jpg" alt="Янкель и Нохума - парадный портрет" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>Яков (Янкель) Сандлер</strong> + <strong>Нохума (Наташа) Зельцер</strong> - дед и бабушка Александра Сандлера, Шифры, Жени Сандлер (через Сруля), Марика Местецкого, Ирины Савранской и многих других. Янкель - старший сын Мотла Сандлера.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Парадная домашняя съёмка пожилой супружеской пары.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото из архива <strong>Александра Сандлера</strong> (14 мая 13:58). Те же лица, что в центре фото 50-летия.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="fifty-year-anniversary">
+  <span class="album-card-num">Фото 18</span>
+  <h3 class="album-card-title">50 лет со дня регистрации брака деда Яши и бабы Наташи</h3>
+  <div class="album-card-date">примерно конец 1970-х</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/fifty-year-anniversary.jpg" alt="50 лет со дня регистрации брака деда Яши и бабы Наташи" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>В нижнем-левом углу сидит Миля Липовецкий</strong> (сын тёти Бети, племянник Якова) - подтверждение от Александра Сандлера и Марка Местецкого. В центре - <strong>Нохума</strong> в шали; справа от неё - <strong>Яков (Янкель)</strong>. Стоящий сзади мужчина и женщина справа - другие члены рода.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Юбилейный портрет - 50 лет с регистрации брака Якова (Янкеля) Сандлера и Нохумы (Натаси) Зельцер.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Атрибуция: <strong>Александр Сандлер</strong> (13 мая 18:17): «Это как раз та фотография спустя 50 лет регистрации деда Яши и баба Наташи». Уточнение по Миле - Александр Сандлер, Марк Местецкий.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="fanya-mestetskaya-husband">
+  <span class="album-card-num">Фото 19</span>
+  <h3 class="album-card-title">Фаня Местецкая с мужем</h3>
+  <div class="album-card-date">1970-е</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/fanya-mestetskaya-husband.jpg" alt="Фаня Местецкая с мужем" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>Фаня (Сандлер) Местецкая</strong> - старшая дочь Якова и Нохумы - и её муж <strong>Михаил Местецкий</strong>. Их дети - Марк Местецкий и Лариса Визельман (Местецкая).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Парный портрет - крупный план мужа и жены, домашняя обстановка.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Идентификация: <strong>Александр Сандлер</strong> (15 мая): «Скорее всего Фаня Местецкая с мужем».</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="yakov-with-rita">
+  <span class="album-card-num">Фото 20</span>
+  <h3 class="album-card-title">Яков с внуками - Рита Райтер справа</h3>
+  <div class="album-card-date">1970-е</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/yakov-with-rita.jpg" alt="Яков с внуками - Рита Райтер справа" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">В центре - <strong>Яков Сандлер</strong>. Справа от него (крайняя справа) - <strong>Рита Райтер</strong> (урожд. Сандлер), дочь Мози и Софы, внучка Якова. Остальные двое - мальчик слева и девочка-подросток в платье с цветочным узором - другие внуки или родственники, имена пока не закреплены.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Семейный портрет дома на фоне ковра.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Идентификация: <strong>Александр Сандлер</strong> (15 мая): «На фото 11 Яков, ты права, справа Рита Райтер дочь Мози».</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="naum-mikhail-ny">
+  <span class="album-card-num">Фото 21</span>
+  <h3 class="album-card-title">Наум и Михаил в Нью-Йорке - 1992 или 1993</h3>
+  <div class="album-card-date">1992 или 1993</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/naum-mikhail-ny.jpg" alt="Наум и Михаил в Нью-Йорке - 1992 или 1993" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>Михаил Наумович Сандлер</strong> с отцом, <strong>Наумом Михайловичем</strong>, на семейном торжестве в Нью-Йорке. Вероятно, ханукальное торжество - на фоне видна стилизованная под меноры подсветка.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">1992 или 1993, через год-два после переезда Михаила из Москвы в Канаду (Оттава, 1991).</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Домашний архив <strong>Михаила Наумовича</strong>.</div>
+      <div class="album-card-note">«Большая мишпуха» - потомки разных братьев и сестёр Мехла - перебралась в Денвер и Нью-Йорк в 1980-90-е. Михаил приехал в Канаду в 1991-м, в США - в 2013-м.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-sofa-grave">
+  <span class="album-card-num">Фото 22</span>
+  <h3 class="album-card-title">Могила Мози и Софы - Денвер</h3>
+  <div class="album-card-date">после 2019</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-sofa-grave.jpg" alt="Могила Мози и Софы - Денвер" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">У памятника - <strong>Александр Сандлер</strong>, их сын.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Памятник на еврейском кладбище в Денвере (Колорадо, США). На камне: <strong>SOFIA - LOVED AND MISSED, Sept. 19, 1932 - Nov. 27, 2019</strong> - <strong>MOISEY - ALWAYS A MENSCH, Jan. 01, 1930 - Dec. 07, 2017</strong> - «FOREVER IN OUR HEARTS».</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото из архива <strong>Александра Сандлера</strong> (14 мая 14:02).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="shifra-with-kids">
+  <span class="album-card-num">Фото 23</span>
+  <h3 class="album-card-title">У семейного памятника Сандлеров</h3>
+  <div class="album-card-date">ок. 2020 (по возрасту детей)</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/shifra-with-kids.jpg" alt="У семейного памятника Сандлеров" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body"><strong>Шифра (Светлана) Балансио</strong>, урожд. Сандлер - внучка Мози и Софы, дочь Александра Сандлера и Елены Поляковой, - с двумя своими детьми: <strong>Симоной Лили Балансио</strong> и <strong>Луисом Балансио III</strong>. Муж Шифры - Джеффри Балансио.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Семейный визит на кладбище: вокруг - другие еврейские надгробия (BRONSTINE, PLOTKIN, GOLDIN, KHURGINA, ENGBAR, KHAYKIN, THORNER).</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Фото из архива <strong>Александра Сандлера</strong> (14 мая 14:02). Состав семьи - по семейному древу.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="tree-1990">
+  <span class="album-card-num">Древо</span>
+  <h3 class="album-card-title">Рукописное древо Сандлер-Райхер, ~1990</h3>
+  <div class="album-card-date">конец 1970-х - начало 1990-х</div>
+  <div class="album-card-body tall">
+    <div class="photo-frame tree">
+      <img src="photos/tree-1990.jpg" alt="Рукописное древо Сандлер-Райхер, ~1990" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Самодельное генеалогическое древо рода Мотла Сандлера и Хаи Райхер. На нём - все семь ветвей: Яков (Янкель), Идл, Бетя, Фаня, Сруль, Мехл, Роза.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">С него началось восстановление родословной - <strong>Александр Бейдер</strong> подтвердил в чате, что это его рукопись, составленная ещё в Москве в конце 1970-х.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span><strong>Александр Бейдер</strong> (14 мая 12:33): «часть имен/фамилий добавил не по памяти, а по моему рукописному древу (на листе бумаги, составленном в Москве где-то в конце 1970-ых г.г.)»</div>
+      
+    </div>
+  </div>
+</article>
+
+</section>
+
+<section class="major" id="memorial-naum">
+  <div class="memorial">
+    <div class="kicker">Памяти</div>
+    <h2>Наум Михайлович Сандлер</h2>
+    <div class="lifespan">9 января 1941, Москва &nbsp;&mdash;&nbsp; 27 января 2026</div>
+
+    <div class="memorial-body">
+      <div class="memorial-photo"><img src="photos/naum-memorial.jpg" alt="Наум Михайлович Сандлер"></div>
+      <div class="memorial-text">
+        <p>Он посвятил всю свою жизнь созиданию в электроэнергетике. Всецело жил своей работой &mdash; строительством энергетических объектов. Этому делу он отдавал все свои силы, способности и время, глубоко погружаясь во все детали, был неутомимым двигателем больших свершений.</p>
+        <p>Наум Михайлович заслужил безграничное уважение в отрасли как блестящий специалист и человек незаурядных личных качеств. В трудовом коллективе создавал рабочую атмосферу доверия и продуктивности, слушал и слышал людей, независимо от их положения.</p>
+
+        <h4>Образование</h4>
+        <p>Выпускник Всесоюзного заочного инженерно-строительного института и Московского энергетического института. Кандидат технических наук. Автор ряда научных работ.</p>
+
+        <h4>Трудовой путь</h4>
+        <p>От бетонщика-монтажника и мастера треста &laquo;Мосэнергострой&raquo; до руководителя института &laquo;Мосэнергопроект&raquo;. Под его руководством &mdash; проекты электростанций, тепловых магистралей, подстанций, линий электропередачи, схем тепло- и электроснабжения Москвы и регионов России, парогазовые блоки &laquo;Мосэнерго&raquo;. В 2011-2020 &mdash; советник в ООО &laquo;Газпром энергохолдинг&raquo;.</p>
+
+        <h4>Награды и звания</h4>
+        <p>Заслуженный работник Единой энергетической системы России. Заслуженный строитель Российской Федерации. Заслуженный работник Минтопэнерго РФ. Орден Почёта и ряд других государственных и ведомственных медалей.</p>
+      </div>
+    </div>
+
+    <div class="memorial-closing">Светлой памяти.</div>
+  </div>
+</section>
+
+<section class="major" id="living">
+  <div class="section-kicker">Двое из ныне живущих родственников</div>
+  <h2 class="section-title">Современники</h2>
+  <div class="section-lede">Два двоюродных-троюродных родственника, благодаря которым в семейном архиве оказалось столько фотографий, имён и историй.</div>
+  <div class="section-rule"></div>
+
+  <div class="bio-grid">
+
+    <div class="bio-card" id="bio-aleksandr-beider">
+      <h3>Александр Бейдер</h3>
+      <div class="bio-sub">р. 1963, Москва &middot; Париж с 1990 г.</div>
+
+      <h4>Кто он по родству</h4>
+      <p>Сын Гени (дочери Бети Сандлер) и Бориса Бейдера. Троюродный брат Михаила Наумовича. Источник старых семейных фотографий и большой части генеалогических сведений по литинской ветке.</p>
+
+      <h4>Образование</h4>
+      <p>Окончил МФТИ (1986). Кандидат физико-математических наук (1989). Вторая докторская &mdash; по иудаистике, Сорбонна (École Pratique des Hautes Études), 2000 г.</p>
+
+      <h4>Чем известен</h4>
+      <p>Один из ведущих в мире специалистов по ономастике ашкеназских евреев &mdash; этимологии и географии еврейских фамилий и идишских имён. Автор фундаментальных словарей еврейских фамилий Российской империи, Польши, Галиции, Магриба и др. Соавтор фонетического алгоритма Beider-Morse (с Стивеном Морсом, 2008) &mdash; стандарт в генеалогических базах.</p>
+
+      <h4>Главные книги</h4>
+      <p><em>Origins of Yiddish Dialects</em> (Oxford University Press, 2015); словари фамилий Российской империи (1993, перераб. 2008); Польши (1996, премия &laquo;Лучшая иудаистическая справочная книга&raquo;); Галиции (2004); Магриба, Гибралтара и Мальты (2017); Италии, Франции и португальских общин (2019).</p>
+    </div>
+
+    <div class="bio-card" id="bio-shifra">
+      <h3>Шифра Балансио</h3>
+      <div class="bio-sub">урожд. Светлана Сандлер &middot; Нью-Йоркская агломерация</div>
+
+      <h4>Кто она по родству</h4>
+      <p>Дочь Александра Сандлера (сына Мози) и Елены Поляковой. Правнучка Якова (Янкеля) Сандлера. Замужем за Джеффри Балансио, двое детей &mdash; Simone Lily и Louis III.</p>
+
+      <h4>Образование</h4>
+      <p>Carnegie Mellon University, Tepper School of Business &mdash; BBA по финансам и международному менеджменту, 2007 г.</p>
+
+      <h4>Чем известна</h4>
+      <p>Карьера в индустрии люксовых брендов: ранее Louis Vuitton и Bulgari, сейчас &mdash; Director, Global Retail Performance в Tiffany &amp; Co. Живёт в районе Нью-Йорка (Скарсдейл / Монклер).</p>
+    </div>
+
+  </div>
+
+  <p style="font-family:'PT Sans',sans-serif; font-size:12px; color:var(--ink-mute); font-style:italic; margin-top:24px; text-align:center;">Источники: открытые публикации, Wikipedia, академические страницы, профессиональные профили. Личных деталей из закрытых соцсетей не использовано.</p>
+</section>
+
+<section class="major" id="updates">
+  <div class="section-kicker">Уточнения, пришедшие от родных</div>
+  <h2 class="section-title">Поправки и дополнения</h2>
+  <div class="section-rule"></div>
+
+  <div class="info-card">
+    <h3>Наум Михайлович Сандлер</h3>
+    <ul>
+      <li>9 января 1941 (Москва) &mdash; 27 января 2026. Жизнь в электроэнергетике.</li>
+      <li>Кандидат технических наук. Заслуженный работник ЕЭС России, Заслуженный строитель РФ.</li>
+      <li>См. отдельную <a href="#memorial-naum" style="color:var(--accent);">страницу памяти</a>.</li>
+    </ul>
+
+    <h3>Хума (Нина) Трефняк</h3>
+    <ul>
+      <li>Девичья фамилия &mdash; Трефняк, по мужу &mdash; Сандлер. В советской бытовой жизни звалась Ниной.</li>
+      <li>Скончалась в Москве в 1977 или 1978 году.</li>
+    </ul>
+
+    <h3>Большая семейная эмиграция</h3>
+    <ul>
+      <li>Бо́льшая часть родни перебралась из Москвы в Денвер и далее по США в 1980-90-е годы.</li>
+    </ul>
+
+    <h3>Мозя (Моисей Яковлевич) Сандлер</h3>
+    <ul>
+      <li>Жил и похоронен в Денвере. Сын Алекс Сандлер с женой Леной Поляковой &mdash; под Нью-Йорком.</li>
+      <li>Их дочь Шифра Сандлер замужем за Джеффом Балансио. Внуки &mdash; Луис и Сима.</li>
+    </ul>
+
+    <h3>Михаил Наумович Сандлер</h3>
+    <ul>
+      <li>Переехал из Москвы в Канаду (Оттава) в 1991 году, из Канады в США &mdash; в 2013 году.</li>
+    </ul>
+
+    <h3>Ветка Бети &mdash; Бейдеры</h3>
+    <ul>
+      <li>У Бети, кроме Мили Липовецкого, была дочь Геня (живёт в Германии).</li>
+      <li>Её сын Александр Бейдер &mdash; во Франции, у него две дочери: Соня и Катя.</li>
+      <li>Сестра Александра &mdash; Маша (Мария) &mdash; тоже в Германии.</li>
+      <li>Александр поделился старыми фотографиями Мотла, Хаи и снимком с Мехлом до войны.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="major" id="open-questions">
+  <div class="section-kicker">Что ещё хочется уточнить</div>
+  <h2 class="section-title">Открытые вопросы</h2>
+  <div class="section-rule"></div>
+
+  <div class="info-card">
+    <h3>Фото и даты</h3>
+    <ul>
+      <li>Фото №1 (Мотл, 1940): точная дата и место съёмки. Где жил Мотл в 1940 году?</li>
+      <li>Фото №2 (Хая): когда и где сделан портрет?</li>
+      <li>Фото №6 (Бетя, Мехл, Фаня): кто стоит сзади &mdash; Сруль или Исаак Шомштейн? Год съёмки?</li>
+      <li>Фото №13 (свадьба Наума и Галины): сохранились ли другие снимки свадьбы?</li>
+      <li>Фото №14 (свадьба Тамары и Эдика): не все лица опознаны. Группа со стороны Эдика Табакина &mdash; у кого-то есть ещё снимки?</li>
+    </ul>
+
+    <h3>Биография и семьи</h3>
+    <ul>
+      <li>Год рождения Мехла: архивы дают 1907, 1909, 1910, 1911, 1914.</li>
+      <li>Хума Трефняк: родители, место рождения, как выживала с младенцем-Наумом в Калошино после 1941.</li>
+      <li>Филюшины: откуда родом Фёдор Егорович и Анастасия Николаевна (в дев. Елисеева).</li>
+      <li>Связь с потомками Розы (Маня Бронфмахер, Анна Ховер, Инна Кранцберг) в Израиле &mdash; кто-то на связи?</li>
+      <li>Тамара и Эдик Табакины &mdash; где живут их потомки (дочь Инна 1965 г.р.)?</li>
+    </ul>
+
+    <h3>Имена и порядок поколений</h3>
+    <ul>
+      <li>Дети Геннадия (сына Михаила, ветка Янкеля) &mdash; сын и дочь, имена.</li>
+      <li>Дети Аллы и Игоря (ветка Фани → Анчель) &mdash; имена.</li>
+      <li>Порядок старшинства Мехла и Сруля среди семи детей Мотла.</li>
+      <li>Маня (дочь Розы) &mdash; от Зейдла Бангика или от Давида Барановича?</li>
+      <li>Дети Бети от второго мужа (Моисея Шестака), если были.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="major" id="contact">
+  <div class="contact-block">
+    <h3>Контакт</h3>
+    <div class="who">Архивом семьи занимается <strong>Михаил Наумович Сандлер</strong><br>(сын Наума Михайловича, внук Мехла; в Канаде с 1991 г., в США с 2013 г.)</div>
+    <div class="lines">
+      Все ваши уточнения, поправки и истории &mdash; присылайте ему:<br><br>
+      <a href="mailto:msandler@epiphan.com">msandler@epiphan.com</a><br>
+      +1 (650) 714-4558
+    </div>
+    <div class="footer-meta">
+      &#10026; Архив обновлён 15 мая 2026 &middot; собрано по чату &laquo;Мышпуха Сандлер&raquo; и пдф-древу А. Бейдера &#10026;
+    </div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
