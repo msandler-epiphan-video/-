@@ -273,12 +273,23 @@
     overflow-y: visible;
     padding: 16px 0 24px;
     -webkit-overflow-scrolling: touch;
+    /* Make horizontal scroll visible on wide trees so users know they can scroll */
+    scrollbar-color: var(--gen-3) var(--paper);
+    scrollbar-width: thin;
   }
+  .ctree::-webkit-scrollbar { height: 10px; }
+  .ctree::-webkit-scrollbar-track { background: var(--paper); border-radius: 5px; }
+  .ctree::-webkit-scrollbar-thumb { background: var(--gen-3); border-radius: 5px; }
+  .ctree::-webkit-scrollbar-thumb:hover { background: var(--gen-2); }
   .ctree ul {
     display: flex;
     justify-content: center;
     padding-top: 28px;
     position: relative;
+    /* Let ul size to its content so wide trees scroll instead of overflowing the page */
+    width: max-content;
+    min-width: 100%;
+    margin: 0 auto;
   }
   .ctree ul::before {
     content: "";
@@ -293,7 +304,7 @@
   .ctree > ul::before { display: none; }
   .ctree li {
     flex: 0 0 auto;
-    padding: 28px 10px 0;
+    padding: 28px 7px 0;
     position: relative;
     text-align: center;
   }
@@ -335,9 +346,9 @@
   .tnode {
     display: inline-block;
     position: relative;
-    min-width: 140px;
-    max-width: 220px;
-    padding: 10px 14px;
+    min-width: 118px;
+    max-width: 190px;
+    padding: 8px 11px;
     border: 1.5px solid var(--gen-2);
     border-radius: 6px;
     background: var(--paper);
