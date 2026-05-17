@@ -1,0 +1,2311 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>משפחת סנדלר מליטין — ארכיון משפחתי</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  :root {
+    --bg:        #f4ede0;
+    --bg-soft:   #ece1cc;
+    --paper:     #fcf6ea;
+    --paper-2:   #f9f1de;
+    --ink:       #221c14;
+    --ink-soft:  #5a4a39;
+    --ink-mute:  #8a7960;
+    --accent:    #7a2c43;
+    --accent-2:  #7a3b1f;
+    --rule:      #c9b893;
+    --gold:      #b78d4a;
+    --shadow:    0 18px 40px -22px rgba(60,40,15,.45),
+                 0 4px 12px -6px rgba(60,40,15,.25);
+    --gen-2: #7a2c43;
+    --gen-3: #1f5d8c;
+    --gen-4: #2c8a82;
+    --gen-5: #cc7a2c;
+    --gen-6: #c94545;
+    --gen-7: #7a4abc;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background:
+      radial-gradient(1200px 600px at 12% -8%,  #efe2c4 0%, transparent 60%),
+      radial-gradient(900px 500px  at 100% 0%,  #e9dcc0 0%, transparent 55%),
+      radial-gradient(700px 400px  at 0% 100%,  #f0e3c6 0%, transparent 60%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+    color: var(--ink);
+    font-family: "PT Serif", "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image:
+      radial-gradient(rgba(120,80,30,.07) 1px, transparent 1px),
+      radial-gradient(rgba(120,80,30,.05) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 1px;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: multiply;
+    opacity: .55;
+  }
+
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(8px);
+    background: rgba(244,237,224,.82);
+    border-bottom: 1px solid var(--rule);
+    font-family: "PT Sans", system-ui, sans-serif;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  nav.top .nav-inner {
+    max-width: 1180px; margin: 0 auto;
+    padding: 12px 24px;
+    display: flex; gap: 4px 22px; flex-wrap: wrap;
+    align-items: center;
+  }
+  nav.top .brand {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: 18px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--accent);
+    margin-right: auto;
+  }
+  nav.top a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+  }
+  nav.top a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 24px 96px;
+  }
+
+  h1, h2, h3 { margin-top: 0; }
+
+  section.major {
+    margin-top: 96px;
+    scroll-margin-top: 72px;
+  }
+  section.major:first-of-type { margin-top: 24px; }
+
+  .section-kicker {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .26em;
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.05;
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+  .section-lede {
+    font-family: "PT Serif", serif;
+    font-size: clamp(17px, 1.8vw, 19px);
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 740px;
+    margin-bottom: 36px;
+  }
+  .section-rule {
+    height: 1px; background: var(--rule);
+    margin: 0 0 36px;
+    position: relative;
+  }
+  .section-rule::after {
+    content: "\2726";
+    position: absolute; left: 0; top: -10px;
+    background: var(--bg); padding: 0 12px 0 0;
+    color: var(--gold); font-size: 18px;
+  }
+
+  header.hero {
+    text-align: center;
+    padding: 56px 12px 36px;
+    position: relative;
+  }
+  header.hero .kicker {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  header.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500; font-style: italic;
+    font-size: clamp(44px, 8vw, 92px);
+    line-height: 1.0;
+    margin: 0 0 12px;
+  }
+  header.hero .subtitle {
+    font-family: "PT Serif", serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.3vw, 22px);
+    color: var(--ink-soft);
+    max-width: 760px; margin: 12px auto 0;
+  }
+  header.hero .meta-line {
+    margin-top: 22px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px; color: var(--ink-soft);
+    letter-spacing: .12em; text-transform: uppercase;
+  }
+  header.hero::after {
+    content: "\2726";
+    display: block;
+    text-align: center;
+    color: var(--gold);
+    font-size: 20px;
+    margin-top: 36px;
+  }
+
+  .patriarchs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    margin-bottom: 48px;
+  }
+  .patriarch-card { text-align: center; }
+  .patriarch-photo {
+    background: #fff;
+    padding: 16px 16px 8px;
+    border: 1px solid rgba(180,140,80,.4);
+    box-shadow: var(--shadow);
+    display: inline-block;
+    max-width: 100%;
+  }
+  .patriarch-photo img {
+    display: block;
+    max-width: 100%;
+    max-height: 440px;
+    width: auto; margin: 0 auto;
+    filter: contrast(1.02) saturate(.92);
+  }
+  .patriarch-name {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 18px 0 4px;
+    color: var(--accent);
+  }
+  .patriarch-meta {
+    font-family: "PT Sans", sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: .04em;
+  }
+  .patriarch-meta div { margin: 2px 0; }
+  .patriarchs-intro {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 26px 34px;
+    margin-bottom: 64px;
+    position: relative;
+    font-size: 18px;
+  }
+  .patriarchs-intro::before {
+    content: "";
+    position: absolute; inset: 6px;
+    border: 1px solid rgba(183,141,74,.32);
+    pointer-events: none;
+  }
+  .patriarchs-intro p { margin: 0 0 10px; }
+  .patriarchs-intro p:last-child { margin-bottom: 0; }
+
+  /* visual tree */
+  .tree-legend {
+    display: flex; flex-wrap: wrap; gap: 8px 24px;
+    margin: 0 0 32px;
+    padding: 14px 22px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    align-items: center;
+  }
+  .tree-legend .lbl { letter-spacing: .12em; text-transform: uppercase; }
+  .tree-legend .dot {
+    display: inline-block; width: 10px; height: 10px;
+    border-radius: 50%; margin-right: 6px;
+    vertical-align: middle;
+  }
+  .tree-legend .item { display: flex; align-items: center; }
+
+  .ctree, .ctree ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    position: relative;
+  }
+  .ctree {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 16px 0 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ctree ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 28px;
+    position: relative;
+  }
+  .ctree ul::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 50%;
+    width: 1px; height: 28px;
+    background: var(--rule);
+  }
+  /* outermost ul of a per-branch tree has no parent .tnode above it -
+     suppress the dangling line. The overview tree is wrapped in
+     .root-wrap so its ul is not a direct child of .ctree. */
+  .ctree > ul::before { display: none; }
+  .ctree li {
+    flex: 0 0 auto;
+    padding: 28px 10px 0;
+    position: relative;
+    text-align: center;
+  }
+  .ctree li::before,
+  .ctree li::after {
+    content: "";
+    position: absolute;
+    top: 0; height: 1px;
+    background: var(--rule);
+  }
+  .ctree li::before {
+    right: 50%;
+    width: 50%;
+  }
+  .ctree li::after {
+    left: 50%;
+    width: 50%;
+  }
+  .ctree li:only-child::before,
+  .ctree li:only-child::after { display: none; }
+  .ctree li:first-child::before { background: transparent; }
+  .ctree li:last-child::after  { background: transparent; }
+  .ctree li > .tnode::before {
+    content: "";
+    position: absolute;
+    top: -28px; left: 50%;
+    width: 1px; height: 28px;
+    background: var(--rule);
+  }
+  .ctree li:only-child > .tnode::before { display: block; }
+  .ctree > ul > li > .tnode::before { display: none; }
+  .ctree .root-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ctree .root-wrap > .tnode { margin: 0 auto; }
+
+  .tnode {
+    display: inline-block;
+    position: relative;
+    min-width: 140px;
+    max-width: 220px;
+    padding: 10px 14px;
+    border: 1.5px solid var(--gen-2);
+    border-radius: 6px;
+    background: var(--paper);
+    font-family: "PT Sans", sans-serif;
+    text-align: center;
+    box-shadow: 0 2px 6px -3px rgba(60,40,15,.3);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .tnode:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px -4px rgba(60,40,15,.4);
+  }
+  .tnode .nm {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gen-2);
+    line-height: 1.2;
+  }
+  .tnode .alt {
+    display: block;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--ink-mute);
+    margin-top: 2px;
+  }
+  .tnode .sp {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+  .tnode .pl {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 1px 7px;
+    background: rgba(180,140,80,.18);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--ink-soft);
+    border-radius: 2px;
+  }
+  .tnode.g2 { border-color: var(--gen-2); }
+  .tnode.g2 .nm { color: var(--gen-2); }
+  .tnode.g3 { border-color: var(--gen-3); }
+  .tnode.g3 .nm { color: var(--gen-3); }
+  .tnode.g4 { border-color: var(--gen-4); }
+  .tnode.g4 .nm { color: var(--gen-4); }
+  .tnode.g5 { border-color: var(--gen-5); }
+  .tnode.g5 .nm { color: var(--gen-5); }
+  .tnode.g6 { border-color: var(--gen-6); }
+  .tnode.g6 .nm { color: var(--gen-6); }
+  .tnode.g7 { border-color: var(--gen-7); }
+  .tnode.g7 .nm { color: var(--gen-7); }
+  .tnode.root {
+    border-color: var(--ink);
+    background: var(--paper-2);
+  }
+  .tnode.root .nm { color: var(--ink); font-size: 16px; }
+
+  a.tnode-link {
+    text-decoration: none;
+    display: inline-block;
+  }
+  a.tnode-link .tnode { cursor: pointer; }
+  .tnode .ph-marker {
+    position: absolute;
+    top: -8px; right: -8px;
+    min-width: 22px; height: 22px;
+    padding: 0 6px;
+    background: var(--accent);
+    color: var(--paper);
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: "PT Sans", sans-serif;
+    line-height: 22px;
+    text-align: center;
+    box-shadow: 0 2px 4px -1px rgba(60,40,15,.4);
+  }
+  .tnode .ph-marker.mem { background: var(--gen-5); }
+  .tnode .ph-marker.bio { background: var(--gen-3); }
+
+  .branch-title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 64px 0 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .branch-title .num {
+    font-style: normal;
+    color: var(--gold);
+    margin-right: 6px;
+  }
+  .branch-sub {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  /* list tree */
+  .ltree-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 36px 30px 36px 24px;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  .ltree-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .ltree .root-couple {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 0 18px;
+    border-bottom: 1px dashed var(--rule);
+    margin-bottom: 20px;
+  }
+  .ltree .root-couple .m { font-weight: 400; color: var(--accent); padding: 0 4px; }
+  .ltree .root-couple .meta {
+    display: block;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+  .ltree ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 22px;
+    position: relative;
+  }
+  .ltree > ul { padding-left: 4px; }
+  .ltree ul ul {
+    margin-top: 4px;
+    padding-left: 22px;
+    border-left: 1px solid rgba(180,140,80,.30);
+    margin-left: 6px;
+  }
+  .ltree li {
+    padding: 6px 0 6px 12px;
+    position: relative;
+    font-family: "PT Serif", serif;
+  }
+  .ltree ul ul li::before {
+    content: "";
+    position: absolute;
+    left: -1px; top: 16px;
+    width: 12px; height: 1px;
+    background: rgba(180,140,80,.45);
+  }
+  .ltree .branch-head {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: clamp(20px, 2.4vw, 25px);
+    font-weight: 600;
+    padding: 18px 0 8px;
+    border-top: 1px solid var(--rule);
+    margin-top: 14px;
+  }
+  .ltree > ul > li:first-child .branch-head {
+    border-top: none; margin-top: 0; padding-top: 4px;
+  }
+  .ltree > ul > li:first-child .branch-head::before { display: none; }
+  .ltree .branch-head .num {
+    display: inline-block;
+    width: 1.6em;
+    color: var(--accent);
+    font-style: normal;
+  }
+  .ltree .m { color: var(--accent); font-style: italic; margin: 0 4px; }
+  .ltree .dates {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin: 0 6px;
+    letter-spacing: .02em;
+    font-style: normal;
+  }
+  .ltree .place {
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    margin-left: 6px;
+    background: rgba(183,141,74,.12);
+    padding: 1px 6px;
+    border-radius: 2px;
+  }
+  .ltree .meta-inline {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-left: 4px;
+    font-style: italic;
+  }
+
+  a.linked-name {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 1px;
+    font-weight: 700;
+  }
+  a.linked-name:hover {
+    color: var(--accent);
+    background: rgba(122,44,67,.08);
+  }
+  sup.ref-cluster {
+    display: inline-flex;
+    gap: 3px;
+    margin-left: 4px;
+    line-height: 1;
+    vertical-align: super;
+    font-size: 75%;
+  }
+  a.ph-ref {
+    font-family: "PT Sans", sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    background: var(--accent);
+    color: var(--paper);
+    padding: 1.5px 5px;
+    border-radius: 2px;
+    text-decoration: none;
+    letter-spacing: .04em;
+  }
+  a.ph-ref:hover { background: var(--ink); }
+  a.ph-ref.bio { background: var(--gen-3); }
+  a.ph-ref.mem { background: var(--gen-5); }
+
+  /* album */
+  .album-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 28px 30px 30px;
+    margin-bottom: 52px;
+    position: relative;
+    scroll-margin-top: 72px;
+  }
+  .album-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .album-card-num {
+    position: absolute;
+    top: -14px; left: 26px;
+    background: var(--accent);
+    color: var(--paper);
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: .18em;
+    padding: 6px 12px;
+    text-transform: uppercase;
+  }
+  .album-card-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(26px, 3.2vw, 34px);
+    line-height: 1.15;
+    margin: 6px 0 4px;
+  }
+  .album-card-date {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .album-card-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 32px;
+  }
+  .album-card-body.tall .photo-frame img { max-height: 720px; }
+  .photo-frame {
+    background: #fff;
+    padding: 14px;
+    border: 1px solid rgba(180,140,80,.35);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.04);
+    text-align: center;
+  }
+  .photo-frame img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: contrast(1.02) saturate(.92);
+  }
+  .photo-frame.tree img { filter: none; max-height: none; }
+  .album-card-fields .field { margin: 0 0 18px; }
+  .album-card-fields .field-label {
+    font-family: "PT Sans", sans-serif;
+    font-size: 10.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .album-card-fields .field-body { font-size: 17px; line-height: 1.55; }
+  .album-card-source {
+    margin-top: 18px; padding-top: 14px;
+    border-top: 1px dashed var(--rule);
+    font-size: 16px; color: var(--ink-soft);
+    font-style: italic;
+  }
+  .album-card-source strong { font-style: normal; color: var(--ink); }
+  .album-card-note {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(183,141,74,.10);
+    border-left: 3px solid var(--accent);
+    font-size: 16px;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+  .album-card-note strong { font-style: normal; color: var(--ink); }
+
+  /* memorial */
+  .memorial {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 48px 44px;
+    position: relative;
+    text-align: center;
+  }
+  .memorial::before {
+    content: "";
+    position: absolute; inset: 8px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .memorial .kicker {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .32em;
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .memorial h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: clamp(34px, 4.5vw, 48px);
+    margin: 4px 0 6px;
+  }
+  .memorial .lifespan {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    color: var(--ink-soft);
+    letter-spacing: .05em;
+    margin-bottom: 36px;
+  }
+  .memorial-body {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: 40px;
+    text-align: left;
+    align-items: start;
+  }
+  .memorial-photo {
+    background: #fff;
+    padding: 14px 14px 8px;
+    border: 1px solid rgba(180,140,80,.35);
+  }
+  .memorial-photo img {
+    max-width: 100%; height: auto; display: block;
+    filter: contrast(1.02) saturate(.92);
+  }
+  .memorial-text p { margin: 0 0 12px; }
+  .memorial-text h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 22px;
+    margin: 18px 0 4px;
+    color: var(--accent);
+  }
+  .memorial-closing {
+    margin-top: 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+
+  /* bio */
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .bio-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 28px 30px;
+    position: relative;
+    scroll-margin-top: 72px;
+  }
+  .bio-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .bio-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: 28px;
+    margin: 4px 0 4px;
+    color: var(--accent);
+  }
+  .bio-card .bio-sub {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: .08em;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .bio-card h4 {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .22em;
+    color: var(--accent);
+    margin: 14px 0 4px;
+  }
+  .bio-card p { margin: 0 0 10px; font-size: 16px; line-height: 1.55; }
+
+  /* updates */
+  .info-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 28px 32px;
+    position: relative;
+  }
+  .info-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .info-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: 24px;
+    margin: 18px 0 6px;
+    color: var(--accent);
+  }
+  .info-card h3:first-of-type { margin-top: 0; }
+  .info-card ul {
+    list-style: none;
+    padding: 0; margin: 0 0 10px;
+  }
+  .info-card li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    font-size: 16px;
+  }
+  .info-card li::before {
+    content: "\2726";
+    position: absolute; left: 4px; top: 6px;
+    color: var(--gold);
+    font-size: 11px;
+  }
+
+  /* contact */
+  .contact-block {
+    text-align: left;
+    padding: 48px 32px 40px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .contact-block > h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 30px;
+    margin: 0 0 22px;
+    color: var(--accent);
+    text-align: center;
+  }
+  .contact-block h4 {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .22em;
+    color: var(--accent);
+    margin: 28px 0 8px;
+  }
+  .contact-block p {
+    font-family: "PT Serif", serif;
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 0 0 12px;
+    color: var(--ink);
+  }
+  .contact-block .who {
+    font-family: "PT Serif", serif;
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+  .contact-block .lines {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+  }
+  .contact-block .lines a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+  .contact-block .footer-meta {
+    margin-top: 36px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    text-align: center;
+  }
+
+  /* feedback section */
+  .feedback-block {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+  }
+  .feedback-card {
+    display: block;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 22px 22px 20px;
+    text-decoration: none;
+    color: var(--ink);
+    box-shadow: var(--shadow);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .feedback-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold);
+    box-shadow: 0 24px 50px -22px rgba(60,40,15,.55),
+                0 6px 16px -6px rgba(60,40,15,.30);
+  }
+  .feedback-card .feedback-icon {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .feedback-card .feedback-title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--accent);
+    margin-bottom: 6px;
+    line-height: 1.15;
+  }
+  .feedback-card .feedback-desc {
+    font-family: "PT Serif", serif;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  /* visits counter */
+  .visits-strip {
+    max-width: 760px;
+    margin: 48px auto 0;
+    padding: 18px 24px;
+    text-align: center;
+    border-top: 1px solid var(--rule);
+    font-family: "PT Sans", sans-serif;
+    font-size: 13px;
+    color: var(--ink-mute);
+    letter-spacing: .04em;
+  }
+  .visits-strip .visits-row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .visits-strip .visits-num {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .visits-strip .visits-label {
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: 10.5px;
+    color: var(--ink-mute);
+  }
+
+  @media (max-width: 820px) {
+    .feedback-grid { grid-template-columns: 1fr; gap: 14px; }
+    .visits-strip .visits-row { flex-direction: column; gap: 6px; }
+    .patriarchs { grid-template-columns: 1fr; }
+    .album-card-body { grid-template-columns: 1fr; }
+    .memorial-body { grid-template-columns: 1fr; }
+    .bio-grid { grid-template-columns: 1fr; }
+    nav.top .nav-inner { padding: 10px 14px; gap: 4px 14px; }
+    nav.top .brand { width: 100%; margin-bottom: 4px; }
+    .wrap { padding: 16px 16px 60px; }
+    body { font-size: 16px; }
+  }
+
+  /* === Language switcher === */
+  .lang-switcher {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: .85rem;
+    letter-spacing: .04em;
+    padding: 6px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink-soft);
+  }
+  .lang-switcher a.lang-link {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color .15s;
+  }
+  .lang-switcher a.lang-link:hover {
+    color: var(--accent);
+  }
+  .lang-switcher .lang-current {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    .lang-switcher {
+      font-size: .78rem;
+      padding: 4px 8px;
+      gap: 4px;
+    }
+  }
+
+  /* === RTL overrides (Hebrew) === */
+  html[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+  }
+  html[dir="rtl"] .contact-block,
+  html[dir="rtl"] .feedback-card,
+  html[dir="rtl"] .album-card-fields,
+  html[dir="rtl"] .field,
+  html[dir="rtl"] .album-card-source,
+  html[dir="rtl"] .album-card-note {
+    text-align: right;
+  }
+  html[dir="rtl"] nav.top {
+    flex-direction: row-reverse;
+  }
+  html[dir="rtl"] .footer-meta,
+  html[dir="rtl"] .visits-strip {
+    direction: rtl;
+  }
+  /* English book titles etc. stay LTR inside otherwise-Hebrew text */
+  html[dir="rtl"] em,
+  html[dir="rtl"] cite {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="nav-inner">
+    <span class="brand">משפחת סנדלר מליטין</span>
+    <a href="#root-couple">אבותינו</a>
+    <a href="#visual-tree">אילן יוחסין</a>
+    <a href="#list-tree">רשימה</a>
+    <a href="#album">תצלומים</a>
+    <a href="#memorial-naum">לזכרו של נחום</a>
+    <a href="#living">בני זמננו</a>
+    <a href="#updates">עדכונים</a>
+    <a href="#feedback">משוב</a>
+    <a href="#contact">על הארכיון</a>
+  </div>
+<div class="lang-switcher" aria-label="Language"><a href="index.html" class="lang-link">RU</a> · <a href="index.en.html" class="lang-link">EN</a> · <span class="lang-current">HE</span> · <a href="index.fr.html" class="lang-link">FR</a> · <a href="index.de.html" class="lang-link">DE</a></div></nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">ארכיון משפחתי · משפחה · מאי 2026</div>
+  <h1>משפחת סנדלר מליטין</h1>
+  <div class="subtitle">אילן יוחסין, ארכיון תצלומים ודפים ביוגרפיים של שבעת הענפים שיצאו ממוטל סנדלר וחיה רייכר</div>
+  <div class="meta-line">ליטין · מוסקבה · דנבר · ניו יורק · ישראל · גרמניה · צרפת</div>
+</header>
+
+<section class="major" id="root-couple">
+  <div class="section-kicker">ארכיון משפחתי · שורשים</div>
+  <h2 class="section-title">מוטל סנדלר · חיה רייכר</h2>
+  <div class="section-rule"></div>
+
+  <div class="patriarchs">
+    <a href="#motl-1940" style="text-decoration:none; color:inherit;">
+    <div class="patriarch-card">
+      <div class="patriarch-photo"><img src="photos/motl-1940.jpg" alt="מוטל סנדלר, 1940"></div>
+      <div class="patriarch-name">מוטל סנדלר</div>
+      <div class="patriarch-meta">
+        <div>טוחן בליטין · תצלום 1940</div>
+        <div>נרצח בשואה, סתיו 1941</div>
+      </div>
+    </div>
+    </a>
+    <a href="#khaya-1930s" style="text-decoration:none; color:inherit;">
+    <div class="patriarch-card">
+      <div class="patriarch-photo"><img src="photos/khaya-1930s.jpg" alt="חיה רייכר"></div>
+      <div class="patriarch-name">חיה רייכר</div>
+      <div class="patriarch-meta">
+        <div>אשתו של מוטל · תצלום ~שנות ה־30</div>
+        <div>נרצחה בשואה, 1941</div>
+      </div>
+    </div>
+    </a>
+  </div>
+
+  <div class="patriarchs-intro">
+    <p>מוטל וחיה חיו בליטין שבמחוז ויניצה (אוקראינה). מוטל היה טוחן. נולדו להם <strong>שבעה ילדים</strong>, לפי סדר הגיל: יעקב (יענקל), רוזה, מעכל (מיכאיל), ישראל, פניה (פרימה), בתיה (ביילה, 1914–1979) ויידל.</p>
+    <p>נישאו ב־<em>21 ביולי 1898</em>. <strong>שניהם נרצחו בשואה ב־1941:</strong> חיה — כמעט מיד אחרי כניסת הכובשים, מוטל — בסתיו, כשניסה לעזוב את ליטין אל אזור הכיבוש הרומני. הוא קבור בקבר האחים של יהודי ליטין. עד שנות ה־70 בתיה ואחיותיה היו באות לליטין להזכיר את הוריהן.</p>
+    <p>הלאה — כל אחד משבעת הענפים, ארכיון של 23 תמונות, דף הזיכרון של נחום מיכאילוביץ׳ סנדלר וסקירות קצרות על שני בני משפחה חיים שהקדישו את עצמם לשחזור תולדות המשפחה.</p>
+  </div>
+</section>
+
+<section class="major" id="visual-tree">
+  <div class="section-kicker">אילן יוחסין מס׳ 1 — בסגנון תיבות</div>
+  <h2 class="section-title">אילן היוחסין — סקירה</h2>
+  <div class="section-lede">שבעת ילדיהם של מוטל וחיה וצאצאיהם. צבע המסגרת מסמן את הדור; העיגול האדום עם המספר הוא מספר התצלום בארכיון שבו האדם מופיע. לחצו על תיבה כדי לעבור לתצלום.</div>
+  <div class="section-rule"></div>
+
+  <div class="tree-legend">
+    <span class="lbl">הצבע = הדור:</span>
+    <span class="item"><span class="dot" style="background:var(--gen-2)"></span>ילדי מוטל</span>
+    <span class="item"><span class="dot" style="background:var(--gen-3)"></span>נכדים</span>
+    <span class="item"><span class="dot" style="background:var(--gen-4)"></span>נינים</span>
+    <span class="item"><span class="dot" style="background:var(--gen-5)"></span>נצרים</span>
+    <span class="item"><span class="dot" style="background:var(--gen-6)"></span>דור 6</span>
+    <span class="item"><span class="dot" style="background:var(--gen-7)"></span>דור 7</span>
+  </div>
+
+  
+<div class="ctree">
+  <div class="root-wrap">
+    <div class="tnode root"><span class="nm">מוטל סנדלר + חיה רייכר</span><span class="alt">ליטין · נרצחו בשואה 1941</span></div>
+    <ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g2"><span class="ph-marker">14</span><span class="nm">יעקב (יענקל)</span></div></a></li><li><div class="tnode g2"><span class="nm">רוזה</span></div></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">מעכל</span><span class="alt">1907/14 — 1942/43</span></div></a></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">ישראל</span><span class="alt">נפל במלחמה</span></div></a></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">פניה</span></div></a></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">בתיה</span><span class="alt">1914–1979</span></div></a></li><li><div class="tnode g2"><span class="nm">יידל</span><span class="alt">ללא צאצאים</span></div></li></ul>
+  </div>
+</div>
+
+
+  
+<div class="branch-title"><span class="num">1.</span>יעקב (יענקל) סנדלר</div>
+<div class="branch-sub">יעקב (יענקל) סנדלר — ענף</div>
+<div class="ctree">
+  <ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g2"><span class="ph-marker">14</span><span class="nm">יעקב סנדלר</span><span class="alt">יענקל</span><span class="sp">+ נחומה זלצר</span></div></a><ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">14</span><span class="nm">פניה</span><span class="sp">+ מיכאיל מסטצקי</span></div></a><ul><li><div class="tnode g4"><span class="nm">מארק</span><span class="sp">+ ולריה אליגינה</span></div><ul><li><div class="tnode g5"><span class="nm">דמיטרי</span></div></li><li><div class="tnode g5"><span class="nm">נטליה</span></div></li></ul></li><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g4"><span class="ph-marker">14</span><span class="nm">לריסה</span><span class="alt">הבכורה</span><span class="sp">+ לאוניד ויזלמן</span></div></a><ul><li><div class="tnode g5"><span class="nm">אלכסנדר</span></div></li><li><div class="tnode g5"><span class="nm">לב</span></div></li></ul></li></ul></li><li><a href="#mozya-officer" class="tnode-link"><div class="tnode g3"><span class="ph-marker">07</span><span class="nm">מוזיה</span><span class="alt">מויסיי, בדנבר</span><span class="sp">+ סופה קרצבורג</span></div></a><ul><li><a href="#yakov-with-rita" class="tnode-link"><div class="tnode g4"><span class="ph-marker">20</span><span class="nm">ריטה</span><span class="sp">+ גריגורי רייטר</span></div></a><ul><li><div class="tnode g5"><span class="nm">בוריס</span><span class="pl">ארה״ב</span></div></li></ul></li><li><a href="#mozya-sofa-grave" class="tnode-link"><div class="tnode g4"><span class="ph-marker">22</span><span class="nm">אלכסנדר</span><span class="sp">+ אלנה פוליאקובה</span><span class="pl">באזור ניו יורק</span></div></a><ul><li><a href="#shifra-with-kids" class="tnode-link"><div class="tnode g5"><span class="ph-marker">23</span><span class="nm">סבטלנה בלנציו</span><span class="alt">שפרה, לבית סנדלר</span><span class="sp">+ ג׳פרי בלנציו</span></div></a><ul><li><a href="#shifra-with-kids" class="tnode-link"><div class="tnode g6"><span class="ph-marker">23</span><span class="nm">Simone Lily Balancio</span><span class="alt">סימה</span></div></a></li><li><a href="#shifra-with-kids" class="tnode-link"><div class="tnode g6"><span class="ph-marker">23</span><span class="nm">Louis Balancio III</span><span class="alt">לואי</span></div></a></li></ul></li></ul></li></ul></li><li><a href="#sofa-redhead-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">11</span><span class="nm">סופה</span><span class="alt">האדמונית</span><span class="sp">+ יצחק סברנסקי</span><span class="pl">ישראל</span></div></a><ul><li><a href="#old-family-clean" class="tnode-link"><div class="tnode g4"><span class="ph-marker">05</span><span class="nm">אירינה</span><span class="alt">אירה סברנסקיה</span><span class="sp">+ ליוניה לוין</span></div></a><ul><li><div class="tnode g5"><span class="nm">יעקב</span></div></li><li><div class="tnode g5"><span class="nm">יעל</span></div></li></ul></li></ul></li><li><div class="tnode g3"><span class="nm">מיכאיל</span><span class="alt">«מישקה הקטן»</span><span class="sp">+ רייסה גנדלינה</span></div><ul><li><div class="tnode g4"><span class="nm">גנדי</span><span class="sp">+ סבטלנה</span></div><ul><li><div class="tnode g5"><span class="nm">ליזה</span></div></li><li><div class="tnode g5"><span class="nm">לאוניד</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">2.</span>רוזה</div>
+<div class="branch-sub">רוזה — ענף</div>
+<div class="ctree">
+  <ul><li><div class="tnode g2"><span class="nm">רוזה</span><span class="sp">+ זיידל באנגיק / דוד ברנוביץ׳</span></div><ul><li><div class="tnode g3"><span class="nm">אהרן באנגיק</span><span class="alt">ללא צאצאים</span></div></li><li><div class="tnode g3"><span class="nm">מניה</span><span class="sp">+ גריגורי ברונפמכר</span></div><ul><li><div class="tnode g4"><span class="nm">אנה</span><span class="sp">+ יעקב חובר</span></div><ul><li><div class="tnode g5"><span class="nm">אלכסנדר</span><span class="pl">ישראל</span></div></li><li><div class="tnode g5"><span class="nm">מאיה</span><span class="sp">+ צביקה שמעון</span><span class="pl">ישראל</span></div><ul><li><div class="tnode g6"><span class="nm">עידו</span></div></li><li><div class="tnode g6"><span class="nm">אנית</span></div></li></ul></li></ul></li><li><div class="tnode g4"><span class="nm">אינה</span><span class="sp">+ דמיטרי קרנצברג</span></div><ul><li><div class="tnode g5"><span class="nm">רומן</span><span class="sp">+ אולגה</span><span class="pl">ישראל</span></div><ul><li><div class="tnode g6"><span class="nm">שי</span></div></li><li><div class="tnode g6"><span class="nm">רותם</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">יעקב</span><span class="pl">ישראל</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">3.</span>מעכל (מיכאיל מטוויביץ׳) סנדלר</div>
+<div class="branch-sub">מעכל (מיכאיל מטוויביץ׳) סנדלר — ענף</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">מעכל סנדלר</span><span class="alt">מיכאיל מטוויביץ׳, 1907/14 – 1942/43</span><span class="sp">+ חומה (נינה) טרפניאק</span></div></a><ul><li><a href="#naum-galina-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">13</span><span class="nm">נחום</span><span class="alt">1941-2026, מוסקבה</span><span class="sp">+ גלינה פיליושינה</span></div></a><ul><li><a href="#naum-mikhail-ny" class="tnode-link"><div class="tnode g4"><span class="ph-marker">21</span><span class="nm">מיכאיל נאומוביץ׳</span><span class="alt">קנדה 1991, ארה״ב 2013</span><span class="sp">+ אלנה וולינסקיה / טטיאנה טרטיאקובה</span></div></a><ul><li><div class="tnode g5"><span class="nm">דניס</span><span class="alt">מאלנה</span><span class="sp">+ נורה טוראייבה</span></div><ul><li><div class="tnode g6"><span class="nm">קמילה</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">פיליפ</span><span class="alt">מטטיאנה</span></div></li><li><div class="tnode g5"><span class="nm">איוון</span><span class="alt">מטטיאנה</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">4.</span>ישראל סנדלר</div>
+<div class="branch-sub">ישראל סנדלר — ענף</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">ישראל סנדלר</span><span class="alt">נפל במלחמה 1943</span><span class="sp">+ גניה גמר</span></div></a><ul><li><a href="#manya-garik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">12</span><span class="nm">מניה</span><span class="sp">+ גריק (גריגורי) קוזלין</span></div></a><ul><li><div class="tnode g4"><span class="nm">יבגניה (ז׳ניה)</span><span class="sp">+ לב שרבליס</span><span class="pl">ישראל</span></div><ul><li><div class="tnode g5"><span class="nm">אסף סנדלר</span><span class="sp">+ דורית</span><span class="pl">ישראל</span></div><ul><li><div class="tnode g6"><span class="nm">סער</span></div></li></ul></li></ul></li></ul></li><li><div class="tnode g3"><span class="nm">ריטה</span><span class="sp">+ אליק רייכר</span></div><ul><li><div class="tnode g4"><span class="nm">בלה</span><span class="sp">+ סטיב כהן</span><span class="pl">ארה״ב</span></div><ul><li><div class="tnode g5"><span class="nm">לני</span></div></li><li><div class="tnode g5"><span class="nm">ג׳ייסון</span></div></li></ul></li><li><div class="tnode g4"><span class="nm">סבטלנה</span><span class="pl">ארה״ב</span></div></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">5.</span>פניה</div>
+<div class="branch-sub">פניה — ענף</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">פניה</span><span class="sp">+ איציק (יצחק) שומשטיין</span></div></a><ul><li><div class="tnode g3"><span class="nm">מיליה שומשטיין</span><span class="sp">+ ליודמילה סידלר</span></div><ul><li><div class="tnode g4"><span class="nm">מרינה</span><span class="sp">+ אנטולי אילצ׳וק</span><span class="pl">גרמניה</span></div><ul><li><div class="tnode g5"><span class="nm">אלנה</span><span class="sp">+ כריסטיאן</span><span class="pl">גרמניה</span></div><ul><li><div class="tnode g6"><span class="nm">ארתור</span></div></li><li><div class="tnode g6"><span class="nm">נועה</span></div></li></ul></li></ul></li></ul></li><li><div class="tnode g3"><span class="nm">אנשל (אליק)</span><span class="sp">+ אירינה פרידמן</span></div><ul><li><div class="tnode g4"><span class="nm">אלה</span><span class="sp">+ ז׳ניה מאירסון</span><span class="pl">ישראל</span></div><ul><li><div class="tnode g5"><span class="nm">נועה</span></div></li><li><div class="tnode g5"><span class="nm">דנה</span></div></li></ul></li><li><div class="tnode g4"><span class="nm">איגור שומשטיין</span><span class="sp">+ אינה</span><span class="pl">ארה״ב</span></div><ul><li><div class="tnode g5"><span class="nm">איתן</span></div></li><li><div class="tnode g5"><span class="nm">אהרן</span></div></li><li><div class="tnode g5"><span class="nm">יואל</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">6.</span>בתיה</div>
+<div class="branch-sub">בתיה — ענף</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">בתיה</span><span class="alt">1914–1979</span><span class="sp">+ שיקו ליפובצקי / מויסיי שסטק</span></div></a><ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">14</span><span class="nm">מיליה ליפובצקי</span><span class="alt">משיקו</span><span class="sp">+ ריטה (גלינה) גורלניק</span></div></a><ul><li><div class="tnode g4"><span class="nm">מרינה</span><span class="sp">+ אלכסנדר דרויאן</span></div><ul><li><div class="tnode g5"><span class="nm">בת-חן</span><span class="sp">+ רז פלדמן</span><span class="pl">ישראל</span></div><ul><li><div class="tnode g6"><span class="nm">ילד</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">רונן</span><span class="pl">ישראל</span></div></li><li><div class="tnode g5"><span class="nm">איתי</span><span class="pl">ישראל</span></div></li></ul></li><li><div class="tnode g4"><span class="nm">אירינה</span><span class="sp">+ לאוניד גורבקובסקי</span><span class="pl">ישראל</span></div></li></ul></li><li><a href="#manya-garik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">12</span><span class="nm">גניה ביידר</span><span class="alt">אמו של אלכסנדר</span><span class="sp">+ בוריס ביידר</span><span class="pl">גרמניה</span></div></a><ul><li><a href="#bio-aleksandr-beider" class="tnode-link"><div class="tnode g4"><span class="ph-marker bio">ביו</span><span class="nm">אלכסנדר ביידר</span><span class="alt">בלשן, מקור תצלומים</span><span class="pl">צרפת</span></div></a><ul><li><div class="tnode g5"><span class="nm">סוניה</span><span class="sp">+ אטיין הרנינג</span></div><ul><li><div class="tnode g6"><span class="nm">ארתור</span></div></li><li><div class="tnode g6"><span class="nm">אלי</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">קטיה</span><span class="sp">+ אנטואן שלפמיץ</span></div><ul><li><div class="tnode g6"><span class="nm">אלנה</span></div></li></ul></li></ul></li><li><div class="tnode g4"><span class="nm">משה (מריה)</span><span class="sp">+ סשה מיכלב</span><span class="pl">גרמניה</span></div><ul><li><div class="tnode g5"><span class="nm">מקס ביידר</span></div></li><li><div class="tnode g5"><span class="nm">אליזה ביידר</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">7.</span>יידל סנדלר</div>
+<div class="branch-sub">יידל סנדלר — ענף</div>
+<div class="ctree">
+  <ul><li><div class="tnode g2"><span class="nm">יידל סנדלר</span><span class="alt">ללא צאצאים</span></div></li></ul>
+</div>
+
+
+</section>
+
+<section class="major" id="list-tree">
+  <div class="section-kicker">אילן יוחסין מס׳ 2 — כרשימה</div>
+  <h2 class="section-title">אילן יוחסין כרשימה</h2>
+  <div class="section-lede">אותו אילן יוחסין בצורת רשימה היררכית. שמות עם <em>קו תחתון</em> ניתנים ללחיצה; התגיות האדומות לידם הן מספרי תצלומים, סימוני "ביו" כחולים — כרטיסים ביוגרפיים, ו־&#10026; כתום — דף הזיכרון.</div>
+  <div class="section-rule"></div>
+
+<div class="ltree-card">
+<div class="ltree">
+
+  <div class="root-couple">
+    <a href="#motl-1940" class="linked-name">מוטל (מרדכי) סנדלר</a><sup class="ref-cluster"><a href="#motl-1940" class="ph-ref" title="תצלום 1">01</a><a href="#old-family-damaged" class="ph-ref" title="תצלום 3">03</a><a href="#old-family-clean" class="ph-ref" title="תצלום 5">05</a></sup> <span class="m">+ <a href="#khaya-1930s" class="linked-name">חיה (שיינא חיה) רייכר</a><sup class="ref-cluster"><a href="#khaya-1930s" class="ph-ref" title="תצלום 2">02</a></sup></span>
+    <span class="meta">ליטין (מחוז ויניצה), טוחן · נישאו ב־21 ביולי 1898 · שניהם נרצחו בשואה, 1941</span>
+  </div>
+
+  <ul>
+    <li>
+      <div class="branch-head">
+        <span class="num">1.</span> <a href="#tamara-edik-wedding" class="linked-name">יעקב (יענקל) סנדלר</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="תצלום 14">14</a><a href="#yakov-nokhuma-portrait" class="ph-ref" title="תצלום 17">17</a><a href="#fifty-year-anniversary" class="ph-ref" title="תצלום 18">18</a><a href="#yakov-with-rita" class="ph-ref" title="תצלום 20">20</a></sup> <span class="m">+ <a href="#sofa-redhead-wedding" class="linked-name">נחומה (נטשה) זלצר</a><sup class="ref-cluster"><a href="#sofa-redhead-wedding" class="ph-ref" title="תצלום 11">11</a><a href="#tamara-edik-wedding" class="ph-ref" title="תצלום 14">14</a><a href="#yakov-nokhuma-portrait" class="ph-ref" title="תצלום 17">17</a><a href="#fifty-year-anniversary" class="ph-ref" title="תצלום 18">18</a></sup></span>
+      </div>
+      <ul>
+        <li><a href="#tamara-edik-wedding" class="linked-name">פניה מסטצקיה</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="תצלום 14">14</a><a href="#fanya-mestetskaya-husband" class="ph-ref" title="תצלום 19">19</a></sup> <span class="m">+ <a href="#tamara-edik-wedding" class="linked-name">מיכאיל מסטצקי</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="תצלום 14">14</a><a href="#fanya-mestetskaya-husband" class="ph-ref" title="תצלום 19">19</a></sup></span>
+          <ul>
+            <li>מארק מסטצקי <span class="m">+ ולריה אליגינה</span>
+              <ul><li>דמיטרי</li><li>נטליה</li></ul>
+            </li>
+            <li><a href="#tamara-edik-wedding" class="linked-name">לריסה</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="תצלום 14">14</a></sup> <span class="m">+ לאוניד ויזלמן</span>
+              <ul><li>אלכסנדר</li><li>לב</li></ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#mozya-officer" class="linked-name">מוזיה (מויסיי) סנדלר</a><sup class="ref-cluster"><a href="#mozya-officer" class="ph-ref" title="תצלום 7">07</a><a href="#mozya-wedding" class="ph-ref" title="תצלום 8">08</a><a href="#mozya-wedding-duplicate" class="ph-ref" title="תצלום 9">09</a><a href="#mozya-sofa-grave" class="ph-ref" title="תצלום 22">22</a></sup> <span class="dates">01.01.1930 — 07.12.2017, דנבר</span> <span class="m">+ <a href="#mozya-wedding" class="linked-name">סופה קרצבורג</a><sup class="ref-cluster"><a href="#mozya-wedding" class="ph-ref" title="תצלום 8">08</a><a href="#mozya-wedding-duplicate" class="ph-ref" title="תצלום 9">09</a><a href="#tamara-edik-wedding" class="ph-ref" title="תצלום 14">14</a><a href="#mozya-sofa-grave" class="ph-ref" title="תצלום 22">22</a></sup></span> <span class="dates">19.09.1932 — 27.11.2019</span>
+          <ul>
+            <li><a href="#yakov-with-rita" class="linked-name">ריטה רייטר</a><sup class="ref-cluster"><a href="#yakov-with-rita" class="ph-ref" title="תצלום 20">20</a></sup> <span class="m">+ גריגורי רייטר</span>
+              <ul><li>בוריס <span class="place">ארה״ב</span></li></ul>
+            </li>
+            <li><a href="#mozya-sofa-grave" class="linked-name">אלכסנדר סנדלר</a><sup class="ref-cluster"><a href="#mozya-sofa-grave" class="ph-ref" title="תצלום 22">22</a></sup> <span class="m">+ אלנה פוליאקובה</span> <span class="place">באזור ניו יורק</span>
+              <ul>
+                <li><a href="#shifra-with-kids" class="linked-name">שפרה (סבטלנה) בלנציו</a><sup class="ref-cluster"><a href="#shifra-with-kids" class="ph-ref" title="תצלום 23">23</a><a href="#bio-shifra" class="ph-ref bio" title="ביוגרפיה">ביו</a></sup> <span class="m">+ ג׳פרי בלנציו</span>
+                  <ul>
+                    <li><a href="#shifra-with-kids" class="linked-name">Simone Lily Balancio</a><sup class="ref-cluster"><a href="#shifra-with-kids" class="ph-ref" title="תצלום 23">23</a></sup></li>
+                    <li><a href="#shifra-with-kids" class="linked-name">Louis Balancio III</a><sup class="ref-cluster"><a href="#shifra-with-kids" class="ph-ref" title="תצלום 23">23</a></sup></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#sofa-redhead-wedding" class="linked-name">סופה סנדלר &amp;laquo;האדמונית&amp;raquo;</a><sup class="ref-cluster"><a href="#sofa-redhead-wedding" class="ph-ref" title="תצלום 11">11</a><a href="#manya-garik-wedding" class="ph-ref" title="תצלום 12">12</a><a href="#tamara-edik-wedding" class="ph-ref" title="תצלום 14">14</a></sup> <span class="m">+ <a href="#sofa-redhead-wedding" class="linked-name">יצחק סברנסקי</a><sup class="ref-cluster"><a href="#sofa-redhead-wedding" class="ph-ref" title="תצלום 11">11</a></sup></span> <span class="place">ישראל</span>
+          <ul>
+            <li><a href="#old-family-clean" class="linked-name">אירינה (אירה) סברנסקיה</a><sup class="ref-cluster"><a href="#old-family-clean" class="ph-ref" title="תצלום 5">05</a></sup> <span class="m">+ ליוניה לוין</span>
+              <ul><li>יעקב</li><li>יעל</li></ul>
+            </li>
+          </ul>
+        </li>
+        <li>מיכאיל ("מישקה הקטן") סנדלר <span class="m">+ רייסה גנדלינה</span>
+          <ul>
+            <li>גנדי <span class="m">+ סבטלנה</span>
+              <ul><li>ליזה</li><li>לאוניד</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">2.</span> רוזה <span class="m">+ זיידל באנגיק / דוד ברנוביץ׳</span>
+      </div>
+      <ul>
+        <li>אהרן באנגיק <span class="meta-inline">(ללא צאצאים)</span></li>
+        <li>מניה <span class="m">+ גריגורי ברונפמכר</span>
+          <ul>
+            <li>אנה <span class="m">+ יעקב חובר</span>
+              <ul>
+                <li>אלכסנדר <span class="place">ישראל</span></li>
+                <li>מאיה <span class="m">+ צביקה שמעון</span> <span class="place">ישראל</span>
+                  <ul><li>עידו</li><li>אנית</li></ul>
+                </li>
+              </ul>
+            </li>
+            <li>אינה <span class="m">+ דמיטרי קרנצברג</span>
+              <ul>
+                <li>רומן <span class="m">+ אולגה</span> <span class="place">ישראל</span>
+                  <ul><li>שי</li><li>רותם</li></ul>
+                </li>
+                <li>יעקב <span class="place">ישראל</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">3.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">מעכל (מיכאיל מטוויביץ׳) סנדלר</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="תצלום 6">06</a></sup> <span class="dates">1907/14 — 1942/43, נפל במלחמה</span> <span class="m">+ <a href="#naum-galina-wedding" class="linked-name">חומה (נינה) טרפניאק</a><sup class="ref-cluster"><a href="#naum-galina-wedding" class="ph-ref" title="תצלום 13">13</a></sup></span>
+        <span class="meta-inline">חומה: 05.04.1916, ברדיצ׳ב — 03.07.1977, מוסקבה</span>
+      </div>
+      <ul>
+        <li><a href="#naum-galina-wedding" class="linked-name">נחום מיכאילוביץ׳</a><sup class="ref-cluster"><a href="#naum-galina-wedding" class="ph-ref" title="תצלום 13">13</a><a href="#naum-mikhail-ny" class="ph-ref" title="תצלום 21">21</a><a href="#memorial-naum" class="ph-ref mem" title="לזכרו">&#10026;</a></sup> <span class="dates">09.01.1941 — 27.01.2026, מוסקבה</span> <span class="m">+ <a href="#naum-galina-wedding" class="linked-name">גלינה פיודורובנה פיליושינה</a><sup class="ref-cluster"><a href="#naum-galina-wedding" class="ph-ref" title="תצלום 13">13</a></sup></span>
+          <ul>
+            <li><a href="#naum-mikhail-ny" class="linked-name">מיכאיל נאומוביץ׳ סנדלר</a><sup class="ref-cluster"><a href="#naum-mikhail-ny" class="ph-ref" title="תצלום 21">21</a></sup> <span class="place">קנדה 1991 → ארה״ב 2013</span>
+              <ul>
+                <li><em>מאלנה וולינסקיה:</em> דניס <span class="m">+ נורה (גולנורה) טוראייבה</span>
+                  <ul><li>קמילה</li></ul>
+                </li>
+                <li><em>מטטיאנה טרטיאקובה:</em> פיליפ, איוון</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">4.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">ישראל סנדלר</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="תצלום 6">06</a></sup> <span class="dates">1904 — נפל ליד זפוריז׳יה 1943</span> <span class="m">+ גניה גמר</span>
+      </div>
+      <ul>
+        <li><a href="#manya-garik-wedding" class="linked-name">מניה סנדלר</a><sup class="ref-cluster"><a href="#manya-garik-wedding" class="ph-ref" title="תצלום 12">12</a></sup> <span class="m">+ <a href="#manya-garik-wedding" class="linked-name">גריק (גריגורי) קוזלין</a><sup class="ref-cluster"><a href="#manya-garik-wedding" class="ph-ref" title="תצלום 12">12</a></sup></span>
+          <ul>
+            <li>יבגניה (ז׳ניה) <span class="m">+ לב שרבליס</span> <span class="place">ישראל</span>
+              <ul>
+                <li>אסף סנדלר <span class="m">+ דורית סנדלר</span> <span class="place">ישראל</span>
+                  <ul><li>סער סנדלר</li></ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>ריטה <span class="m">+ אליק רייכר</span>
+          <ul>
+            <li>בלה <span class="m">+ סטיב כהן</span> <span class="place">ארה״ב</span>
+              <ul><li>לני</li><li>ג׳ייסון</li></ul>
+            </li>
+            <li>סבטלנה <span class="place">ארה״ב</span></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">5.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">פניה (פרימה)</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="תצלום 6">06</a></sup> <span class="m">+ <a href="#betya-mehl-fanya-prewar" class="linked-name">איציק (יצחק) שומשטיין</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="תצלום 6">06</a></sup></span>
+      </div>
+      <ul>
+        <li>מיליה שומשטיין <span class="m">+ ליודמילה סידלר</span>
+          <ul>
+            <li>מרינה <span class="m">+ אנטולי אילצ׳וק</span> <span class="place">גרמניה</span>
+              <ul>
+                <li>אלנה <span class="m">+ כריסטיאן</span> <span class="place">גרמניה</span>
+                  <ul><li>ארתור</li><li>נועה</li></ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>אנשל (אליק) <span class="m">+ אירינה פרידמן</span>
+          <ul>
+            <li>אלה <span class="m">+ ז׳ניה מאירסון</span> <span class="place">ישראל</span>
+              <ul><li>נועה</li><li>דנה</li></ul>
+            </li>
+            <li>איגור שומשטיין <span class="m">+ אינה</span> <span class="place">ארה״ב</span>
+              <ul><li>איתן</li><li>אהרן</li><li>יואל</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">6.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">בתיה (ביילה)</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="תצלום 6">06</a></sup> <span class="dates">1914 — 1979</span> <span class="m">+ שיקו ליפובצקי / מויסיי שסטק</span>
+      </div>
+      <ul>
+        <li><a href="#tamara-edik-wedding" class="linked-name">מיליה ליפובצקי</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="תצלום 14">14</a><a href="#fifty-year-anniversary" class="ph-ref" title="תצלום 18">18</a></sup> <span class="m">+ ריטה (גלינה) גורלניק</span>
+          <ul>
+            <li>מרינה <span class="m">+ אלכסנדר דרויאן</span>
+              <ul>
+                <li>בת-חן <span class="m">+ רז פלדמן</span> <span class="place">ישראל</span>
+                  <ul><li>ילד</li></ul>
+                </li>
+                <li>רונן <span class="place">ישראל</span></li>
+                <li>איתי <span class="place">ישראל</span></li>
+              </ul>
+            </li>
+            <li>אירינה <span class="m">+ לאוניד גורבקובסקי</span> <span class="place">ישראל</span></li>
+          </ul>
+        </li>
+        <li><a href="#manya-garik-wedding" class="linked-name">גניה ביידר</a><sup class="ref-cluster"><a href="#manya-garik-wedding" class="ph-ref" title="תצלום 12">12</a></sup> <span class="m">+ בוריס ביידר</span> <span class="place">גרמניה</span>
+          <ul>
+            <li><a href="#bio-aleksandr-beider" class="linked-name">אלכסנדר ביידר</a><sup class="ref-cluster"><a href="#bio-aleksandr-beider" class="ph-ref bio" title="ביוגרפיה">ביו</a></sup> <span class="place">צרפת, בלשן־אונומסט</span>
+              <ul>
+                <li>סוניה <span class="m">+ אטיין הרנינג</span> <ul><li>ארתור</li><li>אלי</li></ul></li>
+                <li>קטיה <span class="m">+ אנטואן שלפמיץ</span> <ul><li>אלנה</li></ul></li>
+              </ul>
+            </li>
+            <li>משה (מריה) <span class="m">+ סשה מיכלב</span> <span class="place">גרמניה</span>
+              <ul><li>מקס ביידר</li><li>אליזה ביידר</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">7.</span> יידל סנדלר <span class="meta-inline">(ללא צאצאים)</span>
+      </div>
+    </li>
+
+  </ul>
+
+</div>
+</div>
+</section>
+
+<section class="major" id="album">
+  <div class="section-kicker">ארכיון תצלומים · 23 תמונות + אילן בכתב יד</div>
+  <h2 class="section-title">תצלומים</h2>
+  <div class="section-lede">כל התצלומים בסדר מהקדום למאוחר. לכל כרטיס יש עוגן משלו — והשמות בשני אילני היוחסין שלמעלה מקושרים אל העוגנים האלה.</div>
+  <div class="section-rule"></div>
+  
+<article class="album-card" id="motl-1940">
+  <span class="album-card-num">תמונה 01</span>
+  <h3 class="album-card-title">מוטל סנדלר — 1940</h3>
+  <div class="album-card-date">1940</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/motl-1940.jpg" alt="מוטל סנדלר — 1940" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>מוטל (מטוויי) סנדלר</strong> — סבא רבא של מיכאיל נאומוביץ׳ סנדלר והאב הקדמון המשותף של כל צאצאי המשפחה. טוחן בליטין (מחוז ויניצה, אוקראינה).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">1940 — שנה לפני פרוץ המלחמה ולפני שנהרג.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>דף מתוך אלבומה של קטיה ביידר. דרך <strong>גניה ביידר</strong> (אמו של אלכסנדר ביידר) — מקרובים מבוגרים.</div>
+      <div class="album-card-note">נרצח בשואה, סתיו 1941. מוטל ניסה לעזוב את ליטין הכבושה ולעבור לאזור הכיבוש הרומני (שם לא רצחו יהודים) — לא הצליח. קבור בקבר האחים של יהודי ליטין. עד שנות ה־70 בתיה ואחיותיה היו באות לשם להזכיר את הוריהן.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="khaya-1930s">
+  <span class="album-card-num">תמונה 02</span>
+  <h3 class="album-card-title">חיה רייכר</h3>
+  <div class="album-card-date">כנראה שנות ה־30</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/khaya-1930s.jpg" alt="חיה רייכר" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>חיה רייכר</strong>, אשתו של מוטל סנדלר. אם כל שבעת הילדים: יעקב, יידל, בתיה, פניה, ישראל, מעכל, רוזה. סבתא רבתא של מיכאיל נאומוביץ׳ סנדלר.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">התאריך המדויק אינו ידוע. כנראה שנות ה־30.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>הדיוקן היחיד הידוע. נמצא על ידי <strong>אלכסנדר ביידר</strong> בניירת המשפחה.</div>
+      <div class="album-card-note">נרצחה בשואה, קיץ–סתיו 1941. לפי בתיה: חיה יצאה מהבית, ומישהו — גרמני או שוטר מקומי — ירה בה. כמעט מיד אחרי שהכובשים נכנסו.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="old-family-damaged">
+  <span class="album-card-num">תמונה 03</span>
+  <h3 class="album-card-title">תצלום משפחתי ישן (העתק שחוק)</h3>
+  <div class="album-card-date">שנות ה־20–30</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/old-family-damaged.jpg" alt="תצלום משפחתי ישן (העתק שחוק)" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">במרכז גבר מבוגר עם שפם, זקן וכובע מצחייה. <strong>לפי הלבוש, הכובע והעניבה האופיינית — קרוב לוודאי שזה מוטל סנדלר עצמו</strong> (השוו לתצלום מס׳ 1 "מוטל, 1940" בגיל מבוגר יותר). משמאל גבר צעיר עם עניבה; מאחור משמאל נערה עם תספורת קארה; מימין נער ואישה צעירה. אם האדם המרכזי הוא אכן מוטל, סובבים אותו ארבעה משבעת ילדיו.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">שנות ה־20–30.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>התצלום נשלח על ידי <strong>אלכסנדר סנדלר</strong> (13 במאי, 18:25) ללא כיתוב — בהמשך לשיחה על תצלום יום הנישואין ה־50 של יענקל ונחומה.</div>
+      <div class="album-card-note">זה אותו תצלום שנמצא בתמונה מס׳ 5 למטה — אצל אירינה לוין בישראל נשמר עותק נקי הרבה יותר, שבו נראים הפנים.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="old-family-children">
+  <span class="album-card-num">תמונה 04</span>
+  <h3 class="album-card-title">נערה, אישה וילד</h3>
+  <div class="album-card-date">שנות ה־20–30</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/old-family-children.jpg" alt="נערה, אישה וילד" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">משמאל נערה עם פפיון גדול; במרכז אישה בגיל העמידה עם חרוז/שרשרת ארוכה; מימין ילד קטן בכובע. ייתכן שזו חיה רייכר עם ילדים, או אחת מאחיותיה — דרוש בירור.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">הדפסה פגומה מאוד מאותה תקופה, ככל הנראה מאותו אלבום. בסגנון של סטודיו פורטרטים מתחילת המאה ה־20.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>התצלום נשלח על ידי <strong>אלכסנדר סנדלר</strong> (13 במאי, 18:25) יחד עם התצלום הקודם.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="old-family-clean">
+  <span class="album-card-num">תמונה 05</span>
+  <h3 class="album-card-title">דיוקן משפחתי (העתק נקי מישראל)</h3>
+  <div class="album-card-date">שנות ה־20–30</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/old-family-clean.jpg" alt="דיוקן משפחתי (העתק נקי מישראל)" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">משמאל גבר צעיר בחליפה ועניבה; מאחור משמאל נערה עם תספורת קארה כהה; במרכז גבר מבוגר עם שפם, זקן וכובע מצחייה (<strong>קרוב לוודאי מוטל סנדלר</strong>); מימין נער ואישה צעירה. הדור הבכיר של משפחת סנדלר/רייכר; שמותיהם של היתר עוד מחכים לאישור.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">אותה סצנה כמו בתמונה מס׳ 3 למעלה, אך עותקה של אירינה לוין מישראל השתמר טוב יותר: ללא קרעים וסדקים, הפנים נראים. (התצלום סובב 90° עם כיוון השעון — המקור נסרק מהצד.)</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>התצלום נשלח על ידי <strong>אירינה (אירנה) לוין</strong> (14 במאי, 13:10) — נכדתו של יעקב סנדלר דרך בתו סופה ("האדמונית"); חיה בישראל, נשואה לליוניה לוין.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="betya-mehl-fanya-prewar">
+  <span class="album-card-num">תמונה 06</span>
+  <h3 class="album-card-title">בתיה, מעכל ופניה. לפני המלחמה</h3>
+  <div class="album-card-date">שנות ה־20 — תחילת שנות ה־30</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/betya-mehl-fanya-prewar.jpg" alt="בתיה, מעכל ופניה. לפני המלחמה" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">יושבים משמאל לימין: <strong>בתיה סנדלר</strong> (1914–1979) — <strong>מעכל (מיכאיל מטוויביץ׳) סנדלר</strong> — <strong>פניה סנדלר</strong> (לאחר נישואיה — שומשטיין). מאחור עומד גבר צעיר — זהותו לא ברורה. ככל הנראה <strong>ישראל סנדלר</strong> (אחיה, נפל במלחמה) או <strong>יצחק שומשטיין</strong> (בעלה של פניה).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">בקירוב שנות ה־20 — תחילת שנות ה־30.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span><strong>אלכסנדר ביידר</strong>, פברואר 2026.</div>
+      <div class="album-card-note"><strong>העיקר בתצלום הזה:</strong> בפעם הראשונה בארכיון רואים את פניו של מיכאיל מטוויביץ׳ סנדלר, אביו של נחום מיכאילוביץ׳. עד 2026 לא היה בידי משפחתו של נחום ולו תצלום אחד של אביו.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-officer">
+  <span class="album-card-num">תמונה 07</span>
+  <h3 class="album-card-title">מוזיה סנדלר — קצין בצבא הסובייטי</h3>
+  <div class="album-card-date">סוף שנות ה־40 — שנות ה־50</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-officer.jpg" alt="מוזיה סנדלר — קצין בצבא הסובייטי" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>מוזיה (מויסיי יעקובלביץ׳) סנדלר</strong> — בנו של יעקב (יענקל), אחיהם של פניה, סופה ומיכאיל. דודו של מיכאיל נאומוביץ׳ מצד יעקב. במדי קצין בצבא הסובייטי.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">בקירוב סוף שנות ה־40 — שנות ה־50.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>ארכיון משפחתי, מאי 2026.</div>
+      <div class="album-card-note">חי ונקבר בדנבר. דרך צאצאיו ממשיכה שושלת סנדלר בארצות הברית: בנו אלכס סנדלר ואשתו לנה פוליאקובה גרים באזור ניו יורק, בתם שפרה בלנציו, ונכדיהם סימון לילי ולואי השלישי.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-wedding">
+  <span class="album-card-num">תמונה 08</span>
+  <h3 class="album-card-title">דיוקן חתונה של מוזיה וסופה</h3>
+  <div class="album-card-date">1 בספטמבר 1955</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-wedding.jpg" alt="דיוקן חתונה של מוזיה וסופה" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>מוזיה (מויסיי) סנדלר</strong> (01.01.1930 – 07.12.2017) — בנם של יעקב ונחומה, ואשתו <strong>סופה קרצבורג</strong> (19.09.1932 – 27.11.2019). מאוחר יותר עברו לדנבר. בנם — אלכסנדר סנדלר, בתם — ריטה.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">יום רישום הנישואין. החתן במדי קצין בצבא הסובייטי.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>התצלום נשלח על ידי <strong>שפרה (סבטלנה) בלנציו</strong>, נכדתם של מוזיה וסופה (13 במאי, 17:21): "Married September 1 1955".</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-wedding-duplicate">
+  <span class="album-card-num">תמונה 09</span>
+  <h3 class="album-card-title">דיוקן חתונה של מוזיה וסופה (העתק נוסף)</h3>
+  <div class="album-card-date">1 בספטמבר 1955</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-wedding-duplicate.jpg" alt="דיוקן חתונה של מוזיה וסופה (העתק נוסף)" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>מוזיה (מויסיי) סנדלר</strong> במדי קצין ו<strong>סופה קרצבורג</strong>.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">אותו תצלום חתונה כמו במס׳ 8 — נסרק עותק נוסף.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>מארכיונו של <strong>אלכסנדר סנדלר</strong> (14 במאי, 14:00).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="beach-sochi-1960">
+  <span class="album-card-num">תמונה 10</span>
+  <h3 class="album-card-title">אצל הים — סוצ׳י, 26 ביולי 1960</h3>
+  <div class="album-card-date">26 ביולי 1960</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/beach-sochi-1960.jpg" alt="אצל הים — סוצ׳י, 26 ביולי 1960" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">על סלע במים — אח ואחות, ילדיהם של יעקב (יענקל) ונחומה: משמאל <strong>מיכאיל סנדלר "מישקה הקטן"</strong> (אביו של גנדי, נשוי לרייסה גנדלינה), מימין <strong>סופה סנדלר "האדמונית"</strong> (לימים סברנסקיה, עברה לישראל). הזיהוי — <strong>אלכסנדר סנדלר</strong> (15 במאי 2026, בצ׳אט "משפחה סנדלר").</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">תצלום נופש על סלע במים. בפינה הימנית התחתונה של ההדפסה כתוב ביד: "סוצ׳י 26.VII.60".</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>תצלום מארכיונו של <strong>אלכסנדר סנדלר</strong> (14 במאי, 13:58), צולם מחדש מתוך דף אלבום.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="sofa-redhead-wedding">
+  <span class="album-card-num">תמונה 11</span>
+  <h3 class="album-card-title">חתונת סופה (האדמונית) ויצחק סברנסקי</h3>
+  <div class="album-card-date">אמצע שנות ה־60</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/sofa-redhead-wedding.jpg" alt="חתונת סופה (האדמונית) ויצחק סברנסקי" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">הכלה היא <strong>סופה סנדלר "האדמונית"</strong>, בתם של יעקב ונחומה; החתן — <strong>יצחק סברנסקי</strong>. אחרי החתונה סופה ויצחק עלו לישראל; בתם — אירינה סברנסקיה (לוין). ברקע, מאחורי סופה — אמה, <strong>נחומה (נטשה)</strong>.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">רישום נישואין בארמון הנישואין (נראים העמודים והפנים של משרד רישום סובייטי). הכלה — עם זר וצעיף, בחליפה לבנה, בתסרוקת "באבטה".</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>ייחוס: <strong>אלכסנדר סנדלר</strong> (13 במאי, 18:29) — "סופה האדמונית". את נטשה ברקע זיהו נטליה, לריסה ומארק מסטצקי.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="manya-garik-wedding">
+  <span class="album-card-num">תמונה 12</span>
+  <h3 class="album-card-title">חתונת מניה וגריק קוזלין</h3>
+  <div class="album-card-date">סוף שנות ה־60</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/manya-garik-wedding.jpg" alt="חתונת מניה וגריק קוזלין" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">הכלה היא <strong>מניה סנדלר</strong> (בתו של ישראל, נפל בחזית ב־1943); החתן — <strong>גריק (גריגורי) קוזלין</strong>. בתם — ז׳ניה סנדלר (שרבליס), כיום בישראל. לצידם, לפי דברי ז׳ניה: "מימין לאמא עומדת <strong>גניה ביידר</strong> (אמו של אלכסנדר ביידר), ומשמאל לאבא — <strong>סופה</strong> (האדמונית)".</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">תצלום חתונה באולם משרד רישום נישואין, עם נברשת ושטיח מעוטר.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span><strong>ז׳ניה סנדלר</strong> שלחה ואיתרה (14 במאי, 13:02–13:04): "זה בחתונה של ההורים שלי". אלכסנדר ביידר אישר.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="naum-galina-wedding">
+  <span class="album-card-num">תמונה 13</span>
+  <h3 class="album-card-title">חתונת נחום וגלינה — 22 באוגוסט 1964, מוסקבה</h3>
+  <div class="album-card-date">22 באוגוסט 1964</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/naum-galina-wedding.jpg" alt="חתונת נחום וגלינה — 22 באוגוסט 1964, מוסקבה" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">משמאל לימין: 1) <strong>נחום מיכאילוביץ׳ סנדלר</strong> — החתן; 2) <strong>חומה "נינה" טרפניאק-סנדלר</strong> — אמו של החתן, סבתו של מיכאיל מצד האב; 3) <strong>גלינה פיודורובנה פיליושינה</strong> — הכלה; 4) <strong>אנסטסיה ניקולייבנה פיליושינה</strong> (לבית אליסייבה) — אמה של הכלה; 5) <strong>פיודור יגורוביץ׳ פיליושין</strong> — אביה של הכלה.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">22 באוגוסט 1964, מוסקבה.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>הארכיון הביתי של <strong>מיכאיל נאומוביץ׳ סנדלר</strong>.</div>
+      <div class="album-card-note"><strong>העיקר:</strong> התצלום היחיד הידוע של חומה (נינה) טרפניאק, אמו של נחום. תצלום אחד שמראה את שתי המשפחות יחד: סנדלר (דרך חומה) ופיליושין-אליסייב. חומה מויסייבנה נפטרה במוסקבה ב־3 ביולי 1977 (אושר בתעודת פטירה, פרוטוקול משרד רישום מס׳ 2031 מ־04.07.1977).</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="tamara-edik-wedding">
+  <span class="album-card-num">תמונה 14</span>
+  <h3 class="album-card-title">חתונת תמרה ליפובצקיה ואדיק טבקין — בקירוב 1964, מוסקבה</h3>
+  <div class="album-card-date">~1964, מוסקבה</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/tamara-edik-wedding.jpg" alt="חתונת תמרה ליפובצקיה ואדיק טבקין — בקירוב 1964, מוסקבה" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">הכלה — <strong>תמרה ליפובצקיה</strong> (בתם של חיים / יפים ליפובצקי). החתן — <strong>אדיק טבקין</strong>.<br><br><strong>"שבט סנדלר" בתצלום:</strong> <strong>מיליה ליפובצקי</strong> (דודו של אלכסנדר ביידר), <strong>לריסה</strong> (בתה הבכורה של פניה), <strong>סופה קרצבורג</strong> (אשתו של מוזיה), <strong>סופה סנדלר</strong> ("סופה האדמונית", אחותו של מוזיה), <strong>פניה סנדלר</strong>, <strong>מישה מסטצקי</strong> (בעלה של פניה), <strong>נחומה זלצר</strong>, <strong>יעקב (יאשה) סנדלר</strong>, <strong>אמה ליפובצקיה</strong> (אחותה של הכלה), <strong>מאריק אינדורסקי</strong> (ידיד המשפחה).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">~1964, מוסקבה.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>זיהוי: <strong>לריסה + אלכסנדר ביידר</strong>.</div>
+      <div class="album-card-note">תצלום קבוצתי נדיר שבו כמה ענפים של המשפחה נמצאים יחד בפריים אחד.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mother-dacha">
+  <span class="album-card-num">תמונה 15</span>
+  <h3 class="album-card-title">בטיול ביער</h3>
+  <div class="album-card-date">סוף שנות ה־50 — תחילת שנות ה־60</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mother-dacha.jpg" alt="בטיול ביער" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">אישה צעירה, מחייכת, נושאת בידיה ילד קטן עם כובע; לידה ילדה גדולה יותר בחולצה בהירה עם צווארון. השמות המדויקים עדיין לא נקבעו.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">תצלום בשביל יער (כנראה דאצ׳ה ליד מוסקבה). תצלום חמים ויומיומי, לא רשמי.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>תצלום מארכיונו של <strong>אלכסנדר סנדלר</strong> (14 במאי, 13:58).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="two-men-tree">
+  <span class="album-card-num">תמונה 16</span>
+  <h3 class="album-card-title">שני צעירים מתחת לעץ פורח</h3>
+  <div class="album-card-date">שנות ה־60—70</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/two-men-tree.jpg" alt="שני צעירים מתחת לעץ פורח" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">משמאל יושב <strong>מיכאיל סנדלר "מישקה הקטן"</strong>, בנו של יעקב (יענקל). מימין <strong>מיליה ליפובצקי</strong> (לפי מיכאיל נאומוביץ׳ — "בנו של שיקוב"; הקשר ההורי דורש אישור מאלכסנדר סנדלר). הזיהוי — <strong>אלכסנדר סנדלר</strong> (15 במאי 2026, בצ׳אט "משפחה סנדלר").</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">תצלום קיץ בטבע: שיח ורד בר או עץ תפוח פורח מאחור, שני גברים יושבים בדשא בחולצות לבנות.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>תצלום מארכיונו של <strong>אלכסנדר סנדלר</strong> (14 במאי, 13:58).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="yakov-nokhuma-portrait">
+  <span class="album-card-num">תמונה 17</span>
+  <h3 class="album-card-title">יענקל ונחומה — דיוקן רשמי</h3>
+  <div class="album-card-date">שנות ה־70</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/yakov-nokhuma-portrait.jpg" alt="יענקל ונחומה — דיוקן רשמי" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>יעקב (יענקל) סנדלר</strong> + <strong>נחומה (נטשה) זלצר</strong> — סבא וסבתא של אלכסנדר סנדלר, שפרה, ז׳ניה סנדלר (דרך ישראל), מאריק מסטצקי, אירינה סברנסקיה ועוד רבים. יענקל הוא בנו הבכור של מוטל סנדלר.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">תצלום בית רשמי של זוג מבוגרים.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>תצלום מארכיונו של <strong>אלכסנדר סנדלר</strong> (14 במאי, 13:58). אותם פנים שנמצאים במרכז תצלום 50 השנים.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="fifty-year-anniversary">
+  <span class="album-card-num">תמונה 18</span>
+  <h3 class="album-card-title">50 שנים לרישום נישואיהם של סבא יאשה וסבתא נטשה</h3>
+  <div class="album-card-date">בקירוב סוף שנות ה־70</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/fifty-year-anniversary.jpg" alt="50 שנים לרישום נישואיהם של סבא יאשה וסבתא נטשה" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>בפינה השמאלית התחתונה יושב מיליה ליפובצקי</strong> (בנה של דודה בתיה, אחיינו של יעקב) — אישרו אלכסנדר סנדלר ומארק מסטצקי. במרכז — <strong>נחומה</strong> בצעיף; מימינה — <strong>יעקב (יענקל)</strong>. הגבר שעומד מאחור והאישה מימין הם בני משפחה אחרים.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">דיוקן יום השנה — 50 שנים לרישום נישואיהם של יעקב (יענקל) סנדלר ונחומה (נטסי) זלצר.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>ייחוס: <strong>אלכסנדר סנדלר</strong> (13 במאי, 18:17): "זו בדיוק התמונה 50 שנה אחרי שסבא יאשה וסבתא נטשה נרשמו לנישואין". בירור לגבי מיליה — אלכסנדר סנדלר, מארק מסטצקי.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="fanya-mestetskaya-husband">
+  <span class="album-card-num">תמונה 19</span>
+  <h3 class="album-card-title">פניה מסטצקיה עם בעלה</h3>
+  <div class="album-card-date">שנות ה־70</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/fanya-mestetskaya-husband.jpg" alt="פניה מסטצקיה עם בעלה" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>פניה (סנדלר) מסטצקיה</strong> — בתם הבכורה של יעקב ונחומה — ובעלה <strong>מיכאיל מסטצקי</strong>. ילדיהם — מארק מסטצקי ולריסה ויזלמן (מסטצקיה).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">דיוקן זוגי — קלוז־אפ של בעל ואישה בסביבה ביתית.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>זיהוי: <strong>אלכסנדר סנדלר</strong> (15 במאי): "כנראה פניה מסטצקיה ובעלה".</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="yakov-with-rita">
+  <span class="album-card-num">תמונה 20</span>
+  <h3 class="album-card-title">יעקב עם נכדיו — ריטה רייטר מימין</h3>
+  <div class="album-card-date">שנות ה־70</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/yakov-with-rita.jpg" alt="יעקב עם נכדיו — ריטה רייטר מימין" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">במרכז <strong>יעקב סנדלר</strong>. מימינו (הקיצונית מימין) — <strong>ריטה רייטר</strong> (לבית סנדלר), בתם של מוזיה וסופה, נכדתו של יעקב. הנער משמאל הוא <strong>גנדי ("גנה") סנדלר</strong>, בנם של מיכאיל ("מישקה הקטן") ורייסה גנדלינה, נכדו של יעקב. הנערה בשמלה פרחונית היא <strong>קרוב לוודאי אירינה סברנסקיה (לוין)</strong>, בתה של סופה "האדמונית", נכדתו של יעקב — <em>טעון אישור של אלכסנדר סנדלר</em>. זיהוי הנער וההשערה לגבי הנערה — <strong>אלכסנדר סנדלר</strong> (15 במאי 2026, בצ׳אט "משפחה סנדלר").</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">דיוקן משפחתי בבית על רקע שטיח.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>זיהוי: <strong>אלכסנדר סנדלר</strong> (15 במאי): "בתמונה 11 יעקב, את צודקת, מימין ריטה רייטר בתו של מוזיה".</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="naum-mikhail-ny">
+  <span class="album-card-num">תמונה 21</span>
+  <h3 class="album-card-title">נחום ומיכאיל בניו יורק — 1992 או 1993</h3>
+  <div class="album-card-date">1992 או 1993</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/naum-mikhail-ny.jpg" alt="נחום ומיכאיל בניו יורק — 1992 או 1993" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>מיכאיל נאומוביץ׳ סנדלר</strong> עם אביו, <strong>נחום מיכאילוביץ׳</strong>, באירוע משפחתי בניו יורק. כנראה חגיגת חנוכה — ברקע נראית תאורה מעוצבת כמנורות.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">1992 או 1993, שנה־שנתיים אחרי שמיכאיל עבר ממוסקבה לקנדה (אוטווה, 1991).</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>הארכיון הביתי של <strong>מיכאיל נאומוביץ׳</strong>.</div>
+      <div class="album-card-note">"המשפחה הגדולה" — צאצאי האחים והאחיות של מעכל — עברה לדנבר ולניו יורק בשנות ה־80 וה־90. מיכאיל הגיע לקנדה ב־1991, ולארה״ב ב־2013.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-sofa-grave">
+  <span class="album-card-num">תמונה 22</span>
+  <h3 class="album-card-title">קברם של מוזיה וסופה — דנבר</h3>
+  <div class="album-card-date">אחרי 2019</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-sofa-grave.jpg" alt="קברם של מוזיה וסופה — דנבר" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">ליד המצבה — <strong>אלכסנדר סנדלר</strong>, בנם.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">מצבה בבית עלמין יהודי בדנבר (קולורדו, ארה״ב). על האבן: <strong>SOFIA — LOVED AND MISSED, Sept. 19, 1932 – Nov. 27, 2019</strong> — <strong>MOISEY — ALWAYS A MENSCH, Jan. 01, 1930 – Dec. 07, 2017</strong> — "FOREVER IN OUR HEARTS".</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>תצלום מארכיונו של <strong>אלכסנדר סנדלר</strong> (14 במאי, 14:02).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="shifra-with-kids">
+  <span class="album-card-num">תמונה 23</span>
+  <h3 class="album-card-title">ליד אנדרטת משפחת סנדלר</h3>
+  <div class="album-card-date">בקירוב 2020 (לפי גיל הילדים)</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/shifra-with-kids.jpg" alt="ליד אנדרטת משפחת סנדלר" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body"><strong>שפרה (סבטלנה) בלנציו</strong>, לבית סנדלר — נכדתם של מוזיה וסופה, בתם של אלכסנדר סנדלר ואלנה פוליאקובה — עם שני ילדיה: <strong>סימון לילי בלנציו</strong> ו<strong>לואי בלנציו השלישי</strong>. בעלה של שפרה — ג׳פרי בלנציו.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">ביקור משפחתי בבית העלמין: סביבם מצבות יהודיות נוספות (BRONSTINE, PLOTKIN, GOLDIN, KHURGINA, ENGBAR, KHAYKIN, THORNER).</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>תצלום מארכיונו של <strong>אלכסנדר סנדלר</strong> (14 במאי, 14:02). הרכב המשפחה — לפי אילן היוחסין.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="tree-1990">
+  <span class="album-card-num">אילן יוחסין</span>
+  <h3 class="album-card-title">אילן יוחסין בכתב יד של משפחת סנדלר-רייכר, ~1990</h3>
+  <div class="album-card-date">סוף שנות ה־70 — תחילת שנות ה־90</div>
+  <div class="album-card-body tall">
+    <div class="photo-frame tree">
+      <img src="photos/tree-1990.jpg" alt="אילן יוחסין בכתב יד של משפחת סנדלר-רייכר, ~1990" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">אילן יוחסין שעוצב ביד של משפחת מוטל סנדלר וחיה רייכר. עליו כל שבעת הענפים: יעקב (יענקל), יידל, בתיה, פניה, ישראל, מעכל, רוזה.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">מהאילן הזה התחיל שחזור השושלת — <strong>אלכסנדר ביידר</strong> אישר בצ׳אט שזה כתב היד שלו, שהורכב עוד במוסקבה בסוף שנות ה־70.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span><strong>אלכסנדר ביידר</strong> (14 במאי, 12:33): "חלק מהשמות/שמות המשפחה הוספתי לא מהזיכרון אלא מאילן היוחסין שלי בכתב יד (על דף נייר, שהורכב במוסקבה בערך בסוף שנות ה־70)."</div>
+      
+    </div>
+  </div>
+</article>
+
+<article class="album-card" id="four-siblings-1970s">
+  <span class="album-card-num">תמונה 25</span>
+  <h3 class="album-card-title">ארבעת ילדיהם של מוטל וחיה — התצלום הקבוצתי האחרון של מי שנותרו בחיים</h3>
+  <div class="album-card-date">מחצית ראשונה של שנות ה־70, מוסקבה</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/four-siblings-1970s.jpg" alt="רוזה, יעקב, פניה ובתיה סנדלר — מוסקבה, תחילת שנות ה־70" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">מי בתמונה</span>
+        <div class="field-body">מימין לשמאל: <strong>רוזה</strong>, <strong>יעקב (יאשה) סנדלר</strong>, <strong>פניה</strong>, <strong>בתיה</strong>. ארבעה משבעת ילדיהם של מוטל סנדלר וחיה רייכר.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">מתי / האירוע</span>
+        <div class="field-body">התצלום צולם במוסקבה, לשם הגיעה רוזה <strong>בערב נסיעתה לישראל</strong>. רוזה עלתה לישראל ב־1973 — כך שהתצלום מתוארך <strong>למחצית הראשונה של שנות ה־70</strong>, כנראה 1972–1973.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">מקור</span>ארכיון משפחתי, נשלח על ידי מיכאיל נאומוביץ׳ סנדלר (17 במאי 2026).</div>
+      <div class="album-card-note"><strong>חשיבותו ההיסטורית של התצלום:</strong> זה התצלום האחרון שבו כל האחיות והאח שנותרו בחיים אחרי המלחמה נמצאים יחד. עד מועד הצילום <strong>ישראל</strong> כבר נפל בחזית ליד זפוריז׳יה ב־1943, <strong>מעכל</strong> (מיכאיל מטוויביץ׳) מת במהלך המלחמה, וגורלו של <strong>יידל</strong> אינו ידוע. ארבעה אלה — יעקב, רוזה, פניה ובתיה — הגיעו לשנות ה־70. בתיה תיפטר ב־1979, רוזה — כבר בישראל.</div>
+    </div>
+  </div>
+</article>
+
+
+</section>
+
+<section class="major" id="memorial-naum">
+  <div class="memorial">
+    <div class="kicker">לזכרו</div>
+    <h2>נחום מיכאילוביץ׳ סנדלר</h2>
+    <div class="lifespan">9 בינואר 1941, מוסקבה  —  27 בינואר 2026</div>
+
+    <div class="memorial-body">
+      <div class="memorial-photo"><img src="photos/naum-memorial.jpg" alt="נחום מיכאילוביץ׳ סנדלר"></div>
+      <div class="memorial-text">
+        <p>הוא הקדיש את כל חייו ליצירה בענף ייצור החשמל. חי לחלוטין מתוך עבודתו — בניית מתקני אנרגיה. לעבודה הזו הקדיש את כל כוחו, כישוריו וזמנו, צלל לעומק הפרטים והיה מנוע בלתי נלאה למפעלים גדולים.</p>
+        <p>נחום מיכאילוביץ׳ זכה להערכה בלתי מסויגת בענף כמומחה מבריק ואדם בעל סגולות אישיות נדירות. בצוות העבודה יצר אווירה של אמון ופוריות, האזין ושמע אנשים ללא תלות במעמדם.</p>
+
+        <h4>השכלה</h4>
+        <p>בוגר המכון הארצי להוראה מרחוק להנדסת בנייה ושל המכון האנרגטי של מוסקבה. דוקטור (קנדידט) למדעי הטכנולוגיה. מחבר של עבודות מדעיות אחדות.</p>
+
+        <h4>הקריירה</h4>
+        <p>מבטונאי-מתקין וראש עבודה בחברת "מוסאנרגוסטרוי" ועד למנהל המכון "מוסאנרגופרויקט". בהנהלתו — פרויקטים של תחנות כוח, צינורות הסקה, תחנות משנה, קווי מתח, סכמות לאספקת חום וחשמל למוסקבה ולמחוזות רוסיה, מקטעי קיטור-גז של "מוסאנרגו". בשנים 2011-2020 — יועץ ב־ООО "גזפרום אנרגוהולדינג".</p>
+
+        <h4>אותות והוקרה</h4>
+        <p>עובד מצטיין של מערכת האנרגיה המאוחדת של רוסיה. בנאי מצטיין של הפדרציה הרוסית. עובד מצטיין של משרד האנרגיה והדלק של רוסיה. אות הכבוד ומדליות מדינתיות ומשרדיות אחרות.</p>
+      </div>
+    </div>
+
+    <div class="memorial-closing">יהי זכרו ברוך.</div>
+  </div>
+</section>
+
+<section class="major" id="living">
+  <div class="section-kicker">שני בני משפחה חיים</div>
+  <h2 class="section-title">בני זמננו</h2>
+  <div class="section-lede">שני בני משפחה — בני־דודים מדרגה שנייה ושלישית — שבזכותם הצטברו בארכיון המשפחתי תצלומים, שמות וסיפורים כה רבים.</div>
+  <div class="section-rule"></div>
+
+  <div class="bio-grid">
+
+    <div class="bio-card" id="bio-aleksandr-beider">
+      <h3>אלכסנדר ביידר</h3>
+      <div class="bio-sub">יליד 1963, מוסקבה · בפריז מאז 1990</div>
+
+      <h4>הקשר המשפחתי</h4>
+      <p>בנה של גניה (בתה של בתיה סנדלר) ושל בוריס ביידר. בן דוד מדרגה שלישית של מיכאיל נאומוביץ׳. מקור לתצלומים משפחתיים ישנים ולחלק גדול מהמידע הגנאלוגי על הענף הליטיני.</p>
+
+      <h4>השכלה</h4>
+      <p>בוגר MIPT (1986). דוקטור (קנדידט) למדעי הפיזיקה והמתמטיקה (1989). דוקטורט שני — במדעי היהדות, בסורבון (École Pratique des Hautes Études), 2000.</p>
+
+      <h4>במה הוא ידוע</h4>
+      <p>אחד המומחים המובילים בעולם באונומסטיקה של יהודי אשכנז — אטימולוגיה וגיאוגרפיה של שמות משפחה יהודיים ושמות פרטיים ביידיש. מחבר ספרי יסוד על שמות משפחה יהודיים של האימפריה הרוסית, פולין, גליציה, המגרב ועוד. מחבר־שותף של האלגוריתם הפונטי Beider-Morse (עם סטיבן מורס, 2008) — סטנדרט במאגרי גנאלוגיה.</p>
+
+      <h4>ספריו המרכזיים</h4>
+      <p><em>Origins of Yiddish Dialects</em> (Oxford University Press, 2015); מילוני שמות משפחה של האימפריה הרוסית (1993, מהדורה מתוקנת 2008); פולין (1996, פרס "ספר העיון המצטיין במדעי היהדות"); גליציה (2004); המגרב, גיברלטר ומלטה (2017); איטליה, צרפת והקהילות הפורטוגליות (2019).</p>
+    </div>
+
+    <div class="bio-card" id="bio-shifra">
+      <h3>שפרה בלנציו</h3>
+      <div class="bio-sub">לבית סבטלנה סנדלר · אזור ניו יורק רבתי</div>
+
+      <h4>הקשר המשפחתי</h4>
+      <p>בתם של אלכסנדר סנדלר (בנו של מוזיה) ושל אלנה פוליאקובה. נינתו של יעקב (יענקל) סנדלר. נשואה לג׳פרי בלנציו; שני ילדים — Simone Lily ו־Louis III.</p>
+
+      <h4>השכלה</h4>
+      <p>Carnegie Mellon University, Tepper School of Business — BBA במימון וניהול בינלאומי, 2007.</p>
+
+      <h4>במה היא ידועה</h4>
+      <p>קריירה בתעשיית מותגי היוקרה: בעבר Louis Vuitton ו־Bulgari, היום Director, Global Retail Performance ב־Tiffany &amp; Co. גרה באזור ניו יורק (סקרסדייל / מונטקלייר).</p>
+    </div>
+
+  </div>
+
+  <p style="font-family:'PT Sans',sans-serif; font-size:12px; color:var(--ink-mute); font-style:italic; margin-top:24px; text-align:center;">מקורות: פרסומים פתוחים, ויקיפדיה, דפים אקדמיים, פרופילים מקצועיים. לא נעשה שימוש בפרטים אישיים מרשתות חברתיות סגורות.</p>
+</section>
+
+<section class="major" id="updates">
+  <div class="section-kicker">תיקונים שהתקבלו מבני המשפחה</div>
+  <h2 class="section-title">תיקונים ותוספות</h2>
+  <div class="section-rule"></div>
+
+  <div class="info-card">
+    <h3>נחום מיכאילוביץ׳ סנדלר</h3>
+    <ul>
+      <li>9 בינואר 1941 (מוסקבה) — 27 בינואר 2026. חיים בתחום ייצור החשמל.</li>
+      <li>דוקטור (קנדידט) למדעי הטכנולוגיה. עובד מצטיין של מערכת האנרגיה המאוחדת של רוסיה; בנאי מצטיין של רוסיה.</li>
+      <li>ראו את <a href="#memorial-naum" style="color:var(--accent);">דף הזיכרון הנפרד</a>.</li>
+    </ul>
+
+    <h3>חומה מויסייבנה טרפניאק-סנדלר</h3>
+    <ul>
+      <li>שם נעוריה — טרפניאק; שם נישואיה — סנדלר. בחיי היומיום הסובייטיים נקראה נינה.</li>
+      <li><strong>נולדה ב־5 באפריל 1916</strong> בברדיצ׳ב (מחוז ז׳יטומיר, אז האימפריה הרוסית).</li>
+      <li><strong>נפטרה ב־3 ביולי 1977</strong> במוסקבה. רישום פטירה מס׳ 2031 מ־4 ביולי 1977, סניף קויבישבסקי של משרד רישום נישואין ופטירות במוסקבה.</li>
+      <li>שם האב <em>מויסייבנה</em>  — בהתאם, שמו של אביה היה מויסיי (כנראה מויסה) טרפניאק. שם אמה עדיין לא הוברר.</li>
+      <li><em>מקור: תעודת פטירה כפולה שהונפקה ב־27.02.2016 (סדרה VII-מ"י, מס׳ 576303). שמורה אצל מיכאיל נאומוביץ׳.</em></li>
+    </ul>
+
+    <h3>הגירת המשפחה הגדולה</h3>
+    <ul>
+      <li>רוב בני המשפחה עברו ממוסקבה לדנבר ומשם ברחבי ארה״ב בשנות ה־80–90.</li>
+    </ul>
+
+    <h3>מוזיה (מויסיי יעקובלביץ׳) סנדלר</h3>
+    <ul>
+      <li>חי ונקבר בדנבר. בנו אלכס סנדלר ואשתו לנה פוליאקובה גרים באזור ניו יורק.</li>
+      <li>בתם שפרה סנדלר נשואה לג׳ף בלנציו. הנכדים — לואי וסימה.</li>
+    </ul>
+
+    <h3>מיכאיל נאומוביץ׳ סנדלר</h3>
+    <ul>
+      <li>עבר ממוסקבה לקנדה (אוטווה) ב־1991, ומקנדה לארה״ב ב־2013.</li>
+    </ul>
+
+    <h3>ענף בתיה — משפחת ביידר</h3>
+    <ul>
+      <li>מלבד מיליה ליפובצקי, לבתיה הייתה בת — גניה (גרה בגרמניה).</li>
+      <li>בנה אלכסנדר ביידר חי בצרפת; יש לו שתי בנות: סוניה וקטיה.</li>
+      <li>אחותו של אלכסנדר — משה (מריה) — חיה גם היא בגרמניה.</li>
+      <li>אלכסנדר שיתף תצלומים ישנים של מוטל וחיה ותצלום של מעכל לפני המלחמה.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="major" id="open-questions">
+  <div class="section-kicker">מה עוד צריך לברר</div>
+  <h2 class="section-title">שאלות פתוחות</h2>
+  <div class="section-rule"></div>
+
+  <div class="info-card">
+    <h3>תמונות ותאריכים</h3>
+    <ul>
+      <li>תצלום מס׳ 1 (מוטל, 1940): מועד מדויק ומקום הצילום. היכן חי מוטל ב־1940?</li>
+      <li>תצלום מס׳ 2 (חיה): מתי והיכן צולם הדיוקן?</li>
+      <li>תצלום מס׳ 6 (בתיה, מעכל, פניה): מי עומד מאחור — ישראל או יצחק שומשטיין? שנת הצילום?</li>
+      <li>תצלום מס׳ 13 (חתונת נחום וגלינה): האם נשמרו תצלומים נוספים מן החתונה?</li>
+      <li>תצלום מס׳ 14 (חתונת תמרה ואדיק): לא כל הפנים זוהו. הקבוצה מצד אדיק טבקין — האם למישהו אחר יש תצלומים נוספים?</li>
+    </ul>
+
+    <h3>ביוגרפיות ומשפחות</h3>
+    <ul>
+      <li>שנת לידתו של מעכל: בארכיונים נכתב 1907, 1909, 1910, 1911, 1914.</li>
+      <li>חומה מויסייבנה טרפניאק: שם אמה (לפי שם האב, אביה היה מויסיי), הוריה ואבותיה בברדיצ׳ב, וכיצד שרדה עם נחום התינוק בקלושינו לאחר 1941.</li>
+      <li>משפחת פיליושין: מאיפה מוצאם של פיודור יגורוביץ׳ ואנסטסיה ניקולייבנה (לבית אליסייבה).</li>
+      <li>קשר עם צאצאיה של רוזה (מניה ברונפמכר, אנה חובר, אינה קרנצברג) בישראל — מישהו בקשר?</li>
+      <li>תמרה ואדיק טבקין — היכן חיים צאצאיהם (הבת אינה, ילידת 1965)?</li>
+    </ul>
+
+    <h3>שמות וסדר הדורות</h3>
+    <ul>
+      <li>ילדיו של גנדי (בנו של מיכאיל "מישקה הקטן", ענף יענקל) — בן ובת, שמותיהם.</li>
+      <li>ילדיהם של אלה ואיגור (ענף פניה → אנשל) — שמות.</li>
+      <li>סדר הבכורה של מעכל וישראל בין שבעת ילדיו של מוטל.</li>
+      <li>מניה (בתה של רוזה) — מזיידל באנגיק או מדוד ברנוביץ׳?</li>
+      <li>ילדיה של בתיה מבעלה השני (מויסיי שסטק), אם היו.</li>
+    </ul>
+
+    <h3>שאלות לאלכסנדר סנדלר <span style="font-family: 'PT Sans', sans-serif; font-size: 13px; font-weight: 400; color: var(--ink-soft); text-transform: none; letter-spacing: 0;">(דרך הצ׳אט "משפחה סנדלר")</span></h3>
+    <ul>
+      <li><strong>הנערה בתצלום מס׳ 20 "יעקב עם נכדיו"</strong>  — ציינת שזו "אירה, בתה של סופה האדמונית". האם תוכל לאשר שזו אירינה סברנסקיה (לוין)?</li>
+      <li><strong>מיליה ליפובצקי</strong> — מי היו הוריו? מיכאיל נאומוביץ׳ כתב "בנו של שיקוב", אך לא ברור לנו עדיין: שיקוב — שם האם? האב? במלוא השם? מאיזה ענף מגיע מיליה — דרך אמה ליפובצקיה (המופיעה בתצלום מס׳ 14) או דרך מישהו אחר?</li>
+      <li><strong>הגבר המזוקן בכובע המצחייה במרכז התצלום המשפחתי הישן</strong>  (זה שכינית "השלישי") — לא נקבת בשמו. האם זה מוטל סנדלר, סבך הגדול?</li>
+      <li><strong>התצלום עם דודה פניה ואיתך בזרועותיה</strong>, שבו עומד לידה מאריק — באיזו שנה בערך? האם זה מאריק מסטצקי (בנה של פניה) או מאריק אחר?</li>
+    </ul>
+  </div>
+</section>
+
+<section class="major" id="feedback">
+  <div class="feedback-block">
+    <div class="section-kicker">משוב</div>
+    <h2 class="section-title">אמרו לי משהו</h2>
+    <div class="section-lede">אם הגעתם לקרוא — תגובה קצרה שווה הרבה. לחצו על המתאים ביותר: ייפתח מייל למיכאיל עם נושא מוכן. הוסיפו שורה ושלחו.</div>
+    <div class="section-rule"></div>
+
+    <div class="feedback-grid">
+      <a class="feedback-card" href="mailto:msandler@epiphan.com?subject=%D0%A1%D0%B0%D0%BD%D0%B4%D0%BB%D0%B5%D1%80%D1%8B%20%E2%80%94%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%84%D0%BE%D1%82%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B0&amp;body=%D0%9C%D0%B8%D1%88%D0%B0%2C%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%0A%0A%D0%A3%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%84%D0%BE%D1%82%D0%BE%2F%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%B8%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D1%85%20%D0%B2%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B5%20%D0%BD%D0%B5%D1%82%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C%D1%81%D1%8F.%0A%0A%D0%9A%D1%82%D0%BE%20%D1%8F%20%D0%B8%20%D0%BF%D0%BE%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%B2%D0%B5%D1%82%D0%B2%D0%B8%20%D1%80%D0%BE%D0%B4%D0%B0%3A%20%0A%D0%A7%D1%82%D0%BE%20%D0%BD%D0%B0%20%D1%84%D0%BE%D1%82%D0%BE%2C%20%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0%2C%20%D0%B3%D0%B4%D0%B5%2C%20%D0%BA%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%BB%D1%91%D0%BD%3A%20%0A%0A%5B%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B8%D1%82%D0%B5%20%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%B8%20%D0%BA%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D1%83%5D">
+        <div class="feedback-icon">📸</div>
+        <div class="feedback-title">יש לי תצלום עבור הארכיון</div>
+        <div class="feedback-desc">יש בידי תצלומים שלא נמצאים כאן. אשמח לשתף.</div>
+      </a>
+
+      <a class="feedback-card" href="mailto:msandler@epiphan.com?subject=%D0%A1%D0%B0%D0%BD%D0%B4%D0%BB%D0%B5%D1%80%D1%8B%20%E2%80%94%20%D0%BF%D0%BE%D0%BC%D0%BD%D1%8E%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8E&amp;body=%D0%9C%D0%B8%D1%88%D0%B0%2C%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%0A%0A%D0%9F%D0%BE%D0%BC%D0%BD%D1%8E%20%D0%B8%D0%BB%D0%B8%20%D0%B7%D0%BD%D0%B0%D1%8E%20%D1%87%D1%82%D0%BE-%D1%82%D0%BE%2C%20%D1%87%D0%B5%D0%B3%D0%BE%20%D0%B2%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B5%20%D0%BD%D0%B5%D1%82%20%E2%80%94%20%D0%BF%D1%80%D0%BE%20%D0%BB%D1%8E%D0%B4%D0%B5%D0%B9%2C%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F%2C%20%D0%BC%D0%B5%D1%81%D1%82%D0%B0.%0A%0A%D0%9A%D1%82%D0%BE%20%D1%8F%20%D0%B8%20%D0%BF%D0%BE%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%B2%D0%B5%D1%82%D0%B2%D0%B8%20%D1%80%D0%BE%D0%B4%D0%B0%3A%20%0A%D0%9E%20%D0%BA%D0%BE%D0%BC%2F%D0%BE%20%D1%87%D1%91%D0%BC%20%D1%80%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B6%D1%83%3A%20%0A%D0%9E%D1%82%20%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%8F%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%BD%D0%B0%D1%8E%3A%20%0A%0A%5B%D1%82%D0%B5%D0%BA%D1%81%D1%82%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8%5D">
+        <div class="feedback-icon">📖</div>
+        <div class="feedback-title">יש בידי סיפור</div>
+        <div class="feedback-desc">אני זוכר/ת תקרית, תאריך, אמירה — משהו שלא נמצא כאן. אספר.</div>
+      </a>
+
+      <a class="feedback-card" href="mailto:msandler@epiphan.com?subject=%D0%A1%D0%B0%D0%BD%D0%B4%D0%BB%D0%B5%D1%80%D1%8B%20%E2%80%94%20%D1%81%D0%BE%D0%B2%D0%B5%D1%82%20%D0%BF%D0%BE%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D1%83&amp;body=%D0%9C%D0%B8%D1%88%D0%B0%2C%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%0A%0A%D0%9F%D1%80%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D0%BB%28%D0%B0%29%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%2C%20%D0%BD%D0%B0%20%D1%83%D0%BC%20%D0%BF%D1%80%D0%B8%D1%88%D0%BB%D0%B0%20%D0%BC%D1%8B%D1%81%D0%BB%D1%8C%2C%20%D0%BA%D0%B0%D0%BA%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%BB%D1%83%D1%87%D1%88%D0%B5%2F%20%D0%BD%D0%B0%D1%88%D1%91%D0%BB%28%D0%B0%29%20%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D1%83%2F%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%B0%D0%B3%D0%B0%D1%8E%20%D1%87%D1%82%D0%BE-%D1%82%D0%BE%20%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C.%0A%0A%5B%D0%BE%D0%BF%D0%B8%D1%88%D0%B8%D1%82%D0%B5%2C%20%D1%87%D1%82%D0%BE%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%5D">
+        <div class="feedback-icon">💡</div>
+        <div class="feedback-title">עצה או רעיון</div>
+        <div class="feedback-desc">הבחנתי בטעות או באי־דיוק, או שעולה לי רעיון איך לשפר את הארכיון.</div>
+      </a>
+
+      <a class="feedback-card" href="mailto:msandler@epiphan.com?subject=%D0%A1%D0%B0%D0%BD%D0%B4%D0%BB%D0%B5%D1%80%D1%8B%20%E2%80%94%20%D1%81%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BE&amp;body=%D0%9C%D0%B8%D1%88%D0%B0%2C%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%0A%0A%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%28%D0%B0%29%20%D1%81%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%2C%20%D1%87%D1%82%D0%BE%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%0A%0A%5B%D0%BA%D1%82%D0%BE%20%D1%8F%20%D0%B8%20%D0%BF%D0%BE%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%B2%D0%B5%D1%82%D0%B2%D0%B8%20%D1%80%D0%BE%D0%B4%D0%B0%5D">
+        <div class="feedback-icon">❤️</div>
+        <div class="feedback-title">תודה</div>
+        <div class="feedback-desc">נהניתי וברצוני לציין זאת — לפחות שתדעו שקראתי.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="major" id="contact">
+  <div class="contact-block">
+    <h3>על הארכיון הזה</h3>
+
+    <h4>מי כותב את זה</h4>
+    <p>את הדף הזה אוסף וכותב <strong>Claude</strong> — מודל שפה גדול של חברת Anthropic. תפקידו של <strong>מיכאיל נאומוביץ׳ סנדלר</strong> — הוא מנחה: הוא מעביר אליי את התצלומים, המסמכים וההודעות של בני המשפחה, בודק את התוצאה ומפרסם עדכונים.</p>
+
+    <h4>מהיכן החומרים</h4>
+    <p>כל מה שכאן — מתוך צ׳אט וואטסאפ "משפחה סנדלר", שבו ל־15 במאי 2026 חברים 16 בני משפחה מצדי סנדלר ורייכר. הצ׳אט סגור — הצטרפות רק בהזמנה מאחד החברים. אם אתם קרובי משפחה ומעוניינים להצטרף — כתבו למיכאיל, והוא יזמין.</p>
+
+    <h4>בקשה לכולם שכבר בצ׳אט</h4>
+    <p><strong>הציגו את עצמכם.</strong> כרגע חלק מהמשתתפים נראים בתור מספרי טלפון בלבד — זה לא נכון. לפחות שם, מאיזה ענף ובאיזו ארץ.</p>
+    <p><strong>הוסיפו פירוט להערות.</strong> אם אתם שולחים תצלום או סיפור — תארו במידת הדיוק האפשרית: מי בתמונה (משמאל לימין), מתי, היכן, באיזה אירוע, מאיפה אתם יודעים. את החומרים אסדר אני, בינה מלאכותית, ואטמיע אותם בארכיון — ואני עלול לטעות בכל דבר שלא נאמר לי במפורש.</p>
+    <p>מיכאיל מעביר אליי מעת לעת את החומר שנצבר בצ׳אט. אחרי כל ניתוח אני מעדכן את הדף הזה — והוא נשאר זמין באותו קישור.</p>
+
+    <h4>על פרטיות</h4>
+    <p>הדף פתוח לכל מי שיש לו את הקישור. עליו שמות, תאריכים, תצלומים וסיפורים של אנשים חיים. <strong>אם אתם מוצאים כאן מידע על עצמכם או על קרוביכם שלא הייתם רוצים לראות בגישה פתוחה — כתבו למיכאיל, והוא יוסר.</strong> זה חשוב.</p>
+
+    <h4>לעתיד</h4>
+    <p>ברצוננו לעשות עם הזמן עותקים של הארכיון הזה באנגלית, בעברית, בגרמנית ובצרפתית — כדי שענפי המשפחה בארה״ב, בקנדה, בישראל, בגרמניה ובצרפת יוכלו לקרוא בשפה הנוחה להם, ושיהיה לזה גישה גם לדורות הבאים, שעבורם רוסית כבר אינה שפת אם. נדון בזה בצ׳אט.</p>
+
+    <h4>יצירת קשר עם מיכאיל</h4>
+    <p class="lines">
+      <a href="mailto:msandler@epiphan.com">msandler@epiphan.com</a><br>
+      +1 (650) 714-4558
+    </p>
+
+    <div class="visits-strip">
+      <div class="visits-row">
+        <span class="visits-label">סך כל הביקורים</span>
+        <span class="visits-num" id="visits-total">—</span>
+        <span class="visits-label">· ב־24 השעות האחרונות</span>
+        <span class="visits-num" id="visits-24h">—</span>
+      </div>
+    </div>
+
+    <div class="footer-meta">
+      &#10026; הארכיון עודכן ב־16 במאי 2026 · נכתב על ידי Claude (Anthropic) על בסיס הצ׳אט "משפחה סנדלר", אילן ה־PDF של א. ביידר ומסמכים משפחתיים · מנחה: מיכאיל סנדלר &#10026;
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+/* Счётчик посещений — через abacus.jasoncameron.dev (бесплатно, без регистрации). */
+(function () {
+  var NS = 'sandler-litin-archive-msandler-2026';
+  var BASE = 'https://abacus.jasoncameron.dev';
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function dayKey(d) {
+    return 'd-' + d.getUTCFullYear() + pad(d.getUTCMonth() + 1) + pad(d.getUTCDate());
+  }
+  function setText(id, val) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = val;
+  }
+  function fetchJSON(url) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error('http ' + r.status);
+      return r.json();
+    });
+  }
+
+  var now = new Date();
+  var yesterday = new Date(now.getTime() — 86400000);
+
+  /* Регистрируем заход: увеличиваем total + сегодняшний счётчик. */
+  Promise.all([
+    fetchJSON(BASE + '/hit/' + NS + '/total').catch(function () { return null; }),
+    fetchJSON(BASE + '/hit/' + NS + '/' + dayKey(now)).catch(function () { return null; })
+  ]).then(function (results) {
+    var totalData = results[0];
+    var todayData = results[1];
+
+    if (totalData && typeof totalData.value === 'number') {
+      setText('visits-total', totalData.value.toLocaleString('ru-RU'));
+    }
+
+    /* Для «ב־24 השעות האחרונות» берём today + долю yesterday,
+       пропорциональную тому, сколько часов до конца суток ещё в окне. */
+    fetchJSON(BASE + '/get/' + NS + '/' + dayKey(yesterday))
+      .catch(function () { return { value: 0 }; })
+      .then(function (yData) {
+        var todayHits = (todayData && typeof todayData.value === 'number') ? todayData.value : 0;
+        var yHits = (yData && typeof yData.value === 'number') ? yData.value : 0;
+        var hoursPassedUTC = now.getUTCHours() + now.getUTCMinutes() / 60;
+        var fractionY = Math.max(0, (24 — hoursPassedUTC) / 24);
+        var visits24h = todayHits + Math.round(fractionY * yHits);
+        setText('visits-24h', visits24h.toLocaleString('ru-RU'));
+      });
+  });
+})();
+</script>
+
+</body>
+</html>

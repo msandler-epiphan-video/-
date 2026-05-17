@@ -988,6 +988,68 @@
     .wrap { padding: 16px 16px 60px; }
     body { font-size: 16px; }
   }
+
+  /* === Language switcher === */
+  .lang-switcher {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: .85rem;
+    letter-spacing: .04em;
+    padding: 6px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink-soft);
+  }
+  .lang-switcher a.lang-link {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color .15s;
+  }
+  .lang-switcher a.lang-link:hover {
+    color: var(--accent);
+  }
+  .lang-switcher .lang-current {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    .lang-switcher {
+      font-size: .78rem;
+      padding: 4px 8px;
+      gap: 4px;
+    }
+  }
+
+  /* === RTL overrides (Hebrew) === */
+  html[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+  }
+  html[dir="rtl"] .contact-block,
+  html[dir="rtl"] .feedback-card,
+  html[dir="rtl"] .album-card-fields,
+  html[dir="rtl"] .field,
+  html[dir="rtl"] .album-card-source,
+  html[dir="rtl"] .album-card-note {
+    text-align: right;
+  }
+  html[dir="rtl"] nav.top {
+    flex-direction: row-reverse;
+  }
+  html[dir="rtl"] .footer-meta,
+  html[dir="rtl"] .visits-strip {
+    direction: rtl;
+  }
+  /* English book titles etc. stay LTR inside otherwise-Hebrew text */
+  html[dir="rtl"] em,
+  html[dir="rtl"] cite {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+  }
 </style>
 </head>
 <body>
@@ -1005,7 +1067,7 @@
     <a href="#feedback">Отклик</a>
     <a href="#contact">Об архиве</a>
   </div>
-</nav>
+<div class="lang-switcher" aria-label="Language"><span class="lang-current">RU</span> · <a href="index.en.html" class="lang-link">EN</a> · <a href="index.he.html" class="lang-link">HE</a> · <a href="index.fr.html" class="lang-link">FR</a> · <a href="index.de.html" class="lang-link">DE</a></div></nav>
 
 <div class="wrap">
 
@@ -1925,6 +1987,30 @@
     </div>
   </div>
 </article>
+
+<article class="album-card" id="four-siblings-1970s">
+  <span class="album-card-num">Фото 25</span>
+  <h3 class="album-card-title">Четверо детей Мотла и Хаи - последняя общая фотография выживших</h3>
+  <div class="album-card-date">первая половина 1970-х, Москва</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/four-siblings-1970s.jpg" alt="Роза, Яков, Фаня и Бетя Сандлер - Москва, начало 1970-х" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Кто на фото</span>
+        <div class="field-body">Справа налево: <strong>Роза</strong>, <strong>Яков (Яша) Сандлер</strong>, <strong>Фаня</strong>, <strong>Бетя</strong>. Четверо из семи детей Мотла Сандлера и Хаи Райхер.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">Когда / Событие</span>
+        <div class="field-body">Снимок сделан в Москве, куда Роза приехала <strong>накануне отъезда в Израиль</strong>. Роза уехала в Израиль в 1973 году - значит, фото датируется <strong>первой половиной 1970-х</strong>, скорее всего 1972-1973 гг.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Источник</span>Семейный архив, прислал Михаил Наумович Сандлер (17 мая 2026).</div>
+      <div class="album-card-note"><strong>Историческое значение снимка:</strong> это последняя фотография, на которой все выжившие после войны сёстры и брат вместе. К моменту съёмки <strong>Сруль</strong> уже погиб на фронте под Запорожьем в 1943 году, <strong>Мехл</strong> (Михаил Матвеевич) умер во время войны, судьба <strong>Идла</strong> неизвестна. Эти четверо - Яков, Роза, Фаня и Бетя - дошли до 1970-х. Бетя умрёт в 1979-м, Роза - уже в Израиле.</div>
+    </div>
+  </div>
+</article>
+
 
 </section>
 

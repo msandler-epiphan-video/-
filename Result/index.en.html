@@ -1,0 +1,2311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Sandlers of Litin — family archive</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  :root {
+    --bg:        #f4ede0;
+    --bg-soft:   #ece1cc;
+    --paper:     #fcf6ea;
+    --paper-2:   #f9f1de;
+    --ink:       #221c14;
+    --ink-soft:  #5a4a39;
+    --ink-mute:  #8a7960;
+    --accent:    #7a2c43;
+    --accent-2:  #7a3b1f;
+    --rule:      #c9b893;
+    --gold:      #b78d4a;
+    --shadow:    0 18px 40px -22px rgba(60,40,15,.45),
+                 0 4px 12px -6px rgba(60,40,15,.25);
+    --gen-2: #7a2c43;
+    --gen-3: #1f5d8c;
+    --gen-4: #2c8a82;
+    --gen-5: #cc7a2c;
+    --gen-6: #c94545;
+    --gen-7: #7a4abc;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background:
+      radial-gradient(1200px 600px at 12% -8%,  #efe2c4 0%, transparent 60%),
+      radial-gradient(900px 500px  at 100% 0%,  #e9dcc0 0%, transparent 55%),
+      radial-gradient(700px 400px  at 0% 100%,  #f0e3c6 0%, transparent 60%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+    color: var(--ink);
+    font-family: "PT Serif", "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image:
+      radial-gradient(rgba(120,80,30,.07) 1px, transparent 1px),
+      radial-gradient(rgba(120,80,30,.05) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 1px;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: multiply;
+    opacity: .55;
+  }
+
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(8px);
+    background: rgba(244,237,224,.82);
+    border-bottom: 1px solid var(--rule);
+    font-family: "PT Sans", system-ui, sans-serif;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  nav.top .nav-inner {
+    max-width: 1180px; margin: 0 auto;
+    padding: 12px 24px;
+    display: flex; gap: 4px 22px; flex-wrap: wrap;
+    align-items: center;
+  }
+  nav.top .brand {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: 18px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--accent);
+    margin-right: auto;
+  }
+  nav.top a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+  }
+  nav.top a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 24px 96px;
+  }
+
+  h1, h2, h3 { margin-top: 0; }
+
+  section.major {
+    margin-top: 96px;
+    scroll-margin-top: 72px;
+  }
+  section.major:first-of-type { margin-top: 24px; }
+
+  .section-kicker {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .26em;
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.05;
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+  .section-lede {
+    font-family: "PT Serif", serif;
+    font-size: clamp(17px, 1.8vw, 19px);
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 740px;
+    margin-bottom: 36px;
+  }
+  .section-rule {
+    height: 1px; background: var(--rule);
+    margin: 0 0 36px;
+    position: relative;
+  }
+  .section-rule::after {
+    content: "\2726";
+    position: absolute; left: 0; top: -10px;
+    background: var(--bg); padding: 0 12px 0 0;
+    color: var(--gold); font-size: 18px;
+  }
+
+  header.hero {
+    text-align: center;
+    padding: 56px 12px 36px;
+    position: relative;
+  }
+  header.hero .kicker {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  header.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500; font-style: italic;
+    font-size: clamp(44px, 8vw, 92px);
+    line-height: 1.0;
+    margin: 0 0 12px;
+  }
+  header.hero .subtitle {
+    font-family: "PT Serif", serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.3vw, 22px);
+    color: var(--ink-soft);
+    max-width: 760px; margin: 12px auto 0;
+  }
+  header.hero .meta-line {
+    margin-top: 22px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px; color: var(--ink-soft);
+    letter-spacing: .12em; text-transform: uppercase;
+  }
+  header.hero::after {
+    content: "\2726";
+    display: block;
+    text-align: center;
+    color: var(--gold);
+    font-size: 20px;
+    margin-top: 36px;
+  }
+
+  .patriarchs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    margin-bottom: 48px;
+  }
+  .patriarch-card { text-align: center; }
+  .patriarch-photo {
+    background: #fff;
+    padding: 16px 16px 8px;
+    border: 1px solid rgba(180,140,80,.4);
+    box-shadow: var(--shadow);
+    display: inline-block;
+    max-width: 100%;
+  }
+  .patriarch-photo img {
+    display: block;
+    max-width: 100%;
+    max-height: 440px;
+    width: auto; margin: 0 auto;
+    filter: contrast(1.02) saturate(.92);
+  }
+  .patriarch-name {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 18px 0 4px;
+    color: var(--accent);
+  }
+  .patriarch-meta {
+    font-family: "PT Sans", sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: .04em;
+  }
+  .patriarch-meta div { margin: 2px 0; }
+  .patriarchs-intro {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 26px 34px;
+    margin-bottom: 64px;
+    position: relative;
+    font-size: 18px;
+  }
+  .patriarchs-intro::before {
+    content: "";
+    position: absolute; inset: 6px;
+    border: 1px solid rgba(183,141,74,.32);
+    pointer-events: none;
+  }
+  .patriarchs-intro p { margin: 0 0 10px; }
+  .patriarchs-intro p:last-child { margin-bottom: 0; }
+
+  /* visual tree */
+  .tree-legend {
+    display: flex; flex-wrap: wrap; gap: 8px 24px;
+    margin: 0 0 32px;
+    padding: 14px 22px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    align-items: center;
+  }
+  .tree-legend .lbl { letter-spacing: .12em; text-transform: uppercase; }
+  .tree-legend .dot {
+    display: inline-block; width: 10px; height: 10px;
+    border-radius: 50%; margin-right: 6px;
+    vertical-align: middle;
+  }
+  .tree-legend .item { display: flex; align-items: center; }
+
+  .ctree, .ctree ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    position: relative;
+  }
+  .ctree {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 16px 0 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ctree ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 28px;
+    position: relative;
+  }
+  .ctree ul::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 50%;
+    width: 1px; height: 28px;
+    background: var(--rule);
+  }
+  /* outermost ul of a per-branch tree has no parent .tnode above it -
+     suppress the dangling line. The overview tree is wrapped in
+     .root-wrap so its ul is not a direct child of .ctree. */
+  .ctree > ul::before { display: none; }
+  .ctree li {
+    flex: 0 0 auto;
+    padding: 28px 10px 0;
+    position: relative;
+    text-align: center;
+  }
+  .ctree li::before,
+  .ctree li::after {
+    content: "";
+    position: absolute;
+    top: 0; height: 1px;
+    background: var(--rule);
+  }
+  .ctree li::before {
+    right: 50%;
+    width: 50%;
+  }
+  .ctree li::after {
+    left: 50%;
+    width: 50%;
+  }
+  .ctree li:only-child::before,
+  .ctree li:only-child::after { display: none; }
+  .ctree li:first-child::before { background: transparent; }
+  .ctree li:last-child::after  { background: transparent; }
+  .ctree li > .tnode::before {
+    content: "";
+    position: absolute;
+    top: -28px; left: 50%;
+    width: 1px; height: 28px;
+    background: var(--rule);
+  }
+  .ctree li:only-child > .tnode::before { display: block; }
+  .ctree > ul > li > .tnode::before { display: none; }
+  .ctree .root-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ctree .root-wrap > .tnode { margin: 0 auto; }
+
+  .tnode {
+    display: inline-block;
+    position: relative;
+    min-width: 140px;
+    max-width: 220px;
+    padding: 10px 14px;
+    border: 1.5px solid var(--gen-2);
+    border-radius: 6px;
+    background: var(--paper);
+    font-family: "PT Sans", sans-serif;
+    text-align: center;
+    box-shadow: 0 2px 6px -3px rgba(60,40,15,.3);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .tnode:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px -4px rgba(60,40,15,.4);
+  }
+  .tnode .nm {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gen-2);
+    line-height: 1.2;
+  }
+  .tnode .alt {
+    display: block;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--ink-mute);
+    margin-top: 2px;
+  }
+  .tnode .sp {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+  .tnode .pl {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 1px 7px;
+    background: rgba(180,140,80,.18);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--ink-soft);
+    border-radius: 2px;
+  }
+  .tnode.g2 { border-color: var(--gen-2); }
+  .tnode.g2 .nm { color: var(--gen-2); }
+  .tnode.g3 { border-color: var(--gen-3); }
+  .tnode.g3 .nm { color: var(--gen-3); }
+  .tnode.g4 { border-color: var(--gen-4); }
+  .tnode.g4 .nm { color: var(--gen-4); }
+  .tnode.g5 { border-color: var(--gen-5); }
+  .tnode.g5 .nm { color: var(--gen-5); }
+  .tnode.g6 { border-color: var(--gen-6); }
+  .tnode.g6 .nm { color: var(--gen-6); }
+  .tnode.g7 { border-color: var(--gen-7); }
+  .tnode.g7 .nm { color: var(--gen-7); }
+  .tnode.root {
+    border-color: var(--ink);
+    background: var(--paper-2);
+  }
+  .tnode.root .nm { color: var(--ink); font-size: 16px; }
+
+  a.tnode-link {
+    text-decoration: none;
+    display: inline-block;
+  }
+  a.tnode-link .tnode { cursor: pointer; }
+  .tnode .ph-marker {
+    position: absolute;
+    top: -8px; right: -8px;
+    min-width: 22px; height: 22px;
+    padding: 0 6px;
+    background: var(--accent);
+    color: var(--paper);
+    border-radius: 11px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: "PT Sans", sans-serif;
+    line-height: 22px;
+    text-align: center;
+    box-shadow: 0 2px 4px -1px rgba(60,40,15,.4);
+  }
+  .tnode .ph-marker.mem { background: var(--gen-5); }
+  .tnode .ph-marker.bio { background: var(--gen-3); }
+
+  .branch-title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 64px 0 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .branch-title .num {
+    font-style: normal;
+    color: var(--gold);
+    margin-right: 6px;
+  }
+  .branch-sub {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  /* list tree */
+  .ltree-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 36px 30px 36px 24px;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  .ltree-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .ltree .root-couple {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 0 18px;
+    border-bottom: 1px dashed var(--rule);
+    margin-bottom: 20px;
+  }
+  .ltree .root-couple .m { font-weight: 400; color: var(--accent); padding: 0 4px; }
+  .ltree .root-couple .meta {
+    display: block;
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+  .ltree ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 22px;
+    position: relative;
+  }
+  .ltree > ul { padding-left: 4px; }
+  .ltree ul ul {
+    margin-top: 4px;
+    padding-left: 22px;
+    border-left: 1px solid rgba(180,140,80,.30);
+    margin-left: 6px;
+  }
+  .ltree li {
+    padding: 6px 0 6px 12px;
+    position: relative;
+    font-family: "PT Serif", serif;
+  }
+  .ltree ul ul li::before {
+    content: "";
+    position: absolute;
+    left: -1px; top: 16px;
+    width: 12px; height: 1px;
+    background: rgba(180,140,80,.45);
+  }
+  .ltree .branch-head {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: clamp(20px, 2.4vw, 25px);
+    font-weight: 600;
+    padding: 18px 0 8px;
+    border-top: 1px solid var(--rule);
+    margin-top: 14px;
+  }
+  .ltree > ul > li:first-child .branch-head {
+    border-top: none; margin-top: 0; padding-top: 4px;
+  }
+  .ltree > ul > li:first-child .branch-head::before { display: none; }
+  .ltree .branch-head .num {
+    display: inline-block;
+    width: 1.6em;
+    color: var(--accent);
+    font-style: normal;
+  }
+  .ltree .m { color: var(--accent); font-style: italic; margin: 0 4px; }
+  .ltree .dates {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin: 0 6px;
+    letter-spacing: .02em;
+    font-style: normal;
+  }
+  .ltree .place {
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    margin-left: 6px;
+    background: rgba(183,141,74,.12);
+    padding: 1px 6px;
+    border-radius: 2px;
+  }
+  .ltree .meta-inline {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-left: 4px;
+    font-style: italic;
+  }
+
+  a.linked-name {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 1px;
+    font-weight: 700;
+  }
+  a.linked-name:hover {
+    color: var(--accent);
+    background: rgba(122,44,67,.08);
+  }
+  sup.ref-cluster {
+    display: inline-flex;
+    gap: 3px;
+    margin-left: 4px;
+    line-height: 1;
+    vertical-align: super;
+    font-size: 75%;
+  }
+  a.ph-ref {
+    font-family: "PT Sans", sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    background: var(--accent);
+    color: var(--paper);
+    padding: 1.5px 5px;
+    border-radius: 2px;
+    text-decoration: none;
+    letter-spacing: .04em;
+  }
+  a.ph-ref:hover { background: var(--ink); }
+  a.ph-ref.bio { background: var(--gen-3); }
+  a.ph-ref.mem { background: var(--gen-5); }
+
+  /* album */
+  .album-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 28px 30px 30px;
+    margin-bottom: 52px;
+    position: relative;
+    scroll-margin-top: 72px;
+  }
+  .album-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .album-card-num {
+    position: absolute;
+    top: -14px; left: 26px;
+    background: var(--accent);
+    color: var(--paper);
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: .18em;
+    padding: 6px 12px;
+    text-transform: uppercase;
+  }
+  .album-card-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(26px, 3.2vw, 34px);
+    line-height: 1.15;
+    margin: 6px 0 4px;
+  }
+  .album-card-date {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .album-card-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 32px;
+  }
+  .album-card-body.tall .photo-frame img { max-height: 720px; }
+  .photo-frame {
+    background: #fff;
+    padding: 14px;
+    border: 1px solid rgba(180,140,80,.35);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.04);
+    text-align: center;
+  }
+  .photo-frame img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: contrast(1.02) saturate(.92);
+  }
+  .photo-frame.tree img { filter: none; max-height: none; }
+  .album-card-fields .field { margin: 0 0 18px; }
+  .album-card-fields .field-label {
+    font-family: "PT Sans", sans-serif;
+    font-size: 10.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .album-card-fields .field-body { font-size: 17px; line-height: 1.55; }
+  .album-card-source {
+    margin-top: 18px; padding-top: 14px;
+    border-top: 1px dashed var(--rule);
+    font-size: 16px; color: var(--ink-soft);
+    font-style: italic;
+  }
+  .album-card-source strong { font-style: normal; color: var(--ink); }
+  .album-card-note {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(183,141,74,.10);
+    border-left: 3px solid var(--accent);
+    font-size: 16px;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+  .album-card-note strong { font-style: normal; color: var(--ink); }
+
+  /* memorial */
+  .memorial {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 48px 44px;
+    position: relative;
+    text-align: center;
+  }
+  .memorial::before {
+    content: "";
+    position: absolute; inset: 8px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .memorial .kicker {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .32em;
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .memorial h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: clamp(34px, 4.5vw, 48px);
+    margin: 4px 0 6px;
+  }
+  .memorial .lifespan {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    color: var(--ink-soft);
+    letter-spacing: .05em;
+    margin-bottom: 36px;
+  }
+  .memorial-body {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: 40px;
+    text-align: left;
+    align-items: start;
+  }
+  .memorial-photo {
+    background: #fff;
+    padding: 14px 14px 8px;
+    border: 1px solid rgba(180,140,80,.35);
+  }
+  .memorial-photo img {
+    max-width: 100%; height: auto; display: block;
+    filter: contrast(1.02) saturate(.92);
+  }
+  .memorial-text p { margin: 0 0 12px; }
+  .memorial-text h4 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 22px;
+    margin: 18px 0 4px;
+    color: var(--accent);
+  }
+  .memorial-closing {
+    margin-top: 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+
+  /* bio */
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .bio-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 28px 30px;
+    position: relative;
+    scroll-margin-top: 72px;
+  }
+  .bio-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .bio-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: 28px;
+    margin: 4px 0 4px;
+    color: var(--accent);
+  }
+  .bio-card .bio-sub {
+    font-family: "PT Sans", sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: .08em;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .bio-card h4 {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .22em;
+    color: var(--accent);
+    margin: 14px 0 4px;
+  }
+  .bio-card p { margin: 0 0 10px; font-size: 16px; line-height: 1.55; }
+
+  /* updates */
+  .info-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: var(--shadow);
+    padding: 28px 32px;
+    position: relative;
+  }
+  .info-card::before {
+    content: "";
+    position: absolute; inset: 7px;
+    border: 1px solid rgba(183,141,74,.28);
+    pointer-events: none;
+  }
+  .info-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic; font-weight: 600;
+    font-size: 24px;
+    margin: 18px 0 6px;
+    color: var(--accent);
+  }
+  .info-card h3:first-of-type { margin-top: 0; }
+  .info-card ul {
+    list-style: none;
+    padding: 0; margin: 0 0 10px;
+  }
+  .info-card li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    font-size: 16px;
+  }
+  .info-card li::before {
+    content: "\2726";
+    position: absolute; left: 4px; top: 6px;
+    color: var(--gold);
+    font-size: 11px;
+  }
+
+  /* contact */
+  .contact-block {
+    text-align: left;
+    padding: 48px 32px 40px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .contact-block > h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 30px;
+    margin: 0 0 22px;
+    color: var(--accent);
+    text-align: center;
+  }
+  .contact-block h4 {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .22em;
+    color: var(--accent);
+    margin: 28px 0 8px;
+  }
+  .contact-block p {
+    font-family: "PT Serif", serif;
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 0 0 12px;
+    color: var(--ink);
+  }
+  .contact-block .who {
+    font-family: "PT Serif", serif;
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+  .contact-block .lines {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+  }
+  .contact-block .lines a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+  .contact-block .footer-meta {
+    margin-top: 36px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    text-align: center;
+  }
+
+  /* feedback section */
+  .feedback-block {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+  }
+  .feedback-card {
+    display: block;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 22px 22px 20px;
+    text-decoration: none;
+    color: var(--ink);
+    box-shadow: var(--shadow);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .feedback-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold);
+    box-shadow: 0 24px 50px -22px rgba(60,40,15,.55),
+                0 6px 16px -6px rgba(60,40,15,.30);
+  }
+  .feedback-card .feedback-icon {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .feedback-card .feedback-title {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--accent);
+    margin-bottom: 6px;
+    line-height: 1.15;
+  }
+  .feedback-card .feedback-desc {
+    font-family: "PT Serif", serif;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  /* visits counter */
+  .visits-strip {
+    max-width: 760px;
+    margin: 48px auto 0;
+    padding: 18px 24px;
+    text-align: center;
+    border-top: 1px solid var(--rule);
+    font-family: "PT Sans", sans-serif;
+    font-size: 13px;
+    color: var(--ink-mute);
+    letter-spacing: .04em;
+  }
+  .visits-strip .visits-row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .visits-strip .visits-num {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .visits-strip .visits-label {
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: 10.5px;
+    color: var(--ink-mute);
+  }
+
+  @media (max-width: 820px) {
+    .feedback-grid { grid-template-columns: 1fr; gap: 14px; }
+    .visits-strip .visits-row { flex-direction: column; gap: 6px; }
+    .patriarchs { grid-template-columns: 1fr; }
+    .album-card-body { grid-template-columns: 1fr; }
+    .memorial-body { grid-template-columns: 1fr; }
+    .bio-grid { grid-template-columns: 1fr; }
+    nav.top .nav-inner { padding: 10px 14px; gap: 4px 14px; }
+    nav.top .brand { width: 100%; margin-bottom: 4px; }
+    .wrap { padding: 16px 16px 60px; }
+    body { font-size: 16px; }
+  }
+
+  /* === Language switcher === */
+  .lang-switcher {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: .85rem;
+    letter-spacing: .04em;
+    padding: 6px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink-soft);
+  }
+  .lang-switcher a.lang-link {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color .15s;
+  }
+  .lang-switcher a.lang-link:hover {
+    color: var(--accent);
+  }
+  .lang-switcher .lang-current {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    .lang-switcher {
+      font-size: .78rem;
+      padding: 4px 8px;
+      gap: 4px;
+    }
+  }
+
+  /* === RTL overrides (Hebrew) === */
+  html[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+  }
+  html[dir="rtl"] .contact-block,
+  html[dir="rtl"] .feedback-card,
+  html[dir="rtl"] .album-card-fields,
+  html[dir="rtl"] .field,
+  html[dir="rtl"] .album-card-source,
+  html[dir="rtl"] .album-card-note {
+    text-align: right;
+  }
+  html[dir="rtl"] nav.top {
+    flex-direction: row-reverse;
+  }
+  html[dir="rtl"] .footer-meta,
+  html[dir="rtl"] .visits-strip {
+    direction: rtl;
+  }
+  /* English book titles etc. stay LTR inside otherwise-Hebrew text */
+  html[dir="rtl"] em,
+  html[dir="rtl"] cite {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="nav-inner">
+    <span class="brand">The Sandlers of Litin</span>
+    <a href="#root-couple">Ancestors</a>
+    <a href="#visual-tree">Tree</a>
+    <a href="#list-tree">List</a>
+    <a href="#album">Photos</a>
+    <a href="#memorial-naum">Naum</a>
+    <a href="#living">Living</a>
+    <a href="#updates">Updates</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#contact">About</a>
+  </div>
+<div class="lang-switcher" aria-label="Language"><a href="index.html" class="lang-link">RU</a> · <span class="lang-current">EN</span> · <a href="index.he.html" class="lang-link">HE</a> · <a href="index.fr.html" class="lang-link">FR</a> · <a href="index.de.html" class="lang-link">DE</a></div></nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">Family archive · mishpacha · May 2026</div>
+  <h1>The Sandlers of Litin</h1>
+  <div class="subtitle">Family tree, photo archive and biographical pages of the seven branches descended from Motl Sandler and Khaya Raykher</div>
+  <div class="meta-line">Litin · Moscow · Denver · New York · Israel · Germany · France</div>
+</header>
+
+<section class="major" id="root-couple">
+  <div class="section-kicker">Family archive · roots</div>
+  <h2 class="section-title">Motl Sandler · Khaya Raykher</h2>
+  <div class="section-rule"></div>
+
+  <div class="patriarchs">
+    <a href="#motl-1940" style="text-decoration:none; color:inherit;">
+    <div class="patriarch-card">
+      <div class="patriarch-photo"><img src="photos/motl-1940.jpg" alt="Motl Sandler, 1940"></div>
+      <div class="patriarch-name">Motl Sandler</div>
+      <div class="patriarch-meta">
+        <div>miller in Litin · photo 1940</div>
+        <div>killed in the Holocaust, autumn 1941</div>
+      </div>
+    </div>
+    </a>
+    <a href="#khaya-1930s" style="text-decoration:none; color:inherit;">
+    <div class="patriarch-card">
+      <div class="patriarch-photo"><img src="photos/khaya-1930s.jpg" alt="Khaya Raykher"></div>
+      <div class="patriarch-name">Khaya Raykher</div>
+      <div class="patriarch-meta">
+        <div>wife of Motl · photo ~1930s</div>
+        <div>killed in the Holocaust, 1941</div>
+      </div>
+    </div>
+    </a>
+  </div>
+
+  <div class="patriarchs-intro">
+    <p>Motl and Khaya lived in Litin, in Vinnytsia Oblast (Ukraine). Motl was a miller. They had <strong>seven children</strong>, in order of age: Yakov (Yankel), Roza, Mehl (Mikhail), Srul (Israel), Fanya (Frima), Betya (Beila, 1914–1979) and Idl.</p>
+    <p>They were married on <em>21 July 1898</em>. <strong>Both were murdered in the Holocaust in 1941:</strong> Khaya almost immediately after the occupiers arrived; Motl in the autumn, when he tried to leave Litin for the Romanian-occupied zone. He is buried in the mass grave of the Litin Jews. Until the 1970s Betya and her sisters travelled to Litin to honour their parents.</p>
+    <p>What follows: each of the seven branches, a 23-photo archive, the memorial page for Naum Mikhailovich Sandler, and brief profiles of two living relatives who have devoted themselves to restoring the family’s history.</p>
+  </div>
+</section>
+
+<section class="major" id="visual-tree">
+  <div class="section-kicker">Tree no. 1 — boxed (PDF-style)</div>
+  <h2 class="section-title">Family tree — overview</h2>
+  <div class="section-lede">The seven children of Motl and Khaya, and their descendants. The frame colour indicates the generation; the red circle with a number is the archive number of a photo on which the person appears. Click a box to jump to the photo.</div>
+  <div class="section-rule"></div>
+
+  <div class="tree-legend">
+    <span class="lbl">Colour = generation:</span>
+    <span class="item"><span class="dot" style="background:var(--gen-2)"></span>children of Motl</span>
+    <span class="item"><span class="dot" style="background:var(--gen-3)"></span>grandchildren</span>
+    <span class="item"><span class="dot" style="background:var(--gen-4)"></span>great-grandchildren</span>
+    <span class="item"><span class="dot" style="background:var(--gen-5)"></span>great-great-grandchildren</span>
+    <span class="item"><span class="dot" style="background:var(--gen-6)"></span>generation 6</span>
+    <span class="item"><span class="dot" style="background:var(--gen-7)"></span>generation 7</span>
+  </div>
+
+  
+<div class="ctree">
+  <div class="root-wrap">
+    <div class="tnode root"><span class="nm">Motl Sandler + Khaya Raykher</span><span class="alt">Litin · d. in the Holocaust 1941</span></div>
+    <ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g2"><span class="ph-marker">14</span><span class="nm">Yakov (Yankel)</span></div></a></li><li><div class="tnode g2"><span class="nm">Roza</span></div></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Mehl</span><span class="alt">1907/14 — 1942/43</span></div></a></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Srul</span><span class="alt">killed in the war</span></div></a></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Fanya</span></div></a></li><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Betya</span><span class="alt">1914–1979</span></div></a></li><li><div class="tnode g2"><span class="nm">Idl</span><span class="alt">no descendants</span></div></li></ul>
+  </div>
+</div>
+
+
+  
+<div class="branch-title"><span class="num">1.</span>Yakov (Yankel) Sandler</div>
+<div class="branch-sub">Yakov (Yankel) Sandler — branch</div>
+<div class="ctree">
+  <ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g2"><span class="ph-marker">14</span><span class="nm">Yakov Sandler</span><span class="alt">Yankel</span><span class="sp">+ Nokhuma Zeltser</span></div></a><ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">14</span><span class="nm">Fanya</span><span class="sp">+ Mikhail Mestetsky</span></div></a><ul><li><div class="tnode g4"><span class="nm">Mark</span><span class="sp">+ Valeria Alygina</span></div><ul><li><div class="tnode g5"><span class="nm">Dmitry</span></div></li><li><div class="tnode g5"><span class="nm">Natalya</span></div></li></ul></li><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g4"><span class="ph-marker">14</span><span class="nm">Larisa</span><span class="alt">eldest</span><span class="sp">+ Leonid Vizelman</span></div></a><ul><li><div class="tnode g5"><span class="nm">Alexander</span></div></li><li><div class="tnode g5"><span class="nm">Lev</span></div></li></ul></li></ul></li><li><a href="#mozya-officer" class="tnode-link"><div class="tnode g3"><span class="ph-marker">07</span><span class="nm">Mozya</span><span class="alt">Moisei, in Denver</span><span class="sp">+ Sofa Kertsburg</span></div></a><ul><li><a href="#yakov-with-rita" class="tnode-link"><div class="tnode g4"><span class="ph-marker">20</span><span class="nm">Rita</span><span class="sp">+ Grigory Reiter</span></div></a><ul><li><div class="tnode g5"><span class="nm">Boris</span><span class="pl">USA</span></div></li></ul></li><li><a href="#mozya-sofa-grave" class="tnode-link"><div class="tnode g4"><span class="ph-marker">22</span><span class="nm">Alexander</span><span class="sp">+ Elena Polyakova</span><span class="pl">near NY</span></div></a><ul><li><a href="#shifra-with-kids" class="tnode-link"><div class="tnode g5"><span class="ph-marker">23</span><span class="nm">Svetlana Balancio</span><span class="alt">Shifra, née Sandler</span><span class="sp">+ Jeffrey Balancio</span></div></a><ul><li><a href="#shifra-with-kids" class="tnode-link"><div class="tnode g6"><span class="ph-marker">23</span><span class="nm">Simone Lily Balancio</span><span class="alt">Sima</span></div></a></li><li><a href="#shifra-with-kids" class="tnode-link"><div class="tnode g6"><span class="ph-marker">23</span><span class="nm">Louis Balancio III</span><span class="alt">Louis</span></div></a></li></ul></li></ul></li></ul></li><li><a href="#sofa-redhead-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">11</span><span class="nm">Sofa</span><span class="alt">the Redhead</span><span class="sp">+ Isaac Savransky</span><span class="pl">Israel</span></div></a><ul><li><a href="#old-family-clean" class="tnode-link"><div class="tnode g4"><span class="ph-marker">05</span><span class="nm">Irina</span><span class="alt">Ira Savranskaya</span><span class="sp">+ Lyonya Levin</span></div></a><ul><li><div class="tnode g5"><span class="nm">Yakov</span></div></li><li><div class="tnode g5"><span class="nm">Yael</span></div></li></ul></li></ul></li><li><div class="tnode g3"><span class="nm">Mikhail</span><span class="alt">«Mishka the Little»</span><span class="sp">+ Raisa Gendlina</span></div><ul><li><div class="tnode g4"><span class="nm">Gennady</span><span class="sp">+ Svetlana</span></div><ul><li><div class="tnode g5"><span class="nm">Liza</span></div></li><li><div class="tnode g5"><span class="nm">Leonid</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">2.</span>Roza</div>
+<div class="branch-sub">Roza — branch</div>
+<div class="ctree">
+  <ul><li><div class="tnode g2"><span class="nm">Roza</span><span class="sp">+ Zeydl Bangik / David Baranovich</span></div><ul><li><div class="tnode g3"><span class="nm">Aron Bangik</span><span class="alt">no descendants</span></div></li><li><div class="tnode g3"><span class="nm">Manya</span><span class="sp">+ Grigory Bronfmakher</span></div><ul><li><div class="tnode g4"><span class="nm">Anna</span><span class="sp">+ Yakov Khover</span></div><ul><li><div class="tnode g5"><span class="nm">Alexander</span><span class="pl">Israel</span></div></li><li><div class="tnode g5"><span class="nm">Maya</span><span class="sp">+ Tzvika Shimon</span><span class="pl">Israel</span></div><ul><li><div class="tnode g6"><span class="nm">Ido</span></div></li><li><div class="tnode g6"><span class="nm">Anit</span></div></li></ul></li></ul></li><li><div class="tnode g4"><span class="nm">Inna</span><span class="sp">+ Dmitry Krantsberg</span></div><ul><li><div class="tnode g5"><span class="nm">Roman</span><span class="sp">+ Olga</span><span class="pl">Israel</span></div><ul><li><div class="tnode g6"><span class="nm">Shai</span></div></li><li><div class="tnode g6"><span class="nm">Rotem</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">Yakov</span><span class="pl">Israel</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">3.</span>Mehl (Mikhail Matveyevich) Sandler</div>
+<div class="branch-sub">Mehl (Mikhail Matveyevich) Sandler — branch</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Mehl Sandler</span><span class="alt">Mikhail Matveyevich, 1907/14 – 1942/43</span><span class="sp">+ Khuma (Nina) Trefnyak</span></div></a><ul><li><a href="#naum-galina-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">13</span><span class="nm">Naum</span><span class="alt">1941-2026, Moscow</span><span class="sp">+ Galina Filyushina</span></div></a><ul><li><a href="#naum-mikhail-ny" class="tnode-link"><div class="tnode g4"><span class="ph-marker">21</span><span class="nm">Mikhail Naumovich</span><span class="alt">Canada 1991, USA 2013</span><span class="sp">+ Elena Volynskaya / Tatyana Tretyakova</span></div></a><ul><li><div class="tnode g5"><span class="nm">Denis</span><span class="alt">from Elena</span><span class="sp">+ Nora Turaeva</span></div><ul><li><div class="tnode g6"><span class="nm">Kamila</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">Filipp</span><span class="alt">from Tatyana</span></div></li><li><div class="tnode g5"><span class="nm">Ivan</span><span class="alt">from Tatyana</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">4.</span>Srul (Israel) Sandler</div>
+<div class="branch-sub">Srul (Israel) Sandler — branch</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Srul Sandler</span><span class="alt">killed in the war 1943</span><span class="sp">+ Genya Gamer</span></div></a><ul><li><a href="#manya-garik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">12</span><span class="nm">Manya</span><span class="sp">+ Garik (Grigory) Kozlin</span></div></a><ul><li><div class="tnode g4"><span class="nm">Yevgenia (Zhenya)</span><span class="sp">+ Lev Sherbelis</span><span class="pl">Israel</span></div><ul><li><div class="tnode g5"><span class="nm">Asaf Sandler</span><span class="sp">+ Dorit</span><span class="pl">Israel</span></div><ul><li><div class="tnode g6"><span class="nm">Saar</span></div></li></ul></li></ul></li></ul></li><li><div class="tnode g3"><span class="nm">Rita</span><span class="sp">+ Elik Raykher</span></div><ul><li><div class="tnode g4"><span class="nm">Bella</span><span class="sp">+ Steve Cohen</span><span class="pl">USA</span></div><ul><li><div class="tnode g5"><span class="nm">Lani</span></div></li><li><div class="tnode g5"><span class="nm">Jason</span></div></li></ul></li><li><div class="tnode g4"><span class="nm">Svetlana</span><span class="pl">USA</span></div></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">5.</span>Fanya</div>
+<div class="branch-sub">Fanya — branch</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Fanya</span><span class="sp">+ Itsik (Isaac) Shomshteyn</span></div></a><ul><li><div class="tnode g3"><span class="nm">Milya Shomshteyn</span><span class="sp">+ Lyudmila Sidler</span></div><ul><li><div class="tnode g4"><span class="nm">Marina</span><span class="sp">+ Anatoly Ilchuk</span><span class="pl">Germany</span></div><ul><li><div class="tnode g5"><span class="nm">Elena</span><span class="sp">+ Kristian</span><span class="pl">Germany</span></div><ul><li><div class="tnode g6"><span class="nm">Artur</span></div></li><li><div class="tnode g6"><span class="nm">Noa</span></div></li></ul></li></ul></li></ul></li><li><div class="tnode g3"><span class="nm">Anchel (Alik)</span><span class="sp">+ Irina Fridman</span></div><ul><li><div class="tnode g4"><span class="nm">Alla</span><span class="sp">+ Zhenya Meirson</span><span class="pl">Israel</span></div><ul><li><div class="tnode g5"><span class="nm">Noa</span></div></li><li><div class="tnode g5"><span class="nm">Dana</span></div></li></ul></li><li><div class="tnode g4"><span class="nm">Igor Shomshteyn</span><span class="sp">+ Inna</span><span class="pl">USA</span></div><ul><li><div class="tnode g5"><span class="nm">Ethan</span></div></li><li><div class="tnode g5"><span class="nm">Aron</span></div></li><li><div class="tnode g5"><span class="nm">Joel</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">6.</span>Betya</div>
+<div class="branch-sub">Betya — branch</div>
+<div class="ctree">
+  <ul><li><a href="#betya-mehl-fanya-prewar" class="tnode-link"><div class="tnode g2"><span class="ph-marker">06</span><span class="nm">Betya</span><span class="alt">1914–1979</span><span class="sp">+ Shiko Lipovetsky / Moisei Shestak</span></div></a><ul><li><a href="#tamara-edik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">14</span><span class="nm">Milya Lipovetsky</span><span class="alt">by Shiko</span><span class="sp">+ Rita (Galina) Guralnik</span></div></a><ul><li><div class="tnode g4"><span class="nm">Marina</span><span class="sp">+ Alexander Druyan</span></div><ul><li><div class="tnode g5"><span class="nm">Bat-Khen</span><span class="sp">+ Raz Feldman</span><span class="pl">Israel</span></div><ul><li><div class="tnode g6"><span class="nm">child</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">Ronen</span><span class="pl">Israel</span></div></li><li><div class="tnode g5"><span class="nm">Itai</span><span class="pl">Israel</span></div></li></ul></li><li><div class="tnode g4"><span class="nm">Irina</span><span class="sp">+ Leonid Gorbakovsky</span><span class="pl">Israel</span></div></li></ul></li><li><a href="#manya-garik-wedding" class="tnode-link"><div class="tnode g3"><span class="ph-marker">12</span><span class="nm">Genya Beider</span><span class="alt">mother of Alexander</span><span class="sp">+ Boris Beider</span><span class="pl">Germany</span></div></a><ul><li><a href="#bio-aleksandr-beider" class="tnode-link"><div class="tnode g4"><span class="ph-marker bio">bio</span><span class="nm">Alexander Beider</span><span class="alt">linguist, photo source</span><span class="pl">France</span></div></a><ul><li><div class="tnode g5"><span class="nm">Sonya</span><span class="sp">+ Étienne Herning</span></div><ul><li><div class="tnode g6"><span class="nm">Artur</span></div></li><li><div class="tnode g6"><span class="nm">Eli</span></div></li></ul></li><li><div class="tnode g5"><span class="nm">Katya</span><span class="sp">+ Antoine Schlafmytz</span></div><ul><li><div class="tnode g6"><span class="nm">Elena</span></div></li></ul></li></ul></li><li><div class="tnode g4"><span class="nm">Masha (Maria)</span><span class="sp">+ Sasha Mikhalev</span><span class="pl">Germany</span></div><ul><li><div class="tnode g5"><span class="nm">Max Beider</span></div></li><li><div class="tnode g5"><span class="nm">Eliza Beider</span></div></li></ul></li></ul></li></ul></li></ul>
+</div>
+
+
+<div class="branch-title"><span class="num">7.</span>Idl Sandler</div>
+<div class="branch-sub">Idl Sandler — branch</div>
+<div class="ctree">
+  <ul><li><div class="tnode g2"><span class="nm">Idl Sandler</span><span class="alt">no descendants</span></div></li></ul>
+</div>
+
+
+</section>
+
+<section class="major" id="list-tree">
+  <div class="section-kicker">Tree no. 2 — as a list</div>
+  <h2 class="section-title">Family tree as a list</h2>
+  <div class="section-lede">The same family tree as a hierarchical list. <em>Underlined</em> names are clickable; the red badges next to them are photo numbers, blue “bio” marks open biographical cards, and an orange &#10026; — the memorial page.</div>
+  <div class="section-rule"></div>
+
+<div class="ltree-card">
+<div class="ltree">
+
+  <div class="root-couple">
+    <a href="#motl-1940" class="linked-name">Motl (Mordko) Sandler</a><sup class="ref-cluster"><a href="#motl-1940" class="ph-ref" title="photo 1">01</a><a href="#old-family-damaged" class="ph-ref" title="photo 3">03</a><a href="#old-family-clean" class="ph-ref" title="photo 5">05</a></sup> <span class="m">+ <a href="#khaya-1930s" class="linked-name">Khaya (Sheyna Khaya) Raykher</a><sup class="ref-cluster"><a href="#khaya-1930s" class="ph-ref" title="photo 2">02</a></sup></span>
+    <span class="meta">Litin (Vinnytsia Obl.), miller · married 21 July 1898 · both killed in the Holocaust, 1941</span>
+  </div>
+
+  <ul>
+    <li>
+      <div class="branch-head">
+        <span class="num">1.</span> <a href="#tamara-edik-wedding" class="linked-name">Yakov (Yankel) Sandler</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="photo 14">14</a><a href="#yakov-nokhuma-portrait" class="ph-ref" title="photo 17">17</a><a href="#fifty-year-anniversary" class="ph-ref" title="photo 18">18</a><a href="#yakov-with-rita" class="ph-ref" title="photo 20">20</a></sup> <span class="m">+ <a href="#sofa-redhead-wedding" class="linked-name">Nokhuma (Natasha) Zeltser</a><sup class="ref-cluster"><a href="#sofa-redhead-wedding" class="ph-ref" title="photo 11">11</a><a href="#tamara-edik-wedding" class="ph-ref" title="photo 14">14</a><a href="#yakov-nokhuma-portrait" class="ph-ref" title="photo 17">17</a><a href="#fifty-year-anniversary" class="ph-ref" title="photo 18">18</a></sup></span>
+      </div>
+      <ul>
+        <li><a href="#tamara-edik-wedding" class="linked-name">Fanya Mestetskaya</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="photo 14">14</a><a href="#fanya-mestetskaya-husband" class="ph-ref" title="photo 19">19</a></sup> <span class="m">+ <a href="#tamara-edik-wedding" class="linked-name">Mikhail Mestetsky</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="photo 14">14</a><a href="#fanya-mestetskaya-husband" class="ph-ref" title="photo 19">19</a></sup></span>
+          <ul>
+            <li>Mark Mestetsky <span class="m">+ Valeria Alygina</span>
+              <ul><li>Dmitry</li><li>Natalya</li></ul>
+            </li>
+            <li><a href="#tamara-edik-wedding" class="linked-name">Larisa</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="photo 14">14</a></sup> <span class="m">+ Leonid Vizelman</span>
+              <ul><li>Alexander</li><li>Lev</li></ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#mozya-officer" class="linked-name">Mozya (Moisei) Sandler</a><sup class="ref-cluster"><a href="#mozya-officer" class="ph-ref" title="photo 7">07</a><a href="#mozya-wedding" class="ph-ref" title="photo 8">08</a><a href="#mozya-wedding-duplicate" class="ph-ref" title="photo 9">09</a><a href="#mozya-sofa-grave" class="ph-ref" title="photo 22">22</a></sup> <span class="dates">01.01.1930 — 07.12.2017, Denver</span> <span class="m">+ <a href="#mozya-wedding" class="linked-name">Sofa Kertsburg</a><sup class="ref-cluster"><a href="#mozya-wedding" class="ph-ref" title="photo 8">08</a><a href="#mozya-wedding-duplicate" class="ph-ref" title="photo 9">09</a><a href="#tamara-edik-wedding" class="ph-ref" title="photo 14">14</a><a href="#mozya-sofa-grave" class="ph-ref" title="photo 22">22</a></sup></span> <span class="dates">19.09.1932 — 27.11.2019</span>
+          <ul>
+            <li><a href="#yakov-with-rita" class="linked-name">Rita Reiter</a><sup class="ref-cluster"><a href="#yakov-with-rita" class="ph-ref" title="photo 20">20</a></sup> <span class="m">+ Grigory Reiter</span>
+              <ul><li>Boris <span class="place">USA</span></li></ul>
+            </li>
+            <li><a href="#mozya-sofa-grave" class="linked-name">Alexander Sandler</a><sup class="ref-cluster"><a href="#mozya-sofa-grave" class="ph-ref" title="photo 22">22</a></sup> <span class="m">+ Elena Polyakova</span> <span class="place">near New York</span>
+              <ul>
+                <li><a href="#shifra-with-kids" class="linked-name">Shifra (Svetlana) Balancio</a><sup class="ref-cluster"><a href="#shifra-with-kids" class="ph-ref" title="photo 23">23</a><a href="#bio-shifra" class="ph-ref bio" title="biography">bio</a></sup> <span class="m">+ Jeffrey Balancio</span>
+                  <ul>
+                    <li><a href="#shifra-with-kids" class="linked-name">Simone Lily Balancio</a><sup class="ref-cluster"><a href="#shifra-with-kids" class="ph-ref" title="photo 23">23</a></sup></li>
+                    <li><a href="#shifra-with-kids" class="linked-name">Louis Balancio III</a><sup class="ref-cluster"><a href="#shifra-with-kids" class="ph-ref" title="photo 23">23</a></sup></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#sofa-redhead-wedding" class="linked-name">Sofa Sandler &amp;laquo;the Redhead&amp;raquo;</a><sup class="ref-cluster"><a href="#sofa-redhead-wedding" class="ph-ref" title="photo 11">11</a><a href="#manya-garik-wedding" class="ph-ref" title="photo 12">12</a><a href="#tamara-edik-wedding" class="ph-ref" title="photo 14">14</a></sup> <span class="m">+ <a href="#sofa-redhead-wedding" class="linked-name">Isaac Savransky</a><sup class="ref-cluster"><a href="#sofa-redhead-wedding" class="ph-ref" title="photo 11">11</a></sup></span> <span class="place">Israel</span>
+          <ul>
+            <li><a href="#old-family-clean" class="linked-name">Irina (Ira) Savranskaya</a><sup class="ref-cluster"><a href="#old-family-clean" class="ph-ref" title="photo 5">05</a></sup> <span class="m">+ Lyonya Levin</span>
+              <ul><li>Yakov</li><li>Yael</li></ul>
+            </li>
+          </ul>
+        </li>
+        <li>Mikhail ("Mishka the Little") Sandler <span class="m">+ Raisa Gendlina</span>
+          <ul>
+            <li>Gennady <span class="m">+ Svetlana</span>
+              <ul><li>Liza</li><li>Leonid</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">2.</span> Roza <span class="m">+ Zeydl Bangik / David Baranovich</span>
+      </div>
+      <ul>
+        <li>Aron Bangik <span class="meta-inline">(no descendants)</span></li>
+        <li>Manya <span class="m">+ Grigory Bronfmakher</span>
+          <ul>
+            <li>Anna <span class="m">+ Yakov Khover</span>
+              <ul>
+                <li>Alexander <span class="place">Israel</span></li>
+                <li>Maya <span class="m">+ Tzvika Shimon</span> <span class="place">Israel</span>
+                  <ul><li>Ido</li><li>Anit</li></ul>
+                </li>
+              </ul>
+            </li>
+            <li>Inna <span class="m">+ Dmitry Krantsberg</span>
+              <ul>
+                <li>Roman <span class="m">+ Olga</span> <span class="place">Israel</span>
+                  <ul><li>Shai</li><li>Rotem</li></ul>
+                </li>
+                <li>Yakov <span class="place">Israel</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">3.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">Mehl (Mikhail Matveyevich) Sandler</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="photo 6">06</a></sup> <span class="dates">1907/14 — 1942/43, killed in the war</span> <span class="m">+ <a href="#naum-galina-wedding" class="linked-name">Khuma (Nina) Trefnyak</a><sup class="ref-cluster"><a href="#naum-galina-wedding" class="ph-ref" title="photo 13">13</a></sup></span>
+        <span class="meta-inline">Khuma: 05.04.1916, Berdychiv — 03.07.1977, Moscow</span>
+      </div>
+      <ul>
+        <li><a href="#naum-galina-wedding" class="linked-name">Naum Mikhailovich</a><sup class="ref-cluster"><a href="#naum-galina-wedding" class="ph-ref" title="photo 13">13</a><a href="#naum-mikhail-ny" class="ph-ref" title="photo 21">21</a><a href="#memorial-naum" class="ph-ref mem" title="memorial">&#10026;</a></sup> <span class="dates">09.01.1941 — 27.01.2026, Moscow</span> <span class="m">+ <a href="#naum-galina-wedding" class="linked-name">Galina Fyodorovna Filyushina</a><sup class="ref-cluster"><a href="#naum-galina-wedding" class="ph-ref" title="photo 13">13</a></sup></span>
+          <ul>
+            <li><a href="#naum-mikhail-ny" class="linked-name">Mikhail Naumovich Sandler</a><sup class="ref-cluster"><a href="#naum-mikhail-ny" class="ph-ref" title="photo 21">21</a></sup> <span class="place">Canada 1991 → USA 2013</span>
+              <ul>
+                <li><em>from Elena Volynskaya:</em> Denis <span class="m">+ Nora (Gulnora) Turaeva</span>
+                  <ul><li>Kamila</li></ul>
+                </li>
+                <li><em>from Tatyana Tretyakova:</em> Filipp, Ivan</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">4.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">Srul (Israel) Sandler</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="photo 6">06</a></sup> <span class="dates">1904 — killed near Zaporizhzhia 1943</span> <span class="m">+ Genya Gamer</span>
+      </div>
+      <ul>
+        <li><a href="#manya-garik-wedding" class="linked-name">Manya Sandler</a><sup class="ref-cluster"><a href="#manya-garik-wedding" class="ph-ref" title="photo 12">12</a></sup> <span class="m">+ <a href="#manya-garik-wedding" class="linked-name">Garik (Grigory) Kozlin</a><sup class="ref-cluster"><a href="#manya-garik-wedding" class="ph-ref" title="photo 12">12</a></sup></span>
+          <ul>
+            <li>Yevgenia (Zhenya) <span class="m">+ Lev Sherbelis</span> <span class="place">Israel</span>
+              <ul>
+                <li>Asaf Sandler <span class="m">+ Dorit Sandler</span> <span class="place">Israel</span>
+                  <ul><li>Saar Sandler</li></ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Rita <span class="m">+ Elik Raykher</span>
+          <ul>
+            <li>Bella <span class="m">+ Steve Cohen</span> <span class="place">USA</span>
+              <ul><li>Lani</li><li>Jason</li></ul>
+            </li>
+            <li>Svetlana <span class="place">USA</span></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">5.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">Fanya (Frima)</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="photo 6">06</a></sup> <span class="m">+ <a href="#betya-mehl-fanya-prewar" class="linked-name">Itsik (Isaac) Shomshteyn</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="photo 6">06</a></sup></span>
+      </div>
+      <ul>
+        <li>Milya Shomshteyn <span class="m">+ Lyudmila Sidler</span>
+          <ul>
+            <li>Marina <span class="m">+ Anatoly Ilchuk</span> <span class="place">Germany</span>
+              <ul>
+                <li>Elena <span class="m">+ Kristian</span> <span class="place">Germany</span>
+                  <ul><li>Artur</li><li>Noa</li></ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Anchel (Alik) <span class="m">+ Irina Fridman</span>
+          <ul>
+            <li>Alla <span class="m">+ Zhenya Meirson</span> <span class="place">Israel</span>
+              <ul><li>Noa</li><li>Dana</li></ul>
+            </li>
+            <li>Igor Shomshteyn <span class="m">+ Inna</span> <span class="place">USA</span>
+              <ul><li>Ethan</li><li>Aron</li><li>Joel</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">6.</span> <a href="#betya-mehl-fanya-prewar" class="linked-name">Betya (Beila)</a><sup class="ref-cluster"><a href="#betya-mehl-fanya-prewar" class="ph-ref" title="photo 6">06</a></sup> <span class="dates">1914 — 1979</span> <span class="m">+ Shiko Lipovetsky / Moisei Shestak</span>
+      </div>
+      <ul>
+        <li><a href="#tamara-edik-wedding" class="linked-name">Milya Lipovetsky</a><sup class="ref-cluster"><a href="#tamara-edik-wedding" class="ph-ref" title="photo 14">14</a><a href="#fifty-year-anniversary" class="ph-ref" title="photo 18">18</a></sup> <span class="m">+ Rita (Galina) Guralnik</span>
+          <ul>
+            <li>Marina <span class="m">+ Alexander Druyan</span>
+              <ul>
+                <li>Bat-Khen <span class="m">+ Raz Feldman</span> <span class="place">Israel</span>
+                  <ul><li>child</li></ul>
+                </li>
+                <li>Ronen <span class="place">Israel</span></li>
+                <li>Itai <span class="place">Israel</span></li>
+              </ul>
+            </li>
+            <li>Irina <span class="m">+ Leonid Gorbakovsky</span> <span class="place">Israel</span></li>
+          </ul>
+        </li>
+        <li><a href="#manya-garik-wedding" class="linked-name">Genya Beider</a><sup class="ref-cluster"><a href="#manya-garik-wedding" class="ph-ref" title="photo 12">12</a></sup> <span class="m">+ Boris Beider</span> <span class="place">Germany</span>
+          <ul>
+            <li><a href="#bio-aleksandr-beider" class="linked-name">Alexander Beider</a><sup class="ref-cluster"><a href="#bio-aleksandr-beider" class="ph-ref bio" title="biography">bio</a></sup> <span class="place">France, linguist & onomastician</span>
+              <ul>
+                <li>Sonya <span class="m">+ Étienne Herning</span> <ul><li>Artur</li><li>Eli</li></ul></li>
+                <li>Katya <span class="m">+ Antoine Schlafmytz</span> <ul><li>Elena</li></ul></li>
+              </ul>
+            </li>
+            <li>Masha (Maria) <span class="m">+ Sasha Mikhalev</span> <span class="place">Germany</span>
+              <ul><li>Max Beider</li><li>Eliza Beider</li></ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <div class="branch-head">
+        <span class="num">7.</span> Idl Sandler <span class="meta-inline">(no descendants)</span>
+      </div>
+    </li>
+
+  </ul>
+
+</div>
+</div>
+</section>
+
+<section class="major" id="album">
+  <div class="section-kicker">Photo archive · 23 images + a handwritten tree</div>
+  <h2 class="section-title">Photos</h2>
+  <div class="section-lede">All photographs in order from oldest to most recent. Each card has its own anchor — those anchors are what the names in the two trees above link to.</div>
+  <div class="section-rule"></div>
+  
+<article class="album-card" id="motl-1940">
+  <span class="album-card-num">Photo 01</span>
+  <h3 class="album-card-title">Motl Sandler — 1940</h3>
+  <div class="album-card-date">1940</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/motl-1940.jpg" alt="Motl Sandler — 1940" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>Motl (Matvey) Sandler</strong> — great-grandfather of Mikhail Naumovich Sandler and the common ancestor of all descendants in the family. A miller in Litin (Vinnytsia Obl., Ukraine).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">1940 — one year before the war began and before his death.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>A page from Katya Beider’s album. Via <strong>Genya Beider</strong> (mother of Alexander Beider) — from older relatives.</div>
+      <div class="album-card-note">Killed in the Holocaust, autumn 1941. Motl tried to leave occupied Litin for the Romanian-occupied zone (where Jews were not being killed) — he did not make it. He is buried in the mass grave of the Litin Jews. Until the 1970s Betya and her sisters travelled there to honour their parents.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="khaya-1930s">
+  <span class="album-card-num">Photo 02</span>
+  <h3 class="album-card-title">Khaya Raykher</h3>
+  <div class="album-card-date">probably 1930s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/khaya-1930s.jpg" alt="Khaya Raykher" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>Khaya Raykher</strong>, wife of Motl Sandler. Mother of all seven children: Yakov, Idl, Betya, Fanya, Srul, Mehl, Roza. Great-grandmother of Mikhail Naumovich Sandler.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">Exact date unknown. Probably the 1930s.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>The only known portrait. Found by <strong>Alexander Beider</strong> among family papers.</div>
+      <div class="album-card-note">Killed in the Holocaust, summer–autumn 1941. According to Betya: Khaya stepped out of the house, and someone — a German or a local policeman — shot her. Almost as soon as the occupiers arrived.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="old-family-damaged">
+  <span class="album-card-num">Photo 03</span>
+  <h3 class="album-card-title">Old family photograph (worn copy)</h3>
+  <div class="album-card-date">1920s — 1930s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/old-family-damaged.jpg" alt="Old family photograph (worn copy)" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">In the centre, an elderly man with a moustache, beard and cap. <strong>By his clothing, cap and distinctive tie this is most likely Motl Sandler himself</strong> (compare with photo no. 1 “Motl, 1940”, taken later). On the left, a young man in a tie; back-left, a teenage girl with a bob; on the right, a boy and a young woman. If the man in the centre really is Motl, four of his seven children are gathered around him.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">1920s — 1930s.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>The photo was sent by <strong>Alexander Sandler</strong> (13 May, 18:25) without a caption — as a follow-up to the conversation about Yankel and Nokhuma’s 50-year anniversary photo.</div>
+      <div class="album-card-note">This is the same photograph as Photo no. 5 below — Irina Levin in Israel kept a much cleaner copy in which the faces are visible.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="old-family-children">
+  <span class="album-card-num">Photo 04</span>
+  <h3 class="album-card-title">A girl, a woman and a child</h3>
+  <div class="album-card-date">1920s — 1930s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/old-family-children.jpg" alt="A girl, a woman and a child" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">On the left a teenage girl with a large bow; in the centre a middle-aged woman with a long bead/chain; on the right a small child in a cap. Possibly Khaya Raykher with children, or one of her sisters — to be clarified.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">A heavily damaged print from the same period and, most likely, from the same album. Style of an early-20th-century portrait studio.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>The photo was sent by <strong>Alexander Sandler</strong> (13 May, 18:25) together with the previous one.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="old-family-clean">
+  <span class="album-card-num">Photo 05</span>
+  <h3 class="album-card-title">Family portrait (clean copy from Israel)</h3>
+  <div class="album-card-date">1920s — 1930s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/old-family-clean.jpg" alt="Family portrait (clean copy from Israel)" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">On the left a young man in a suit and tie; back-left a teenage girl with a dark bob; in the centre an elderly man with a moustache, beard and cap (<strong>presumably Motl Sandler</strong>); on the right a boy and a young woman. The senior generation of the Sandler/Raykher family; specific names for the rest await confirmation.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">The same scene as photo no. 3 above, but Irina Levin’s copy from Israel survived in much better condition: no tears or cracks, faces are readable. (The image has been rotated 90° clockwise — the original was scanned on its side.)</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>The photo was sent by <strong>Irina (Irena) Levin</strong> (14 May, 13:10) — a granddaughter of Yakov Sandler through his daughter Sofa (the Redhead). She lives in Israel and is married to Lyonya Levin.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="betya-mehl-fanya-prewar">
+  <span class="album-card-num">Photo 06</span>
+  <h3 class="album-card-title">Betya, Mehl and Fanya. Before the war</h3>
+  <div class="album-card-date">1920s — early 1930s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/betya-mehl-fanya-prewar.jpg" alt="Betya, Mehl and Fanya. Before the war" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">Seated, left to right: <strong>Betya Sandler</strong> (1914–1979) — <strong>Mehl (Mikhail Matveyevich) Sandler</strong> — <strong>Fanya Sandler</strong> (married name Shomshteyn). Standing behind, a young man — identity uncertain. Most likely either <strong>Srul Sandler</strong> (her brother, killed in the war) or <strong>Isaac Shomshteyn</strong> (Fanya’s husband).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">Approximately the 1920s — early 1930s.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span><strong>Alexander Beider</strong>, February 2026.</div>
+      <div class="album-card-note"><strong>The crucial thing about this image:</strong> for the first time in the archive — the face of Mikhail Matveyevich Sandler, Naum Mikhailovich’s father. Until 2026 Naum’s family had no photograph of his father at all.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-officer">
+  <span class="album-card-num">Photo 07</span>
+  <h3 class="album-card-title">Mozya Sandler — Soviet army officer</h3>
+  <div class="album-card-date">late 1940s — 1950s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-officer.jpg" alt="Mozya Sandler — Soviet army officer" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>Mozya (Moisei Yakovlevich) Sandler</strong> — son of Yakov (Yankel), brother of Fanya, Sofa and Mikhail. Uncle of Mikhail Naumovich on the Yakov side. In Soviet army officer uniform.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">Approximately late 1940s — 1950s.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Family archive, May 2026.</div>
+      <div class="album-card-note">He lived and was buried in Denver. Through his descendants, the Sandler line continues in the United States: his son Alex Sandler with his wife Lena Polyakova live near New York, their daughter is Shifra Balancio, and the grandchildren are Simone Lily and Louis III.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-wedding">
+  <span class="album-card-num">Photo 08</span>
+  <h3 class="album-card-title">Wedding portrait of Mozya and Sofa</h3>
+  <div class="album-card-date">1 September 1955</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-wedding.jpg" alt="Wedding portrait of Mozya and Sofa" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>Mozya (Moisei) Sandler</strong> (01.01.1930 – 07.12.2017) — son of Yakov and Nokhuma, and his wife <strong>Sofa Kertsburg</strong> (19.09.1932 – 27.11.2019). They later moved to Denver. Their son is Alexander Sandler, their daughter Rita.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">The day of the civil marriage. The groom is in Soviet army officer’s uniform.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>The photo was sent by <strong>Shifra (Svetlana) Balancio</strong>, granddaughter of Mozya and Sofa (13 May, 17:21): “Married September 1 1955.”</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-wedding-duplicate">
+  <span class="album-card-num">Photo 09</span>
+  <h3 class="album-card-title">Wedding portrait of Mozya and Sofa (another copy)</h3>
+  <div class="album-card-date">1 September 1955</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-wedding-duplicate.jpg" alt="Wedding portrait of Mozya and Sofa (another copy)" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>Mozya (Moisei) Sandler</strong> in officer’s uniform and <strong>Sofa Kertsburg</strong>.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">The same wedding photo as no. 8 — a second copy has been scanned.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>From <strong>Alexander Sandler</strong>’s archive (14 May, 14:00).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="beach-sochi-1960">
+  <span class="album-card-num">Photo 10</span>
+  <h3 class="album-card-title">At the sea — Sochi, 26 July 1960</h3>
+  <div class="album-card-date">26 July 1960</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/beach-sochi-1960.jpg" alt="At the sea — Sochi, 26 July 1960" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">On a rock in the water — a brother and sister, children of Yakov (Yankel) and Nokhuma: on the left <strong>Mikhail Sandler “Mishka the Little”</strong> (father of Gennady, married to Raisa Gendlina); on the right <strong>Sofa Sandler “the Redhead”</strong> (later Savranskaya, who moved to Israel). Identification — <strong>Alexander Sandler</strong> (15 May 2026, via the “Mishpacha Sandler” chat).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">A holiday snapshot on a stone boulder in the water. Bottom-right on the print, a handwritten inscription: “Sochi 26.VII.60.”</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Photo from <strong>Alexander Sandler</strong>’s archive (14 May, 13:58), re-photographed from an album page.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="sofa-redhead-wedding">
+  <span class="album-card-num">Photo 11</span>
+  <h3 class="album-card-title">Wedding of Sofa (the Redhead) and Isaac Savransky</h3>
+  <div class="album-card-date">mid-1960s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/sofa-redhead-wedding.jpg" alt="Wedding of Sofa (the Redhead) and Isaac Savransky" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">The bride is <strong>Sofa Sandler “the Redhead”</strong>, daughter of Yakov and Nokhuma; the groom is <strong>Isaac Savransky</strong>. After the wedding Sofa and Isaac moved to Israel; their daughter is Irina Savranskaya (Levin). In the background behind Sofa is her mother, <strong>Nokhuma (Natasha)</strong>.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">Civil marriage registration at a Wedding Palace (columns and the interior of a Soviet civil registry office are visible). The bride holds a bouquet and wears a veil over a white suit, with a “Bardot” bouffant hairdo.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Attribution: <strong>Alexander Sandler</strong> (13 May, 18:29) — “Sofa the Redhead.” Natasha in the background was identified by Natalya, Larisa and Mark Mestetsky.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="manya-garik-wedding">
+  <span class="album-card-num">Photo 12</span>
+  <h3 class="album-card-title">Wedding of Manya and Garik Kozlin</h3>
+  <div class="album-card-date">late 1960s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/manya-garik-wedding.jpg" alt="Wedding of Manya and Garik Kozlin" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">The bride is <strong>Manya Sandler</strong> (daughter of Srul, killed at the front in 1943); the groom is <strong>Garik (Grigory) Kozlin</strong>. Their daughter is Zhenya Sandler (Sherbelis), now in Israel. Beside them, per Zhenya: “to the right of mother stands <strong>Genya Beider</strong> (Alexander Beider’s mother), and to the left of father — <strong>Sofa</strong> (the Redhead).”</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">A wedding photograph in a registry-office hall with a chandelier and patterned carpet.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Sent and attributed by <strong>Zhenya Sandler</strong> (14 May, 13:02–13:04): “This is at my parents’ wedding.” Alexander Beider confirmed.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="naum-galina-wedding">
+  <span class="album-card-num">Photo 13</span>
+  <h3 class="album-card-title">Wedding of Naum and Galina — 22 August 1964, Moscow</h3>
+  <div class="album-card-date">22 August 1964</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/naum-galina-wedding.jpg" alt="Wedding of Naum and Galina — 22 August 1964, Moscow" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">Left to right: 1) <strong>Naum Mikhailovich Sandler</strong> — the groom; 2) <strong>Khuma “Nina” Trefnyak-Sandler</strong> — the groom’s mother, Mikhail’s paternal grandmother; 3) <strong>Galina Fyodorovna Filyushina</strong> — the bride; 4) <strong>Anastasia Nikolayevna Filyushina</strong> (née Eliseyeva) — the bride’s mother; 5) <strong>Fyodor Yegorovich Filyushin</strong> — the bride’s father.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">22 August 1964, Moscow.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Home archive of <strong>Mikhail Naumovich Sandler</strong>.</div>
+      <div class="album-card-note"><strong>The key thing:</strong> the only known photograph of Khuma (Nina) Trefnyak, Naum’s mother. A single image shows both families together: the Sandlers (via Khuma) and the Filyushins-Eliseyevs. Khuma Moiseyevna died in Moscow on 3 July 1977 (confirmed by death certificate, civil registry act no. 2031 of 04.07.1977).</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="tamara-edik-wedding">
+  <span class="album-card-num">Photo 14</span>
+  <h3 class="album-card-title">Wedding of Tamara Lipovetskaya and Edik Tabakin — ca. 1964, Moscow</h3>
+  <div class="album-card-date">~1964, Moscow</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/tamara-edik-wedding.jpg" alt="Wedding of Tamara Lipovetskaya and Edik Tabakin — ca. 1964, Moscow" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">The bride — <strong>Tamara Lipovetskaya</strong> (daughter of Khaim / Yefim Lipovetsky). The groom — <strong>Edik Tabakin</strong>.<br><br><strong>The “Sandler clan” in the picture:</strong> <strong>Milya Lipovetsky</strong> (uncle of Alexander Beider), <strong>Larisa</strong> (Fanya’s eldest daughter), <strong>Sofa Kertsburg</strong> (Mozya’s wife), <strong>Sofa Sandler</strong> (“Sofa the Redhead,” Mozya’s sister), <strong>Fanya Sandler</strong>, <strong>Misha Mestetsky</strong> (Fanya’s husband), <strong>Nokhuma Zeltser</strong>, <strong>Yakov (Yasha) Sandler</strong>, <strong>Emma Lipovetskaya</strong> (the bride’s sister), <strong>Marik Indursky</strong> (a family friend).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">~1964, Moscow.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Identification: <strong>Larisa + Alexander Beider</strong>.</div>
+      <div class="album-card-note">A rare group photograph that brings several family branches together in a single frame.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mother-dacha">
+  <span class="album-card-num">Photo 15</span>
+  <h3 class="album-card-title">On a walk in the forest</h3>
+  <div class="album-card-date">late 1950s — early 1960s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mother-dacha.jpg" alt="On a walk in the forest" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">A young woman, smiling, holds a small boy in a cap in her arms; next to her is an older girl in a light blouse with a collar. The exact names have not yet been fixed.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">A snapshot on a forest path (probably a dacha near Moscow). A warm, everyday photo — not posed.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Photo from <strong>Alexander Sandler</strong>’s archive (14 May, 13:58).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="two-men-tree">
+  <span class="album-card-num">Photo 16</span>
+  <h3 class="album-card-title">Two young men under a flowering tree</h3>
+  <div class="album-card-date">1960s — 1970s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/two-men-tree.jpg" alt="Two young men under a flowering tree" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">On the left, seated, is <strong>Mikhail Sandler “Mishka the Little”</strong>, son of Yakov (Yankel). On the right is <strong>Milya Lipovetsky</strong> (according to Mikhail Naumovich — “son of Shikob”; the parental link requires confirmation from Alexander Sandler). Identification — <strong>Alexander Sandler</strong> (15 May 2026, via the “Mishpacha Sandler” chat).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">A summer outdoor shot: a flowering rosehip or apple tree in the background, two men sitting in the grass in white shirts.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Photo from <strong>Alexander Sandler</strong>’s archive (14 May, 13:58).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="yakov-nokhuma-portrait">
+  <span class="album-card-num">Photo 17</span>
+  <h3 class="album-card-title">Yankel and Nokhuma — formal portrait</h3>
+  <div class="album-card-date">1970s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/yakov-nokhuma-portrait.jpg" alt="Yankel and Nokhuma — formal portrait" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>Yakov (Yankel) Sandler</strong> + <strong>Nokhuma (Natasha) Zeltser</strong> — the grandparents of Alexander Sandler, Shifra, Zhenya Sandler (via Srul), Marik Mestetsky, Irina Savranskaya and many others. Yankel was Motl Sandler’s eldest son.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">A formal indoor portrait of an elderly couple.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Photo from <strong>Alexander Sandler</strong>’s archive (14 May, 13:58). The same faces that appear at the centre of the 50-year-anniversary photo.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="fifty-year-anniversary">
+  <span class="album-card-num">Photo 18</span>
+  <h3 class="album-card-title">50 years of grandfather Yasha and grandmother Natasha’s marriage</h3>
+  <div class="album-card-date">approx. late 1970s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/fifty-year-anniversary.jpg" alt="50 years of grandfather Yasha and grandmother Natasha’s marriage" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>In the bottom-left corner sits Milya Lipovetsky</strong> (son of Aunt Betya, nephew of Yakov) — confirmed by Alexander Sandler and Mark Mestetsky. In the centre — <strong>Nokhuma</strong> wearing a shawl; to her right — <strong>Yakov (Yankel)</strong>. The man standing behind and the woman on the right are other family members.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">An anniversary portrait — 50 years since the marriage registration of Yakov (Yankel) Sandler and Nokhuma (Natasi) Zeltser.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Attribution: <strong>Alexander Sandler</strong> (13 May, 18:17): “This is precisely the photograph taken 50 years after grandfather Yasha and grandmother Natasha registered their marriage.” Clarification on Milya — Alexander Sandler, Mark Mestetsky.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="fanya-mestetskaya-husband">
+  <span class="album-card-num">Photo 19</span>
+  <h3 class="album-card-title">Fanya Mestetskaya with her husband</h3>
+  <div class="album-card-date">1970s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/fanya-mestetskaya-husband.jpg" alt="Fanya Mestetskaya with her husband" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>Fanya (Sandler) Mestetskaya</strong> — eldest daughter of Yakov and Nokhuma — and her husband <strong>Mikhail Mestetsky</strong>. Their children are Mark Mestetsky and Larisa Vizelman (Mestetskaya).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">A double portrait — close-up of husband and wife, a domestic setting.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Identification: <strong>Alexander Sandler</strong> (15 May): “Most likely Fanya Mestetskaya with her husband.”</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="yakov-with-rita">
+  <span class="album-card-num">Photo 20</span>
+  <h3 class="album-card-title">Yakov with grandchildren — Rita Reiter on the right</h3>
+  <div class="album-card-date">1970s</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/yakov-with-rita.jpg" alt="Yakov with grandchildren — Rita Reiter on the right" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">In the centre is <strong>Yakov Sandler</strong>. To his right (far right) is <strong>Rita Reiter</strong> (née Sandler), daughter of Mozya and Sofa, granddaughter of Yakov. The boy on the left is <strong>Gennady (“Gena”) Sandler</strong>, son of Mikhail (“Mishka the Little”) and Raisa Gendlina, grandson of Yakov. The teenage girl in a floral dress is <strong>presumably Irina Savranskaya (Levin)</strong>, daughter of Sofa “the Redhead,” granddaughter of Yakov — <em>requires confirmation from Alexander Sandler</em>. Identification of the boy, and the conjecture about the girl, by <strong>Alexander Sandler</strong> (15 May 2026, via the “Mishpacha Sandler” chat).</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">Family portrait taken at home against the backdrop of a carpet.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Identification: <strong>Alexander Sandler</strong> (15 May): “In photo no. 11 it’s Yakov, you’re right — on the right is Rita Reiter, Mozya’s daughter.”</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="naum-mikhail-ny">
+  <span class="album-card-num">Photo 21</span>
+  <h3 class="album-card-title">Naum and Mikhail in New York — 1992 or 1993</h3>
+  <div class="album-card-date">1992 or 1993</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/naum-mikhail-ny.jpg" alt="Naum and Mikhail in New York — 1992 or 1993" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>Mikhail Naumovich Sandler</strong> with his father, <strong>Naum Mikhailovich</strong>, at a family celebration in New York. Most likely a Hanukkah party — there is menorah-styled lighting in the background.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">1992 or 1993, one or two years after Mikhail moved from Moscow to Canada (Ottawa, 1991).</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Home archive of <strong>Mikhail Naumovich</strong>.</div>
+      <div class="album-card-note">The “great mishpacha” — descendants of Mehl’s various brothers and sisters — relocated to Denver and New York in the 1980s–1990s. Mikhail arrived in Canada in 1991 and in the United States in 2013.</div>
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="mozya-sofa-grave">
+  <span class="album-card-num">Photo 22</span>
+  <h3 class="album-card-title">The grave of Mozya and Sofa — Denver</h3>
+  <div class="album-card-date">after 2019</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/mozya-sofa-grave.jpg" alt="The grave of Mozya and Sofa — Denver" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">At the gravestone — <strong>Alexander Sandler</strong>, their son.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">Gravestone at the Jewish cemetery in Denver (Colorado, USA). The inscription: <strong>SOFIA — LOVED AND MISSED, Sept. 19, 1932 – Nov. 27, 2019</strong> — <strong>MOISEY — ALWAYS A MENSCH, Jan. 01, 1930 – Dec. 07, 2017</strong> — “FOREVER IN OUR HEARTS.”</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Photo from <strong>Alexander Sandler</strong>’s archive (14 May, 14:02).</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="shifra-with-kids">
+  <span class="album-card-num">Photo 23</span>
+  <h3 class="album-card-title">At the Sandler family monument</h3>
+  <div class="album-card-date">ca. 2020 (by the children’s age)</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/shifra-with-kids.jpg" alt="At the Sandler family monument" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body"><strong>Shifra (Svetlana) Balancio</strong>, née Sandler — granddaughter of Mozya and Sofa, daughter of Alexander Sandler and Elena Polyakova — with her two children: <strong>Simone Lily Balancio</strong> and <strong>Louis Balancio III</strong>. Shifra’s husband is Jeffrey Balancio.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">A family visit to the cemetery; around them, other Jewish gravestones (BRONSTINE, PLOTKIN, GOLDIN, KHURGINA, ENGBAR, KHAYKIN, THORNER).</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Photo from <strong>Alexander Sandler</strong>’s archive (14 May, 14:02). Family composition — based on the family tree.</div>
+      
+    </div>
+  </div>
+</article>
+
+
+<article class="album-card" id="tree-1990">
+  <span class="album-card-num">Tree</span>
+  <h3 class="album-card-title">Handwritten Sandler-Raykher tree, ~1990</h3>
+  <div class="album-card-date">late 1970s — early 1990s</div>
+  <div class="album-card-body tall">
+    <div class="photo-frame tree">
+      <img src="photos/tree-1990.jpg" alt="Handwritten Sandler-Raykher tree, ~1990" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">A handmade genealogical tree of the family of Motl Sandler and Khaya Raykher. All seven branches are on it: Yakov (Yankel), Idl, Betya, Fanya, Srul, Mehl, Roza.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">It is from this drawing that the work of reconstructing the family tree began — <strong>Alexander Beider</strong> confirmed in the chat that the manuscript is his, compiled while he was still in Moscow in the late 1970s.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span><strong>Alexander Beider</strong> (14 May, 12:33): “some of the names/surnames I added not from memory but from my handwritten tree (on a sheet of paper, compiled in Moscow somewhere in the late 1970s).”</div>
+      
+    </div>
+  </div>
+</article>
+
+<article class="album-card" id="four-siblings-1970s">
+  <span class="album-card-num">Photo 25</span>
+  <h3 class="album-card-title">The four children of Motl and Khaya — the last group photograph of the survivors</h3>
+  <div class="album-card-date">first half of the 1970s, Moscow</div>
+  <div class="album-card-body">
+    <div class="photo-frame">
+      <img src="photos/four-siblings-1970s.jpg" alt="Roza, Yakov, Fanya and Betya Sandler — Moscow, early 1970s" loading="lazy">
+    </div>
+    <div class="album-card-fields">
+      <div class="field">
+        <span class="field-label">Who is in the photo</span>
+        <div class="field-body">Right to left: <strong>Roza</strong>, <strong>Yakov (Yasha) Sandler</strong>, <strong>Fanya</strong>, <strong>Betya</strong>. Four of the seven children of Motl Sandler and Khaya Raykher.</div>
+      </div>
+      <div class="field">
+        <span class="field-label">When / Event</span>
+        <div class="field-body">The picture was taken in Moscow, where Roza came <strong>on the eve of her departure for Israel</strong>. Roza left for Israel in 1973 — so the photograph dates from the <strong>first half of the 1970s</strong>, most likely 1972–1973.</div>
+      </div>
+      <div class="album-card-source"><span class="field-label" style="color:var(--ink-soft); margin-bottom:6px;">Source</span>Family archive, sent by Mikhail Naumovich Sandler (17 May 2026).</div>
+      <div class="album-card-note"><strong>Historical significance of the photograph:</strong> this is the last picture in which all the post-war surviving sisters and brother are together. By the time it was taken, <strong>Srul</strong> had already been killed at the front near Zaporizhzhia in 1943, <strong>Mehl</strong> (Mikhail Matveyevich) had died during the war, and the fate of <strong>Idl</strong> is unknown. These four — Yakov, Roza, Fanya and Betya — lived into the 1970s. Betya would die in 1979; Roza, by then already in Israel.</div>
+    </div>
+  </div>
+</article>
+
+
+</section>
+
+<section class="major" id="memorial-naum">
+  <div class="memorial">
+    <div class="kicker">In memoriam</div>
+    <h2>Naum Mikhailovich Sandler</h2>
+    <div class="lifespan">9 January 1941, Moscow  —  27 January 2026</div>
+
+    <div class="memorial-body">
+      <div class="memorial-photo"><img src="photos/naum-memorial.jpg" alt="Naum Mikhailovich Sandler"></div>
+      <div class="memorial-text">
+        <p>He devoted his entire life to building in the electric-power industry. He lived completely for his work — the construction of energy facilities. He gave it all his strength, ability and time, plunging deeply into every detail, an untiring driver of major undertakings.</p>
+        <p>Naum Mikhailovich earned boundless respect in the industry as a brilliant specialist and a person of remarkable personal qualities. In his teams he created an atmosphere of trust and productivity, and he listened to and heard people regardless of their rank.</p>
+
+        <h4>Education</h4>
+        <p>Graduate of the All-Union Correspondence Civil-Engineering Institute and of the Moscow Power Engineering Institute. Candidate of Technical Sciences. Author of a number of scholarly works.</p>
+
+        <h4>Career</h4>
+        <p>From concrete-layer/fitter and foreman at the Mosenergostroy Trust to the head of the Mosenergoproekt Institute. Under his direction — projects for power stations, heating mains, substations, electricity transmission lines, heat- and power-supply schemes for Moscow and Russia’s regions, combined-cycle units for Mosenergo. In 2011–2020 — adviser at OOO Gazprom Energoholding.</p>
+
+        <h4>Honours and titles</h4>
+        <p>Honoured Worker of the Unified Energy System of Russia. Honoured Builder of the Russian Federation. Honoured Worker of the Ministry of Fuel and Energy of the Russian Federation. Order of Honour and a number of other state and departmental medals.</p>
+      </div>
+    </div>
+
+    <div class="memorial-closing">In blessed memory.</div>
+  </div>
+</section>
+
+<section class="major" id="living">
+  <div class="section-kicker">Two living relatives</div>
+  <h2 class="section-title">Living</h2>
+  <div class="section-lede">Two second-/third-cousin relatives thanks to whom the family archive ended up with so many photographs, names and stories.</div>
+  <div class="section-rule"></div>
+
+  <div class="bio-grid">
+
+    <div class="bio-card" id="bio-aleksandr-beider">
+      <h3>Alexander Beider</h3>
+      <div class="bio-sub">b. 1963, Moscow · in Paris since 1990</div>
+
+      <h4>How he is related</h4>
+      <p>Son of Genya (daughter of Betya Sandler) and Boris Beider. A third cousin of Mikhail Naumovich. A source of old family photographs and of most of the genealogical information on the Litin branch.</p>
+
+      <h4>Education</h4>
+      <p>Graduated from MIPT (1986). Candidate of Physical and Mathematical Sciences (1989). A second doctorate, in Jewish studies, at the Sorbonne (École Pratique des Hautes Études), 2000.</p>
+
+      <h4>What he is known for</h4>
+      <p>One of the world’s leading specialists in Ashkenazi-Jewish onomastics — the etymology and geography of Jewish surnames and Yiddish given names. Author of foundational dictionaries of Jewish surnames of the Russian Empire, Poland, Galicia, the Maghreb and other regions. Co-author (with Stephen Morse, 2008) of the Beider–Morse phonetic algorithm — a standard in genealogical databases.</p>
+
+      <h4>Main books</h4>
+      <p><em>Origins of Yiddish Dialects</em> (Oxford University Press, 2015); dictionaries of surnames of the Russian Empire (1993, revised 2008); Poland (1996, “Best Judaica Reference” award); Galicia (2004); the Maghreb, Gibraltar and Malta (2017); Italy, France and the Portuguese communities (2019).</p>
+    </div>
+
+    <div class="bio-card" id="bio-shifra">
+      <h3>Shifra Balancio</h3>
+      <div class="bio-sub">née Svetlana Sandler · New York metropolitan area</div>
+
+      <h4>How she is related</h4>
+      <p>Daughter of Alexander Sandler (Mozya’s son) and Elena Polyakova. Great-granddaughter of Yakov (Yankel) Sandler. Married to Jeffrey Balancio; two children — Simone Lily and Louis III.</p>
+
+      <h4>Education</h4>
+      <p>Carnegie Mellon University, Tepper School of Business — BBA in Finance and International Management, 2007.</p>
+
+      <h4>What she is known for</h4>
+      <p>A career in the luxury-brand industry: previously Louis Vuitton and Bulgari, currently Director, Global Retail Performance at Tiffany &amp; Co. Lives in the New York area (Scarsdale / Montclair).</p>
+    </div>
+
+  </div>
+
+  <p style="font-family:'PT Sans',sans-serif; font-size:12px; color:var(--ink-mute); font-style:italic; margin-top:24px; text-align:center;">Sources: open publications, Wikipedia, academic pages, professional profiles. No personal details from closed social-media accounts have been used.</p>
+</section>
+
+<section class="major" id="updates">
+  <div class="section-kicker">Corrections received from family</div>
+  <h2 class="section-title">Corrections and additions</h2>
+  <div class="section-rule"></div>
+
+  <div class="info-card">
+    <h3>Naum Mikhailovich Sandler</h3>
+    <ul>
+      <li>9 January 1941 (Moscow) — 27 January 2026. A life in the electric-power industry.</li>
+      <li>Candidate of Technical Sciences. Honoured Worker of the Unified Energy System of Russia; Honoured Builder of the Russian Federation.</li>
+      <li>See the dedicated <a href="#memorial-naum" style="color:var(--accent);">memorial page</a>.</li>
+    </ul>
+
+    <h3>Khuma Moiseyevna Trefnyak-Sandler</h3>
+    <ul>
+      <li>Maiden name — Trefnyak; married name — Sandler. In everyday Soviet life she was called Nina.</li>
+      <li><strong>Born 5 April 1916</strong> in Berdychiv (Zhytomyr Oblast, then the Russian Empire).</li>
+      <li><strong>Died 3 July 1977</strong> in Moscow. Death-record entry no. 2031 of 4 July 1977, Kuibyshevsky civil-registry office of the city of Moscow.</li>
+      <li>Patronymic <em>Moiseyevna</em>  — accordingly, her father’s name was Moisei (probably Moishe) Trefnyak. Her mother’s name has not yet been established.</li>
+      <li><em>Source: duplicate death certificate issued 27.02.2016 (series VII-MYu, no. 576303). Held by Mikhail Naumovich.</em></li>
+    </ul>
+
+    <h3>The great family emigration</h3>
+    <ul>
+      <li>The majority of the family moved from Moscow to Denver, and then on across the United States, in the 1980s–90s.</li>
+    </ul>
+
+    <h3>Mozya (Moisei Yakovlevich) Sandler</h3>
+    <ul>
+      <li>He lived and was buried in Denver. His son Alex Sandler and wife Lena Polyakova live near New York.</li>
+      <li>Their daughter Shifra Sandler is married to Jeff Balancio. The grandchildren are Louis and Sima.</li>
+    </ul>
+
+    <h3>Mikhail Naumovich Sandler</h3>
+    <ul>
+      <li>He moved from Moscow to Canada (Ottawa) in 1991, and from Canada to the United States in 2013.</li>
+    </ul>
+
+    <h3>The Betya branch — the Beiders</h3>
+    <ul>
+      <li>Besides Milya Lipovetsky, Betya had a daughter Genya (who lives in Germany).</li>
+      <li>Her son Alexander Beider lives in France; he has two daughters: Sonya and Katya.</li>
+      <li>Alexander’s sister Masha (Maria) also lives in Germany.</li>
+      <li>Alexander shared old photographs of Motl and Khaya, and a pre-war picture with Mehl.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="major" id="open-questions">
+  <div class="section-kicker">Still to clarify</div>
+  <h2 class="section-title">Open questions</h2>
+  <div class="section-rule"></div>
+
+  <div class="info-card">
+    <h3>Photos and dates</h3>
+    <ul>
+      <li>Photo no. 1 (Motl, 1940): exact date and place of the shot. Where did Motl live in 1940?</li>
+      <li>Photo no. 2 (Khaya): when and where was the portrait taken?</li>
+      <li>Photo no. 6 (Betya, Mehl, Fanya): who is standing behind — Srul or Isaac Shomshteyn? Year of the shot?</li>
+      <li>Photo no. 13 (Naum and Galina’s wedding): are there other wedding photographs that have survived?</li>
+      <li>Photo no. 14 (Tamara and Edik’s wedding): not every face has been identified. From the Edik Tabakin side of the family — does anyone else have photos?</li>
+    </ul>
+
+    <h3>Biographies and families</h3>
+    <ul>
+      <li>Mehl’s year of birth: the archives give 1907, 1909, 1910, 1911, 1914.</li>
+      <li>Khuma Moiseyevna Trefnyak: her mother’s name (judging by the patronymic, her father was Moisei), her parents and ancestors in Berdychiv, and how she survived with infant Naum in Kaloshino after 1941.</li>
+      <li>The Filyushins: where Fyodor Yegorovich and Anastasia Nikolayevna (née Eliseyeva) came from.</li>
+      <li>Contact with Roza’s descendants (Manya Bronfmakher, Anna Khover, Inna Krantsberg) in Israel — is anyone in touch?</li>
+      <li>Tamara and Edik Tabakin — where do their descendants live (daughter Inna, b. 1965)?</li>
+    </ul>
+
+    <h3>Names and order of generations</h3>
+    <ul>
+      <li>Children of Gennady (son of Mikhail “Mishka the Little,” Yankel branch) — son and daughter, names.</li>
+      <li>Children of Alla and Igor (Fanya branch → Anchel) — names.</li>
+      <li>The order of seniority of Mehl and Srul among Motl’s seven children.</li>
+      <li>Manya (Roza’s daughter) — by Zeydl Bangik or by David Baranovich?</li>
+      <li>Children of Betya by her second husband (Moisei Shestak), if any.</li>
+    </ul>
+
+    <h3>Questions for Alexander Sandler <span style="font-family: 'PT Sans', sans-serif; font-size: 13px; font-weight: 400; color: var(--ink-soft); text-transform: none; letter-spacing: 0;">(via the “Mishpacha Sandler” chat)</span></h3>
+    <ul>
+      <li><strong>The teenage girl in photo no. 20 “Yakov with grandchildren”</strong>  — you mentioned this is “Ira, daughter of Sofa the Redhead.” Can you confirm this is Irina Savranskaya (Levin)?</li>
+      <li><strong>Milya Lipovetsky</strong> — who were his parents? Mikhail Naumovich wrote “son of Shikob,” but this isn’t yet clear to us: Shikob — is that the mother’s name? the father’s? in full? Which branch does Milya come from — via Emma Lipovetskaya (who appears in photo no. 14) or via someone else?</li>
+      <li><strong>The bearded man in a cap at the centre of the old family photo</strong>  (the one you called “the third”) — you didn’t name him. Is that Motl Sandler, your great-grandfather?</li>
+      <li><strong>The photo with aunt Fanya and you in her arms</strong>, where Marik is standing next to her — roughly what year is it? Is that Marik Mestetsky (Fanya’s son) or a different Marik?</li>
+    </ul>
+  </div>
+</section>
+
+<section class="major" id="feedback">
+  <div class="feedback-block">
+    <div class="section-kicker">Feedback</div>
+    <h2 class="section-title">Say something to me</h2>
+    <div class="section-lede">If you’ve come to read — a brief reply means a lot. Click on whichever option fits best: it will open an email to Mikhail with the subject already in place. Add a few lines and send.</div>
+    <div class="section-rule"></div>
+
+    <div class="feedback-grid">
+      <a class="feedback-card" href="mailto:msandler@epiphan.com?subject=%D0%A1%D0%B0%D0%BD%D0%B4%D0%BB%D0%B5%D1%80%D1%8B%20%E2%80%94%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%84%D0%BE%D1%82%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B0&amp;body=%D0%9C%D0%B8%D1%88%D0%B0%2C%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%0A%0A%D0%A3%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%B5%D1%81%D1%82%D1%8C%20%D1%84%D0%BE%D1%82%D0%BE%2F%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%B8%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D1%85%20%D0%B2%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B5%20%D0%BD%D0%B5%D1%82%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C%D1%81%D1%8F.%0A%0A%D0%9A%D1%82%D0%BE%20%D1%8F%20%D0%B8%20%D0%BF%D0%BE%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%B2%D0%B5%D1%82%D0%B2%D0%B8%20%D1%80%D0%BE%D0%B4%D0%B0%3A%20%0A%D0%A7%D1%82%D0%BE%20%D0%BD%D0%B0%20%D1%84%D0%BE%D1%82%D0%BE%2C%20%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0%2C%20%D0%B3%D0%B4%D0%B5%2C%20%D0%BA%D1%82%D0%BE%20%D0%B7%D0%B0%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%BB%D1%91%D0%BD%3A%20%0A%0A%5B%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B8%D1%82%D0%B5%20%D1%84%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%B8%20%D0%BA%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D1%83%5D">
+        <div class="feedback-icon">📸</div>
+        <div class="feedback-title">I have a photo for the archive</div>
+        <div class="feedback-desc">I have pictures that aren’t here. I’d like to share them.</div>
+      </a>
+
+      <a class="feedback-card" href="mailto:msandler@epiphan.com?subject=%D0%A1%D0%B0%D0%BD%D0%B4%D0%BB%D0%B5%D1%80%D1%8B%20%E2%80%94%20%D0%BF%D0%BE%D0%BC%D0%BD%D1%8E%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8E&amp;body=%D0%9C%D0%B8%D1%88%D0%B0%2C%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%0A%0A%D0%9F%D0%BE%D0%BC%D0%BD%D1%8E%20%D0%B8%D0%BB%D0%B8%20%D0%B7%D0%BD%D0%B0%D1%8E%20%D1%87%D1%82%D0%BE-%D1%82%D0%BE%2C%20%D1%87%D0%B5%D0%B3%D0%BE%20%D0%B2%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B5%20%D0%BD%D0%B5%D1%82%20%E2%80%94%20%D0%BF%D1%80%D0%BE%20%D0%BB%D1%8E%D0%B4%D0%B5%D0%B9%2C%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F%2C%20%D0%BC%D0%B5%D1%81%D1%82%D0%B0.%0A%0A%D0%9A%D1%82%D0%BE%20%D1%8F%20%D0%B8%20%D0%BF%D0%BE%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%B2%D0%B5%D1%82%D0%B2%D0%B8%20%D1%80%D0%BE%D0%B4%D0%B0%3A%20%0A%D0%9E%20%D0%BA%D0%BE%D0%BC%2F%D0%BE%20%D1%87%D1%91%D0%BC%20%D1%80%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B6%D1%83%3A%20%0A%D0%9E%D1%82%20%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%8F%20%D1%8D%D1%82%D0%BE%20%D0%B7%D0%BD%D0%B0%D1%8E%3A%20%0A%0A%5B%D1%82%D0%B5%D0%BA%D1%81%D1%82%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8%5D">
+        <div class="feedback-icon">📖</div>
+        <div class="feedback-title">I know a story</div>
+        <div class="feedback-desc">I remember an episode, a date, a phrase — something that isn’t here. I’ll share it.</div>
+      </a>
+
+      <a class="feedback-card" href="mailto:msandler@epiphan.com?subject=%D0%A1%D0%B0%D0%BD%D0%B4%D0%BB%D0%B5%D1%80%D1%8B%20%E2%80%94%20%D1%81%D0%BE%D0%B2%D0%B5%D1%82%20%D0%BF%D0%BE%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D1%83&amp;body=%D0%9C%D0%B8%D1%88%D0%B0%2C%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%0A%0A%D0%9F%D1%80%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D0%BB%28%D0%B0%29%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%2C%20%D0%BD%D0%B0%20%D1%83%D0%BC%20%D0%BF%D1%80%D0%B8%D1%88%D0%BB%D0%B0%20%D0%BC%D1%8B%D1%81%D0%BB%D1%8C%2C%20%D0%BA%D0%B0%D0%BA%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%BB%D1%83%D1%87%D1%88%D0%B5%2F%20%D0%BD%D0%B0%D1%88%D1%91%D0%BB%28%D0%B0%29%20%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D1%83%2F%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%B0%D0%B3%D0%B0%D1%8E%20%D1%87%D1%82%D0%BE-%D1%82%D0%BE%20%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C.%0A%0A%5B%D0%BE%D0%BF%D0%B8%D1%88%D0%B8%D1%82%D0%B5%2C%20%D1%87%D1%82%D0%BE%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%5D">
+        <div class="feedback-icon">💡</div>
+        <div class="feedback-title">Advice or an idea</div>
+        <div class="feedback-desc">I’ve spotted an error or inaccuracy, or have a thought on how to make the archive better.</div>
+      </a>
+
+      <a class="feedback-card" href="mailto:msandler@epiphan.com?subject=%D0%A1%D0%B0%D0%BD%D0%B4%D0%BB%D0%B5%D1%80%D1%8B%20%E2%80%94%20%D1%81%D0%BF%D0%B0%D1%81%D0%B8%D0%B1%D0%BE&amp;body=%D0%9C%D0%B8%D1%88%D0%B0%2C%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%21%0A%0A%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%28%D0%B0%29%20%D1%81%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%2C%20%D1%87%D1%82%D0%BE%20%D0%B0%D1%80%D1%85%D0%B8%D0%B2%20%E2%80%94%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%0A%0A%5B%D0%BA%D1%82%D0%BE%20%D1%8F%20%D0%B8%20%D0%BF%D0%BE%20%D0%BA%D0%B0%D0%BA%D0%BE%D0%B9%20%D0%B2%D0%B5%D1%82%D0%B2%D0%B8%20%D1%80%D0%BE%D0%B4%D0%B0%5D">
+        <div class="feedback-icon">❤️</div>
+        <div class="feedback-title">Thank you</div>
+        <div class="feedback-desc">I liked it and just wanted to say so — at least to let you know I read it.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="major" id="contact">
+  <div class="contact-block">
+    <h3>About this archive</h3>
+
+    <h4>Who is writing this</h4>
+    <p>This page is being assembled and written by <strong>Claude</strong> — a large language model from Anthropic. The role of <strong>Mikhail Naumovich Sandler</strong> — is that of facilitator: he passes me photographs, documents and messages from relatives, checks the result and publishes updates.</p>
+
+    <h4>Where the materials come from</h4>
+    <p>Everything here comes from the WhatsApp chat “Mishpacha Sandler,” which as of 15 May 2026 has 16 relatives on the Sandler and Raykher lines. The chat is private — entry is by invitation only, from someone already in it. If you’re a relative and would like to join, write to Mikhail and he will invite you.</p>
+
+    <h4>A request to everyone in the chat</h4>
+    <p><strong>Introduce yourselves.</strong> Right now some participants appear simply as phone numbers — that isn’t right. At least a name, which branch of the family, and which country.</p>
+    <p><strong>Add detail to your comments.</strong> If you’re sending a photograph or a story, describe it as precisely as you can: who is in the picture (from left to right), when, where, for what occasion, how you know this. The one who will sort through the materials and integrate them into this archive is me — an artificial intelligence — and I can get wrong anything you haven’t told me explicitly.</p>
+    <p>Mikhail passes me what has accumulated in the chat from time to time. After each round of analysis I update this page — it remains available at the same link.</p>
+
+    <h4>On privacy</h4>
+    <p>This page is open to anyone who has the link. It carries the names, dates, photographs and stories of living people. <strong>If you find here any information about yourself or your close ones that you would prefer not to see in open access — write to Mikhail and it will be removed.</strong> This matters.</p>
+
+    <h4>Looking ahead</h4>
+    <p>In time, I’d like to make copies of this archive in English, Hebrew, German and French — so that the family branches in the United States, Canada, Israel, Germany and France can read it in a comfortable language, and so that the next generations, for whom Russian is no longer a native tongue, have access to it. We’ll discuss this in the chat.</p>
+
+    <h4>Contact Mikhail</h4>
+    <p class="lines">
+      <a href="mailto:msandler@epiphan.com">msandler@epiphan.com</a><br>
+      +1 (650) 714-4558
+    </p>
+
+    <div class="visits-strip">
+      <div class="visits-row">
+        <span class="visits-label">Total visits</span>
+        <span class="visits-num" id="visits-total">—</span>
+        <span class="visits-label">· in the last 24 hours</span>
+        <span class="visits-num" id="visits-24h">—</span>
+      </div>
+    </div>
+
+    <div class="footer-meta">
+      &#10026; Archive updated 16 May 2026 · written by Claude (Anthropic) from the “Mishpacha Sandler” chat, A. Beider’s PDF tree and family documents · facilitator Mikhail Sandler &#10026;
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+/* Счётчик посещений — через abacus.jasoncameron.dev (бесплатно, без регистрации). */
+(function () {
+  var NS = 'sandler-litin-archive-msandler-2026';
+  var BASE = 'https://abacus.jasoncameron.dev';
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function dayKey(d) {
+    return 'd-' + d.getUTCFullYear() + pad(d.getUTCMonth() + 1) + pad(d.getUTCDate());
+  }
+  function setText(id, val) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = val;
+  }
+  function fetchJSON(url) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error('http ' + r.status);
+      return r.json();
+    });
+  }
+
+  var now = new Date();
+  var yesterday = new Date(now.getTime() — 86400000);
+
+  /* Регистрируем заход: увеличиваем total + сегодняшний счётчик. */
+  Promise.all([
+    fetchJSON(BASE + '/hit/' + NS + '/total').catch(function () { return null; }),
+    fetchJSON(BASE + '/hit/' + NS + '/' + dayKey(now)).catch(function () { return null; })
+  ]).then(function (results) {
+    var totalData = results[0];
+    var todayData = results[1];
+
+    if (totalData && typeof totalData.value === 'number') {
+      setText('visits-total', totalData.value.toLocaleString('ru-RU'));
+    }
+
+    /* Для «in the last 24 hours» берём today + долю yesterday,
+       пропорциональную тому, сколько часов до конца суток ещё в окне. */
+    fetchJSON(BASE + '/get/' + NS + '/' + dayKey(yesterday))
+      .catch(function () { return { value: 0 }; })
+      .then(function (yData) {
+        var todayHits = (todayData && typeof todayData.value === 'number') ? todayData.value : 0;
+        var yHits = (yData && typeof yData.value === 'number') ? yData.value : 0;
+        var hoursPassedUTC = now.getUTCHours() + now.getUTCMinutes() / 60;
+        var fractionY = Math.max(0, (24 — hoursPassedUTC) / 24);
+        var visits24h = todayHits + Math.round(fractionY * yHits);
+        setText('visits-24h', visits24h.toLocaleString('ru-RU'));
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
