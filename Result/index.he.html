@@ -1061,6 +1061,24 @@
     unicode-bidi: embed;
     display: inline-block;
   }
+
+  /* Family trees stay LTR even on Hebrew pages: the connector lines
+     (:before/:after on first/last-child) are positioned by DOM order,
+     and would mis-attach to the wrong end of each row in RTL flex.
+     Hebrew text inside .nm/.sp/.alt is bidi-aware and renders correctly. */
+  html[dir="rtl"] .ctree,
+  html[dir="rtl"] .ctree ul,
+  html[dir="rtl"] .ctree li,
+  html[dir="rtl"] .ctree .root-wrap {
+    direction: ltr;
+  }
+  html[dir="rtl"] .tnode .nm,
+  html[dir="rtl"] .tnode .alt,
+  html[dir="rtl"] .tnode .sp,
+  html[dir="rtl"] .tnode .pl {
+    direction: rtl;
+    unicode-bidi: embed;
+  }
 </style>
 </head>
 <body>
